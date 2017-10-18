@@ -18,9 +18,55 @@ function slugify($text){
     return $text;
 }
 
+function renderRow($item, $class, $nofollow = true) {
+    $output = '<tr class="' . $class . '" id="' . slugify($item->name) . '">';
+    $output .= '<td><a' . ($nofollow ? ' rel="nofollow"' : '') . ' href="' . htmlspecialchars($item->url) . '" class="alert-link" target="_blank">' . htmlspecialchars($item->name) . '</a></td>';
+    $output .= '<td>' . ($item->ipv6 ? 'Ja' : 'Nej') . '</td>';
+    $output .= '<td>' . htmlspecialchars($item->comment) . '</td>';
+    if (null !== $item->sources[0]->url) {
+        $output .= '<td><a' . ($nofollow ? ' rel="nofollow"' : '') . ' href="' . htmlspecialchars($item->sources[0]->url) . '">'  . htmlspecialchars($item->sources[0]->name) . '</a></td>';
+    } else {
+        $output .= '<td>' . htmlspecialchars($item->sources[0]->name) . '</td>';
+    }
+
+    $output .= '<td>' . (new DateTime($item->sources[0]->date))->format('d. M. y') . '</td>';
+    $output .= '</tr>';
+
+    return $output;
+}
+
 
 // Load in data from JSON
 
+$data = json_decode(file_get_contents('data.json'));
+//header('Content-Type: text/plain');
+
+$stats = [
+    'count' => 0,
+    'full_ipv6' => 0,
+    'some_ipv6' => 0,
+];
+
+$fullArray = [];
+$partialArray = [];
+$unsupportedArray = [];
+
+foreach ($data as $item) {
+    $stats['count']++;
+    if ($item->ipv6) {
+        if ($item->partial) {
+            $stats['some_ipv6']++;
+            if ($item->partial) {
+                $partialArray[] = $item;
+            }
+        } else {
+            $stats['full_ipv6']++;
+            $fullArray[] = $item;
+        }
+    } else {
+        $unsupportedArray[] = $item;
+    }
+}
 
 $ip = $_SERVER['REMOTE_ADDR'];
 
@@ -116,20 +162,18 @@ $ip = $_SERVER['REMOTE_ADDR'];
         }
         $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
         if ($query && $query['status'] == 'success') {
-            echo '<p><strong>Din udbyder:</strong> '.$query['isp'];
+            echo '<p><strong>Din udbyder:</strong> '.($query['isp'] ?? 'Unknown');
         }
 
-        $same = strpos($query['isp'], $query['org']);
-        if ($same === false) {
+        if (false === strpos(($query['isp'] ?? 'Unknown'), ($query['org'] ?? 'Unknown'))) {
             echo ' – '.$query['org'];
         }
         echo '<br><strong>Din IP adresse:</strong> '.$ip.'</p>
       <h3>Listen over internetudbydere</h3>
-      <p><strong>Internetudbydere på listen:</strong> '.$ispCount."<br>
-      <strong>Internetudbydere med <span class='text-success'>IPv6</span>:</strong> ".$ipv6Count."<br>
-      <strong>Internetudbydere med <span class='text-awesome'>fuld IPv6</span>:</strong> ".$fullIpv6."<br>
-      <strong>Procentdel der understøtter <span class='text-success'>IPv6</span>:</strong> ".round($ipv6Count / $ispCount * 100, 0)."%<br>
-      <strong>Procentdel med <span class='text-awesome'>fuld IPv6</span>:</strong> ".round($fullIpv6 / $ispCount * 100, 0)."%
+      <p><strong>Internetudbydere på listen:</strong> '.$stats['count']."<br>
+      <strong>Internetudbydere med <span class='text-awesome'>fuld IPv6</span>:</strong> ".$stats['full_ipv6']."<br>
+      Internetudbydere med <span>noget IPv6</span>: ".$stats['some_ipv6']."<br>
+      <strong>Procentdel med <span class='text-awesome'>fuld IPv6</span>:</strong> ".round($stats['full_ipv6'] / $stats['count'] * 100, 0)."%
       <p class='small'><span class='text-awesome'>Fuld IPv6</span>: Alle kunder hos udbyderen har mulighed for få IPv6.</p>";
         ?></p>
 
@@ -144,48 +188,19 @@ $ip = $_SERVER['REMOTE_ADDR'];
             </tr>
             </thead>
             <?php
-            while (false) {
-                $date = new DateTime($row['date']);
-                $date = strtolower($date->format('d. M. y'));
-                // $date = strftime("%d ,%M,%y",strtotime($date));
-                ?>
-                <tr class='<?= $row['class'] ?>' id='<?= slugify($row['isp']) ?>'>
-                    <td><a href='<?= $row['url'] ?>' class='alert-link' target='_blank'><?= $row['isp'] ?></a></td><td>
-                        <?php
-                        if ($row['ipv6'] == 'x') {
-                            echo '<img src="resources/images/hmm.png" class="smiley">';
-                        } else {
-                            echo $row['ipv6'];
-                        }
-                        ?>
-                    </td><td><?= $row['text']  ?></td>
-                    <td><?= $row['source'] ?></td>
-                    <td data-sort-value='<?= $row['date'] ?>'><?= $date ?></td>
-                </tr>
-                <?php
+            foreach ($fullArray as $item) {
+                echo renderRow($item, 'awesome', false);
+            }
+            foreach ($partialArray as $item) {
+                echo renderRow($item, 'alert-warning');
+            }
+            foreach ($unsupportedArray as $item) {
+                echo renderRow($item, 'alert-danger');
             }
             ?>
         </table>
         <small><strong>xDSL:</strong> Internet via telefonstikket (TDC/YouSee kobber) – ADSL, VDSL mm.</small><br>
         <small><strong>Coax:</strong> Internet via kabel-TV-signalet. Ofte leveret af YouSee, Stofa, alterntive operatør på YouSee-nettet eller en antenneforening.</small>
-        <?php
-        /*
-        <div class="ad" data-lazyad data-matchmedia="only screen and (min-width: 1000px)">
-            <script type="text/lazyad">
-              <!--
-              <script language="javascript" src="https://track.adform.net/adfscript/?bn=12290908;click=https://online.adservicemedia.dk/cgi-bin/click.pl?bid=609473&media_id=38971&redirurl=&sub=footer"></script><noscript><a href="https://track.adform.net/C/?bn=12290908;C=0;click=https://online.adservicemedia.dk/cgi-bin/click.pl?bid=609473&media_id=38971&redirurl=&sub=footer" target="_blank"><img src="https://track.adform.net/adfserve/?bn=12290908;srctype=4;ord=[timestamp]" border="0" width="930" height="180" alt=""/></a></noscript>
-              -->
-            </script>
-          </div>
-          <div class="ad" data-lazyad data-matchmedia="only screen and (min-width: 410px) and (max-width: 999px)">
-              <script type="text/lazyad">
-                <!--
-                <a href="https://online.adservicemedia.dk/cgi-bin/click.pl?bid=609482&media_id=38971&sub=footer" target="_blank"><img src="resources/images/hiper-400x185.png" height="100"></a>
-                -->
-              </script>
-            </div>
-        */
-        ?>
         <hr>
         <footer>
             <p class="float-sm-left">&copy; 2013-<?= date('Y') ?> IPv6-adresse.dk &middot; <a href="https://twitter.com/ipv6dk" target="_blank">@ipv6dk</a> &middot; <a href="mailto:ipv6@ipv6-adresse.dk">ipv6@ipv6-adresse.dk</a></p>
