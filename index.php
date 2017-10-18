@@ -1,7 +1,4 @@
 <?php
-ini_set('date.timezone', 'Europe/Copenhagen');
-setlocale(LC_TIME, 'da_DK.UTF-8');
-setlocale(LC_ALL, 'da_DK');
 
 function slugify($text){
 
@@ -34,7 +31,6 @@ function renderRow($item, $class, $nofollow = true) {
 
     return $output;
 }
-
 
 // Load in data from JSON
 
