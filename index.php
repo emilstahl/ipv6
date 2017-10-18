@@ -172,7 +172,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
       <h3>Listen over internetudbydere</h3>
       <p><strong>Internetudbydere på listen:</strong> '.$stats['count']."<br>
       <strong>Internetudbydere med <span class='text-awesome'>fuld IPv6</span>:</strong> ".$stats['full_ipv6']."<br>
-      Internetudbydere med <span>noget IPv6</span>: ".$stats['some_ipv6']."<br>
+      Internetudbydere med <span>delvis IPv6</span>: ".$stats['some_ipv6']."<br>
       <strong>Procentdel med <span class='text-awesome'>fuld IPv6</span>:</strong> ".round($stats['full_ipv6'] / $stats['count'] * 100, 0)."%
       <p class='small'><span class='text-awesome'>Fuld IPv6</span>: Alle kunder hos udbyderen har mulighed for få IPv6.</p>";
         ?></p>
