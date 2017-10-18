@@ -43,7 +43,7 @@
     },
     {
         "name": "TDC Erhvev",
-        "url": "http:\/\/tdc.dk",
+        "url": "https:\/\/tdc.dk",
         "ipv6": true,
         "comment": "Leverer IPv6 til erhverv p\u00e5 professionelle fiberl\u00f8sninger.",
         "partial": true,
@@ -57,7 +57,7 @@
     },
     {
         "name": "Fullrate",
-        "url": "http:\/\/www.fullrate.dk",
+        "url": "https:\/\/www.fullrate.dk",
         "ipv6": true,
         "comment": "Har implementeret IPv6 underst\u00f8ttelse. Ikke alle routere er underst\u00f8ttet.",
         "partial": true,
@@ -295,7 +295,7 @@
     },
     {
         "name": "Gigabit",
-        "url": "http:\/\/gigabit.dk",
+        "url": "https:\/\/gigabit.dk",
         "ipv6": true,
         "comment": "Fuldt ud underst\u00f8ttet. Dual stack til alle, b\u00e5de privat og erhverv. \/48 prefix deligation.",
         "partial": false,
@@ -365,7 +365,7 @@
     },
     {
         "name": "Fibia",
-        "url": "http:\/\/www.fibia.dk",
+        "url": "https:\/\/www.fibia.dk",
         "ipv6": false,
         "comment": "Vi har desv\u00e6rre ingen konkrete planer om at levere IPv6 til privatkunder.",
         "partial": false,
@@ -477,7 +477,7 @@
     },
     {
         "name": "ipvision",
-        "url": "http:\/\/www.ipvision.dk\/da",
+        "url": "https:\/\/ipvision.dk\/da",
         "ipv6": true,
         "comment": "Alle vores kunder kan f\u00e5 IPv6 adresser. Leverer kun til erhverv.",
         "partial": false,
@@ -561,7 +561,7 @@
     },
     {
         "name": "NEF Fonden",
-        "url": "http:\/\/www.nef.dk",
+        "url": "https:\/\/nef.dk",
         "ipv6": false,
         "comment": "Vi kan endnu ikke tilbyde IPv6, og har for indev\u00e6rende heller ikke eftersp\u00f8rgsel fra vores kunder. P.t. forventer vi at kunne levere det i l\u00f8bet af ca. 2 \u00e5r.",
         "partial": false,
@@ -603,7 +603,7 @@
     },
     {
         "name": "ASOM-Net",
-        "url": "http:\/\/asom-net.dk",
+        "url": "https:\/\/asom-net.dk",
         "ipv6": false,
         "comment": "Vi har IPv6 k\u00f8rende i backbone og test-setup, men ikke live. Vi forventer dual-stack med \/48 prefix-delegation til alle vores kunder og h\u00e5ber p\u00e5 at g\u00e5 live Q3\/Q4 2017. Leverer kun til private.",
         "partial": true,
