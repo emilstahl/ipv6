@@ -47,6 +47,7 @@
         "ipv6": true,
         "comment": "Leverer IPv6 til erhverv p\u00e5 professionelle fiberl\u00f8sninger.",
         "partial": true,
+        "business": true,
         "sources": [
             {
                 "date": "2016-04-06",
@@ -117,6 +118,7 @@
         "ipv6": false,
         "comment": "Det er ikke noget vi har planer om p\u00e5 nuv\u00e6rende tidspunkt",
         "partial": false,
+        "private": true,
         "sources": [
             {
                 "date": "2017-06-06",
@@ -159,6 +161,7 @@
         "ipv6": true,
         "comment": "Vi er fuldt IPv6 klar og har allerede nogle kunder som k\u00f8rer dual stack. Leverer kun til erhvervskunder.",
         "partial": false,
+        "business": true,
         "sources": [
             {
                 "date": "2013-09-30",
@@ -173,6 +176,7 @@
         "ipv6": true,
         "comment": "Vi underst\u00f8tter IPv6 (ikke p\u00e5 SE\/Stofa\u2019s net). Leverer kun til erhvervskunder.",
         "partial": true,
+        "business": true,
         "sources": [
             {
                 "date": "2015-12-11",
@@ -196,11 +200,12 @@
         ]
     },
     {
-        "name": "Jay.net",
+        "name": "Jaynet / Sentia",
         "url": "https:\/\/jay.net",
         "ipv6": true,
         "comment": "Vi tilbyder IPv6 til kunder der har specifikke trafikpakker. ",
         "partial": true,
+        "business": true,
         "sources": [
             {
                 "date": "2016-02-14",
@@ -313,6 +318,7 @@
         "ipv6": true,
         "comment": "Vi er fuldt ipv6 dualstack klar. \/48 prefix delegation. Leverer kun til erhvervskunder.",
         "partial": false,
+        "business": true,
         "sources": [
             {
                 "date": "2015-05-13",
@@ -397,6 +403,7 @@
         "ipv6": true,
         "comment": "Vi underst\u00f8tter IPv6 p\u00e5 fiber til erhverv og boligforeninger samt til xDSL-kunder p\u00e5 eBSA platformen.",
         "partial": true,
+        "private": true,
         "sources": [
             {
                 "date": "2016-10-28",
@@ -411,6 +418,7 @@
         "ipv6": true,
         "comment": "Vil tildeler IPv6 til alle kunder p\u00e5 b\u00e5de xDSL og fiber. Vi h\u00e5ber ogs\u00e5 at kunne komme til at g\u00f8re det p\u00e5 coax inden for overskuelig fremtid, men det er vi desv\u00e6rre ikke selv herre over grundet platformens indretning.",
         "partial": true,
+        "private": true,
         "sources": [
             {
                 "date": "2015-12-16",
@@ -425,6 +433,7 @@
         "ipv6": false,
         "comment": "For nu har TDC rigeligt IP-adresser. S\u00e5fremt TDC Privat beslutter at indf\u00f8re IPv6, s\u00e5 kommer Boxer Bredb\u00e5nd ogs\u00e5 til at f\u00e5 det.",
         "partial": false,
+        "private": true,
         "sources": [
             {
                 "date": "2016-01-25",
@@ -481,6 +490,7 @@
         "ipv6": true,
         "comment": "Alle vores kunder kan f\u00e5 IPv6 adresser. Leverer kun til erhverv.",
         "partial": false,
+        "business": true,
         "sources": [
             {
                 "date": "2016-02-27",
@@ -509,6 +519,7 @@
         "ipv6": true,
         "comment": "IPv6 er under test pt. Vi regner med at have IPv6 som option p\u00e5 hele netv\u00e6rket, ved udgangen af \u00e5ret.",
         "partial": true,
+        "private": true,
         "sources": [
             {
                 "date": "2016-04-04",
@@ -523,6 +534,7 @@
         "ipv6": true,
         "comment": "Vi er fuldt ud IPv6 klar, men leverer kun til erhvervskunder.",
         "partial": false,
+        "business": true,
         "sources": [
             {
                 "date": "2016-04-05",
@@ -579,6 +591,7 @@
         "ipv6": false,
         "comment": "Vi har endnu ikke idriftsat IPv6 og der er umiddelbart ikke planer om dette.",
         "partial": false,
+        "private": true,
         "sources": [
             {
                 "date": "2016-08-17",
@@ -593,6 +606,7 @@
         "ipv6": true,
         "comment": "IPv6 er implementeret p\u00e5 forskningsnettets produktionsnet, IPv4 og IPv6 k\u00f8rer dual-stack i backbone og i forbindelserne til NORDUnet.",
         "partial": false,
+        "business": true,
         "sources": [
             {
                 "date": "2017-02-06",
@@ -607,6 +621,7 @@
         "ipv6": false,
         "comment": "Vi har IPv6 k\u00f8rende i backbone og test-setup, men ikke live. Vi forventer dual-stack med \/48 prefix-delegation til alle vores kunder og h\u00e5ber p\u00e5 at g\u00e5 live Q3\/Q4 2017. Leverer kun til private.",
         "partial": true,
+        "private": true,
         "sources": [
             {
                 "date": "2017-03-15",
@@ -621,6 +636,7 @@
         "ipv6": false,
         "comment": "Vi tester IPv6 i backbone. Det tilbydes ikke til nogle kunder p\u00e5 nuv\u00e6rende tidspunkt. Vi har ingen umiddelbare planer for udrulning til private.\n ",
         "partial": true,
+        "private": true,
         "sources": [
             {
                 "date": "2017-04-21",
@@ -635,6 +651,7 @@
         "ipv6": true,
         "comment": "Kalundborgegnens Antennelaug k\u00f8rer IPv6 Dual stack helt ud til slutbrugeren.",
         "partial": false,
+        "private": true,
         "sources": [
             {
                 "date": "2017-06-06",
