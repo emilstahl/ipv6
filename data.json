@@ -502,12 +502,13 @@
     {
         "name": "Net1",
         "url": "https:\/\/www.net1.dk",
-        "ipv6": false,
-        "comment": "Vi vil supportere IPv6 efter vores 'network acceptance\u2019, som vil ske i l\u00f8bet af sommeren 2016. Der foreligger endnu ikke en plan for at implementere IPv6 hos vores slutkunder.",
-        "partial": false,
+        "ipv6": true,
+        "comment": "Net1 netv\u00e6rket er IPv6 ready. Det er testet og godkendt til at supportere IPv6. IPv6 kan tilbydes til erhvervskunder p\u00e5 foresp\u00f8rgsel.",
+        "partial": true,
+        "business": true,
         "sources": [
             {
-                "date": "2016-04-19",
+                "date": "2017-10-31",
                 "name": "ISP",
                 "url": null
             }
