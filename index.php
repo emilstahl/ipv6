@@ -1,37 +1,10 @@
 <?php
-require_once("functions.php");
+require_once('include/functions.php');
+require_once('include/reader.php');
 
 $ip = $_SERVER['REMOTE_ADDR'];
 
-// Load in data from JSON
-$data = json_decode(file_get_contents('data.json'));
-
-$stats = [
-    'count' => 0,
-    'full_ipv6' => 0,
-    'some_ipv6' => 0,
-];
-
-$fullArray = [];
-$partialArray = [];
-$unsupportedArray = [];
-
-foreach ($data as $item) {
-    $stats['count']++;
-    if ($item->ipv6) {
-        if ($item->partial) {
-            $stats['some_ipv6']++;
-            if ($item->partial) {
-                $partialArray[] = $item;
-            }
-        } else {
-            $stats['full_ipv6']++;
-            $fullArray[] = $item;
-        }
-    } else {
-        $unsupportedArray[] = $item;
-    }
-}
+$reader = new Reader('data.json');
 ?>
 <!DOCTYPE html>
 <html lang="da">
@@ -132,10 +105,10 @@ foreach ($data as $item) {
     }
     echo '<br><strong>Din IP adresse:</strong> '.$ip.'</p>
   <h3>Listen over internetudbydere</h3>
-  <p><strong>Internetudbydere på listen:</strong> '.$stats['count']."<br>
-  <strong>Internetudbydere med <span class='text-awesome'>fuld IPv6</span>:</strong> ".$stats['full_ipv6']."<br>
-  Internetudbydere med <span>delvis IPv6</span>: ".$stats['some_ipv6']."<br>
-  <strong>Procentdel med <span class='text-awesome'>fuld IPv6</span>:</strong> ".round($stats['full_ipv6'] / $stats['count'] * 100, 0)."%
+  <p><strong>Internetudbydere på listen:</strong> '.$reader->getCount()."<br>
+  <strong>Internetudbydere med <span class='text-awesome'>fuld IPv6</span>:</strong> ".$reader->getFullCount()."<br>
+  Internetudbydere med <span>delvis IPv6</span>: ".$reader->getPartialCount()."<br>
+  <strong>Procentdel med <span class='text-awesome'>fuld IPv6</span>:</strong> ".round($reader->getFullCount() / $reader->getCount() * 100, 0)."%
   <p class='small'><span class='text-awesome'>Fuld IPv6</span>: Alle kunder hos udbyderen har mulighed for få IPv6.</p>";
     ?></p>
 
@@ -150,13 +123,13 @@ foreach ($data as $item) {
         </tr>
         </thead>
         <?php
-        foreach ($fullArray as $item) {
+        foreach ($reader->getFull() as $item) {
             echo renderRow($item, 'awesome', false);
         }
-        foreach ($partialArray as $item) {
+        foreach ($reader->getPartial() as $item) {
             echo renderRow($item, 'alert-warning');
         }
-        foreach ($unsupportedArray as $item) {
+        foreach ($reader->getUnsupported() as $item) {
             echo renderRow($item, 'alert-danger');
         }
         ?>
