@@ -32,5 +32,3 @@ function renderRow($item, $class, $nofollow = true) {
     return $output;
 }
 
-
-?>
