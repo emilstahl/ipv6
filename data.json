@@ -331,13 +331,13 @@
         "name": "3",
         "url": "https:\/\/www.3.dk",
         "ipv6": false,
-        "comment": "Vi f\u00e5r forventeligt IPv6 omkring \u00e5rsskiftet. Hold \u00f8je med 3.dk, hvor information om test og lancering vil blive lagt ud. ",
+        "comment": "Den 29. november overgik alle vores og OiSTER's mobilabonnementkunder til IPv6\/dual stack, for det udstyr som underst\u00f8tter det.",
         "partial": true,
         "sources": [
             {
-                "date": "2016-08-02",
+                "date": "2017-11-29",
                 "name": "Tweet",
-                "url": "https:\/\/twitter.com\/3Danmark\/status\/760433065453875200"
+                "url": "https:\/\/twitter.com\/3Danmark\/status\/937997673281589248"
             }
         ]
     },
