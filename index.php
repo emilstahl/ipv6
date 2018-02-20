@@ -92,7 +92,7 @@ foreach ($data as $item) {
     <meta property="og:image" content="resources/images/icon.png"/>
     <link rel="stylesheet" href="resources/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300" rel="stylesheet">
-    <style nonce="sha256-vV0tFQ/cpgMMED41lagyjm644ndvB+BcSaIk36L6FLY=">body{font-family: 'Fira Sans', sans-serif; fontw-weight: 300; padding-top:2rem;padding-bottom:1rem;font-size:.93rem}h3{margin-top:2rem}.blockquote{font-size:.95rem}.table td,.table th{padding:.6rem .3rem;vertical-align:middle;font-size:.88rem}.updated{width:85px}.container .credit{margin:20px 0}.awesome{background-color:#5cb85c;color:#fff}.awesome .alert-link{color:#fff}.smiley{width:20px;height:20px}.text-awesome{color:#5cb85c}.alert{display:inline-block}.alert-link{font-weight:400}hr{margin-top:3rem;margin-bottom:.3rem}footer{font-size:.85rem}.topbar{position:fixed;top:0;left:0;right:0;border-top: 6px solid;padding-bottom:2rem;z-index: 50}.yes{border-top-color:#5cb85c}.no{border-top-color:#d9534f}.ad{text-align: center;margin-top: 2em}.footer{font-size:.85em}</style>
+    <style nonce="sha256-jpRFpgkvguZPwZXX+/yUoPXIIFCEm/CrOAKLkj/vO7Y=">body{font-family:'Fira Sans',sans-serif;fontw-weight:300;padding-top:2rem;padding-bottom:1rem;font-size:.93rem}.awesome,.awesome .alert-link{color:#fff}.fork,.topbar{top:0;right:0}h3{margin-top:2rem}.blockquote{font-size:.95rem}.table td,.table th{padding:.6rem .3rem;vertical-align:middle;font-size:.88rem}.updated{width:85px}.container .credit{margin:20px 0}.awesome{background-color:#5cb85c}.smiley{width:20px;height:20px}.text-awesome{color:#5cb85c}.alert{display:inline-block}.alert-link{font-weight:400}hr{margin-top:3rem;margin-bottom:.3rem}.topbar{position:fixed;left:0;border-top:6px solid;padding-bottom:2rem;z-index:50}.yes{border-top-color:#5cb85c}.no{border-top-color:#d9534f}.fork{position:absolute;border:0;width:149px;height:149px}footer{font-size:.85em}</style>
 </head>
 <body>
 <div class="topbar <?= (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) ? 'yes' : 'no'); ?>"></div>
@@ -170,6 +170,6 @@ foreach ($data as $item) {
         <p class="float-sm-right">Et projekt af <a href="https://emilstahl.dk" target="_blank">Emil Stahl</a> &middot; <a href="https://twitter.com/emilstahl" target="_blank">@emilstahl</a></p>
     </footer>
 </div>
-<a href="https://github.com/emilstahl/ipv6" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px;" src="resources/fork-me.png" alt="Fork me on GitHub"></a>
+<a href="https://github.com/emilstahl/ipv6" target="_blank"><img class="fork" src="resources/fork-me.png" alt="Fork me on GitHub"></a>
 </body>
 </html>
