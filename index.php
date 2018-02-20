@@ -37,13 +37,14 @@ foreach ($data as $item) {
 <html lang="da">
 <head>
     <meta charset="utf-8">
-    <style>.async-hide { opacity: 0 !important} </style>
-    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    <style nonce="sha256-9vYcmcUuMrZLwSVJEx9fK8O4RYR+aTmnc9h7ZaNpoIM=">.async-hide { opacity: 0 !important}</style>
+    <script nonce="sha256-0ljJq95g7nUz3hI9XYMT/hJLlpCISu0Xsfe3n6AsPOg=">
+        (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
             h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
             (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
         })(window,document.documentElement,'async-hide','dataLayer',50,
             {'GTM-K3Z2X87':true});</script>
-    <script>
+    <script nonce="sha256-Vi8n6W0eyouyCRodebxi18L8W4ljFmrrs2RyvEPKa04=">
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -91,7 +92,7 @@ foreach ($data as $item) {
     <meta property="og:image" content="resources/images/icon.png"/>
     <link rel="stylesheet" href="resources/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300" rel="stylesheet">
-    <style>body{font-family: 'Fira Sans', sans-serif; fontw-weight: 300; padding-top:2rem;padding-bottom:1rem;font-size:.93rem}h3{margin-top:2rem}.blockquote{font-size:.95rem}.table td,.table th{padding:.6rem .3rem;vertical-align:middle;font-size:.88rem}.updated{width:85px}.container .credit{margin:20px 0}.awesome{background-color:#5cb85c;color:#fff}.awesome .alert-link{color:#fff}.smiley{width:20px;height:20px}.text-awesome{color:#5cb85c}.alert{display:inline-block}.alert-link{font-weight:400}hr{margin-top:3rem;margin-bottom:.3rem}footer{font-size:.85rem}.topbar{position:fixed;top:0;left:0;right:0;border-top: 6px solid;padding-bottom:2rem;z-index: 50}.yes{border-top-color:#5cb85c}.no{border-top-color:#d9534f}.ad{text-align: center;margin-top: 2em}.footer{font-size:.85em}</style>
+    <style nonce="sha256-vV0tFQ/cpgMMED41lagyjm644ndvB+BcSaIk36L6FLY=">body{font-family: 'Fira Sans', sans-serif; fontw-weight: 300; padding-top:2rem;padding-bottom:1rem;font-size:.93rem}h3{margin-top:2rem}.blockquote{font-size:.95rem}.table td,.table th{padding:.6rem .3rem;vertical-align:middle;font-size:.88rem}.updated{width:85px}.container .credit{margin:20px 0}.awesome{background-color:#5cb85c;color:#fff}.awesome .alert-link{color:#fff}.smiley{width:20px;height:20px}.text-awesome{color:#5cb85c}.alert{display:inline-block}.alert-link{font-weight:400}hr{margin-top:3rem;margin-bottom:.3rem}footer{font-size:.85rem}.topbar{position:fixed;top:0;left:0;right:0;border-top: 6px solid;padding-bottom:2rem;z-index: 50}.yes{border-top-color:#5cb85c}.no{border-top-color:#d9534f}.ad{text-align: center;margin-top: 2em}.footer{font-size:.85em}</style>
 </head>
 <body>
 <div class="topbar <?= (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) ? 'yes' : 'no'); ?>"></div>
