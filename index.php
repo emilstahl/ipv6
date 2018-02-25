@@ -94,7 +94,7 @@ foreach ($data as $item) {
         <p class="lead">IPv6-adresse.dk kortlægger internetudbydere og deres (manglende) understøttelse af IPv6.</p>
     </div>
     <div class="alert alert-info">
-        <strong>Hey, ved du noget?</strong> Jeg mangler data om internetudbydere og  deres status på IPv6. <a href="https://github.com/emilstahl/ipv6" target="_blank" class="btn btn-success">Hjælp på GitHub</a>
+        <strong>Hey, ved du noget?</strong> Jeg mangler data om internetudbydere og  deres status på IPv6. <a href="https://github.com/emilstahl/ipv6" target="_blank" class="btn btn-success">Hjælp på GitHub</a><br><small>Er du ikke vild med GitHub? Så send en mail eller skriv et tweet i stedet :).</small>
     </div>
     <h3 id="ipv4">Vi er løbet tør for IPv4 adresser…</h3>
     <p>Derfor er det på tide, at internetudbyderne giver deres kunder den nye version, IPv6 adresser.<br />
