@@ -81,7 +81,7 @@ foreach ($data as $item) {
     <meta property="og:description" content="IPv6-adresse.dk kortlægger internetudbydere og deres (manglende) understøttelse af IPv6. Find din udbyder på listen." />
     <meta property="og:url" content="https://ipv6-adresse.dk"/>
     <meta property="og:site_name" content="IPv6-adresse.dk" />
-    <meta property="og:image" content="resources/images/icon.png"/>
+    <meta property="og:image" content="resources/icon.png"/>
     <link rel="stylesheet" href="resources/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300" rel="stylesheet">
     <style>body{font-family:'Fira Sans',sans-serif;fontw-weight:300;padding-top:2rem;padding-bottom:1rem;font-size:.93rem}.awesome,.awesome .alert-link{color:#fff}.fork,.topbar{top:0;right:0}h3{margin-top:2rem}.blockquote{font-size:.95rem}.table td,.table th{padding:.6rem .3rem;vertical-align:middle;font-size:.88rem}.updated{width:85px}.container .credit{margin:20px 0}.awesome{background-color:#5cb85c}.smiley{width:20px;height:20px}.text-awesome{color:#5cb85c}.alert{display:inline-block}.alert-link{font-weight:400}hr{margin-top:3rem;margin-bottom:.3rem}.topbar{position:fixed;left:0;border-top:6px solid;padding-bottom:2rem;z-index:50}.yes{border-top-color:#5cb85c}.no{border-top-color:#d9534f}.fork{position:absolute;border:0;width:149px;height:149px}@media (max-width:700px){.fork{display:none}}footer{font-size:.85em}</style>
