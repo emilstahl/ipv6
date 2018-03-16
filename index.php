@@ -85,7 +85,7 @@ foreach ($data as $item) {
     <style>body{font-family:'Fira Sans',sans-serif;font-weight:300;padding-top:2rem;padding-bottom:1rem;font-size:.93rem}@font-face {font-family: 'Fira Sans';font-style:normal;font-weight:300;src:local('Fira Sans Light'),local('FiraSans-Light'),url('/resources/fira-sans-v8-latin-300.woff2') format('woff2'), url('/resources/fira-sans-v8-latin-300.woff') format('woff')}.awesome,.awesome .alert-link{color:#fff}.fork,.topbar{top:0;right:0}h3{margin-top:2rem}.blockquote{font-size:.95rem}.table td,.table th{padding:.6rem .3rem;vertical-align:middle;font-size:.88rem}.updated{width:85px}.container .credit{margin:20px 0}.awesome{background-color:#5cb85c}.smiley{width:20px;height:20px}.text-awesome{color:#5cb85c}.alert{display:inline-block}.alert-link{font-weight:400}hr{margin-top:3rem;margin-bottom:.3rem}.topbar{position:fixed;left:0;border-top:6px solid;padding-bottom:2rem;z-index:50}.yes{border-top-color:#5cb85c}.no{border-top-color:#d9534f}.fork{position:absolute;border:0;width:149px;height:149px}@media (max-width:700px){.fork{display:none}}footer{font-size:.85em}</style>
 </head>
 <body>
-<div class="topbar <?= (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) ? 'yes' : 'no'); ?>"></div>
+<div class="topbar"></div>
 <div class="container">
     <div class="page-header">
         <h1>Internetudbydere og IPv6</h1>
@@ -107,21 +107,10 @@ foreach ($data as $item) {
     <p>Det går desværre ret langsomt med IPv6 i Danmark, det er kun et par udbydere, der tilbyder det til privatkunder. Resten tilbyder det slet ikke, eller kun til erhvervskunder.</p>
 
     <h3 id="check">Har jeg IPv6?</h3>
-    <?php
-    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
-        echo "<p class='text-awesome'>Ja, tillykke, du har IPv6!</p>";
-    } else {
-        echo "<p class='text-danger'>Nej, du har desværre ikke IPv6. Kontakt evt. din internetudbyder.</p>";
-    }
-    $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));
-    if ($query && $query['status'] == 'success') {
-        echo '<p><strong>Din udbyder:</strong> '.($query['isp'] ?? 'Unknown');
-    }
+    <p id="ipVersionText" class='text-awesome'>Vi undersøger sagen, dette kræver at JavaScript er slået til!</p>
+    <strong>Din udbyder: <span id="ispName"></span></strong><br>
+    <strong>Din IP adresse:</strong> <span id="ipaddress"></span></p>
 
-    if (false === strpos(($query['isp'] ?? 'Unknown'), ($query['org'] ?? 'Unknown'))) {
-        echo ' – '.$query['org'];
-    }
-    echo '<br><strong>Din IP adresse:</strong> '.$ip.'</p>
   <h3>Listen over internetudbydere</h3>
   <p><strong>Internetudbydere på listen:</strong> '.$stats['count']."<br>
   <strong>Internetudbydere med <span class='text-awesome'>fuld IPv6</span>:</strong> ".$stats['full_ipv6']."<br>
@@ -161,5 +150,28 @@ foreach ($data as $item) {
     </footer>
 </div>
 <a href="https://github.com/emilstahl/ipv6" target="_blank"><img class="fork" src="resources/fork-me.png" alt="Fork me on GitHub"></a>
+
+<script>
+    (function(){
+        function isIPv6(ip) {
+            var ipv6Regex = /^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$/gi;
+            return ipv6Regex.test(ip);
+        }
+
+        window.updateIPData = function updateIPData(data) {
+            var isV6 = isIPv6(data.query);
+            document.getElementById('ipVersionText').innerHTML = isV6 ? "Ja, tillykke, du har IPv6!" : "Nej, du har desværre ikke IPv6. Kontakt evt. din internetudbyder.";
+            document.getElementById('ispName').innerHTML = data.org || data.isp;
+            document.getElementById('ipaddress').innerHTML = data.query;
+            document.querySelector('.topbar').classList.add(isV6 ? 'yes' : 'no');
+        }
+
+        var script = document.createElement('script');
+        script.src = 'http://ip-api.com/json/?callback=updateIPData'
+
+        document.getElementsByTagName('head')[0].appendChild(script);
+    })()
+</script>
+
 </body>
 </html>
