@@ -159,15 +159,15 @@ foreach ($data as $item) {
         }
 
         window.updateIPData = function updateIPData(data) {
-            var isV6 = isIPv6(data.query);
+            var isV6 = isIPv6(data.ip);
             document.getElementById('ipVersionText').innerHTML = isV6 ? "Ja, tillykke, du har IPv6!" : "Nej, du har desværre ikke IPv6. Kontakt evt. din internetudbyder.";
-            document.getElementById('ispName').innerHTML = data.org || data.isp;
-            document.getElementById('ipaddress').innerHTML = data.query;
+            document.getElementById('ispName').innerHTML = data.org;
+            document.getElementById('ipaddress').innerHTML = data.ip;
             document.querySelector('.topbar').classList.add(isV6 ? 'yes' : 'no');
         }
 
         var script = document.createElement('script');
-        script.src = 'http://ip-api.com/json/?callback=updateIPData'
+        script.src = 'https://ipapi.co/jsonp?callback=updateIPData'
 
         document.getElementsByTagName('head')[0].appendChild(script);
     })()
