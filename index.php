@@ -111,7 +111,7 @@ foreach ($data as $item) {
     <strong>Din udbyder: <span id="ispName"></span></strong><br>
     <strong>Din IP adresse:</strong> <span id="ipaddress"></span></p>
 
-  <h3>Listen over internetudbydere</h3>
+  <?php echo '<h3>Listen over internetudbydere</h3>
   <p><strong>Internetudbydere på listen:</strong> '.$stats['count']."<br>
   <strong>Internetudbydere med <span class='text-awesome'>fuld IPv6</span>:</strong> ".$stats['full_ipv6']."<br>
   Internetudbydere med <span>delvis IPv6</span>: ".$stats['some_ipv6']."<br>
