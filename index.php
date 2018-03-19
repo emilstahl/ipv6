@@ -107,7 +107,7 @@ foreach ($data as $item) {
     <p>Det går desværre ret langsomt med IPv6 i Danmark, det er kun et par udbydere, der tilbyder det til privatkunder. Resten tilbyder det slet ikke, eller kun til erhvervskunder.</p>
 
     <h3 id="check">Har jeg IPv6?</h3>
-    <p id="ipVersionText" class='text-awesome'>Vi undersøger sagen, dette kræver at JavaScript er slået til!</p>
+    <p id="ipVersionText">Vi undersøger sagen, dette kræver at JavaScript er slået til!</p>
     <strong>Din udbyder: <span id="ispName"></span></strong><br>
     <strong>Din IP adresse:</strong> <span id="ipaddress"></span></p>
 
@@ -161,6 +161,7 @@ foreach ($data as $item) {
         window.updateIPData = function updateIPData(data) {
             var isV6 = isIPv6(data.ip);
             document.getElementById('ipVersionText').innerHTML = isV6 ? "Ja, tillykke, du har IPv6!" : "Nej, du har desværre ikke IPv6. Kontakt evt. din internetudbyder.";
+            document.getElementById('ipVersionText').classList.add(isV6 ? 'text-awesome' : 'text-danger');
             document.getElementById('ispName').innerHTML = data.org;
             document.getElementById('ipaddress').innerHTML = data.ip;
             document.querySelector('.topbar').classList.add(isV6 ? 'yes' : 'no');
