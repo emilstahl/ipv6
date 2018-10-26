@@ -102,9 +102,14 @@
         "name": "Telmore",
         "url": "https:\/\/www.telmore.dk",
         "ipv6": false,
-        "comment": "Vi har desv\u00e6rre ingen aktuelle planer om, at implementere IPv6 p\u00e5 CPE udstyr.",
+        "comment": "Vores netv\u00e6rk er teknisk set i stand til at tr\u00e6kke IPv6, men desv\u00e6rre er det ikke noget, som der bliver benyttet lige nu, da det vil kr\u00e6ve en stor indsats i samtlige systemer, at f\u00e5 implementeret. Dog er det naturligvis p\u00e5 vores radar, men vi kan desv\u00e6rre ikke give en tidshorisont.",
         "partial": false,
-        "sources": [
+        "sources": [       
+            {
+                "date": "2018-10-26",
+                "name": "ISP",
+                "url": null
+            },
             {
                 "date": "2015-03-10",
                 "name": "Tweet",
