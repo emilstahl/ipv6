@@ -88,13 +88,13 @@
         "name": "Telenor",
         "url": "https:\/\/www.telenor.dk",
         "ipv6": false,
-        "comment": "Vi vil gerne implementere det, men det er ej muligt lige nu. ",
+        "comment": "Der er ikke specifikke planer for IPv6 i øjeblikket",
         "partial": true,
         "sources": [
             {
-                "date": "2016-08-02",
-                "name": "ISP",
-                "url": null
+                "date": "2018-06-20",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/TelenorDanmark\/status\/1009410916331540482"
             }
         ]
     },
@@ -121,14 +121,19 @@
         "private": true,
         "sources": [
             {
-                "date": "2017-06-06",
+                "date": "2018-06-17",
                 "name": "Tweet",
-                "url": "https:\/\/twitter.com\/YouSeeDK\/status\/684093196025098245"
+                "url": "https:\/\/twitter.com\/YouSeeDK\/status\/1008294976982343685"
             },
             {
                 "date": "2018-03-15",
                 "name": "Tweet",
                 "url": "https:\/\/twitter.com\/YouSeeDK\/status\/974304133095284736"
+            },
+            {
+                "date": "2017-06-06",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/YouSeeDK\/status\/684093196025098245"
             }
         ]
     },
@@ -140,9 +145,9 @@
         "partial": true,
         "sources": [
             {
-                "date": "2017-03-08",
-                "name": "ISP",
-                "url": null
+                "date": "2018-06-21",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/stderrdk\/status\/1009563575311101952\n"
             }
         ]
     },
