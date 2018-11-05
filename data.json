@@ -150,10 +150,16 @@
         "partial": true,
         "sources": [
             {
+                "date": "2018-10-02",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/stderrdk\/status\/1059215611916517376\n"
+            },
+            {
                 "date": "2018-06-21",
                 "name": "Tweet",
                 "url": "https:\/\/twitter.com\/stderrdk\/status\/1009563575311101952\n"
             }
+
         ]
     },
     {
