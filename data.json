@@ -385,14 +385,14 @@
         "name": "BornFiber",
         "url": "https:\/\/bornfiber.dk",
         "ipv6": false,
-        "comment": "Vi understøtter fuldt dualstack til alle vores kunder, både til privat- og erhvervskunder.",
+        "comment": "Vi underst\u00F8tter fuldt dualstack til alle vores kunder, b\u00E5de til privat- og erhvervskunder.",
         "partial": false,
         "sources": [
             {
                 "date": "2018-11-06",
                 "name": "ISP",
-                "url": null"
-            }
+                "url": null
+            },
             {
                 "date": "2015-11-26",
                 "name": "Tweet",
