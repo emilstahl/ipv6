@@ -384,7 +384,7 @@
     {
         "name": "BornFiber",
         "url": "https:\/\/bornfiber.dk",
-        "ipv6": false,
+        "ipv6": true,
         "comment": "Vi underst\u00F8tter fuldt dualstack til alle vores kunder, b\u00E5de til privat- og erhvervskunder.",
         "partial": false,
         "sources": [
