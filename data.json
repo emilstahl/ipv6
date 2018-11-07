@@ -554,12 +554,12 @@
         "name": "K-Net",
         "url": "https:\/\/k-net.dk",
         "ipv6": true,
-        "comment": "IPv6 er under test pt. Vi regner med at have IPv6 som option p\u00e5 hele netv\u00e6rket, ved udgangen af \u00e5ret.",
+        "comment": "IPv6 er under test pt.",
         "partial": true,
         "private": true,
         "sources": [
             {
-                "date": "2016-04-04",
+                "date": "2018-10-24",
                 "name": "ISP",
                 "url": null
             }
