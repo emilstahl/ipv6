@@ -371,11 +371,11 @@
         "name": "Parknet",
         "url": "https:\/\/parknet.dk",
         "ipv6": false,
-        "comment": "Vi har pt. ingen planer om IPv6, da vi har nok IPv4 adresser.",
+        "comment": "Vi arbejder løbende med at implementere ipv6, og regner med at have ipv6 til vores brugere ultimo 2019.",
         "partial": false,
         "sources": [
             {
-                "date": "2015-08-20",
+                "date": "2018-11-14",
                 "name": "ISP",
                 "url": null
             }
