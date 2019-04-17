@@ -283,20 +283,6 @@
         ]
     },
     {
-        "name": "Bredb\u00e5nd Nord",
-        "url": "http:\/\/www.bredbaandnord.dk",
-        "ipv6": false,
-        "comment": "Fortsat ingen dato, af den simple grund, at for 99% af kunderne giver det ikke mening, men vi har store erhvervskunder som k\u00f8rer IPv6,  men vi er ikke klar til private endnu.",
-        "partial": false,
-        "sources": [
-            {
-                "date": "2017-04-24",
-                "name": "ISP",
-                "url": null
-            }
-        ]
-    },
-    {
         "name": "bolig:net",
         "url": "https:\/\/www.bolignet.dk",
         "ipv6": true,
