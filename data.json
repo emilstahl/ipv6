@@ -221,8 +221,8 @@
         ]
     },
     {
-        "name": "Jaynet / Sentia",
-        "url": "https:\/\/jay.net",
+        "name": "Sentia",
+        "url": "https:\/\/sentia.com\/dk\/",
         "ipv6": true,
         "comment": "Vi tilbyder IPv6 til kunder der har specifikke trafikpakker. ",
         "partial": true,
@@ -522,7 +522,7 @@
     },
     {
         "name": "ipvision",
-        "url": "https:\/\/ipvision.dk\/da",
+        "url": "https:\/\/ipvision.dk",
         "ipv6": true,
         "comment": "Alle vores kunder kan f\u00e5 IPv6 adresser. Leverer kun til erhverv.",
         "partial": false,
