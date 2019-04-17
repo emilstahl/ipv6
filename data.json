@@ -696,5 +696,20 @@
                 "url": null
             }
         ]
+    },
+    {
+        "name": "Yderholm Antenneforening",
+        "url": "http:\/\/yderholm-antenneforening.dk",
+        "ipv6": true,
+        "comment": "Yderholm Antenneforening har underst\u00F8ttet IPv6 siden november 2016 og tilbyder en \/60 til de af vores kunder der m\u00E5tte \u00F8nske dette.",
+        "partial": false,
+        "private": true,
+        "sources": [
+            {
+                "date": "2019-03-24",
+                "name": "ISP",
+                "url": null
+            }
+        ]
     }
 ]
