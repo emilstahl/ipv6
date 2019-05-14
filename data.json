@@ -697,5 +697,20 @@
                 "url": null
             }
         ]
+    },  
+        {
+        "name": "Fastspeed",
+        "url": "https:\/\/fastspeed.dk",
+        "ipv6": false,
+        "comment": "Vi har ikke IPv6 og kommer heller ikke til [at f\u00E5] det. Vi k\u00F8rer med IPv4",
+        "partial": false,
+        "private": true,
+        "sources": [
+            {
+                "date": "2019-05-14",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/graffen\/status\/1127828192511889408"
+            }
+        ]
     }
 ]
