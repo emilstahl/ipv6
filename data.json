@@ -357,11 +357,11 @@
         "name": "Parknet",
         "url": "https:\/\/parknet.dk",
         "ipv6": false,
-        "comment": "Vi arbejder løbende med at implementere ipv6, og regner med at have ipv6 til vores brugere ultimo 2019.",
+        "comment": "M.h.t. dit spørgsmål om IPv6 så er det noget vi har i de fremtidige planer. Om der går et år eller to kan jeg ikke sige men det er på tegnebrættet."
         "partial": false,
         "sources": [
             {
-                "date": "2018-11-14",
+                "date": "2019-07-09",
                 "name": "ISP",
                 "url": null
             }
