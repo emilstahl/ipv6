@@ -390,7 +390,7 @@
         "name": "Fibia",
         "url": "https:\/\/www.fibia.dk",
         "ipv6": false,
-        "comment": "Vi har det med i vores planer, dog er der ikke givet nogen tidshorisont endnu.",
+        "comment": "Vi har IPv6 med i vores planer, dog er der ikke givet nogen tidshorisont endnu.",
         "partial": false,
         "sources": [
             {
