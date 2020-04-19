@@ -168,7 +168,7 @@ foreach ($data as $item) {
         }
 
         var script = document.createElement('script');
-        script.src = 'https://ipapi.co/jsonp?callback=updateIPData'
+        script.src = 'https://ipv6-adresse.dk/jsonp?callback=updateIPData'
 
         document.getElementsByTagName('head')[0].appendChild(script);
     })()
