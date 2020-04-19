@@ -390,11 +390,11 @@
         "name": "Fibia",
         "url": "https:\/\/www.fibia.dk",
         "ipv6": false,
-        "comment": "Vi har desv\u00e6rre ingen konkrete planer om at levere IPv6 til privatkunder.",
+        "comment": "Vi har IPv6 med i vores planer, dog er der ikke givet nogen tidshorisont endnu.",
         "partial": false,
         "sources": [
             {
-                "date": "2017-04-19",
+                "date": "2020-03-25",
                 "name": "ISP",
                 "url": null
             }
