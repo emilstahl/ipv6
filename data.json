@@ -177,7 +177,7 @@
         ]
     },
     {
-        "name": "Zen Systems",
+        "name": "Zen Systems (ejet af GlobalConnect)",
         "url": "http:\/\/zensystems.dk",
         "ipv6": true,
         "comment": "Vi er fuldt IPv6 klar og har allerede nogle kunder som k\u00f8rer dual stack. Leverer kun til erhvervskunder.",
@@ -192,8 +192,8 @@
         ]
     },
     {
-        "name": "Nianet",
-        "url": "https:\/\/nianet.dk",
+        "name": "GlobalConnect NN (tidl. Nianet)",
+        "url": "https:\/\/www.globalconnect.dk",
         "ipv6": true,
         "comment": "Vi underst\u00f8tter IPv6 (ikke p\u00e5 SE\/Stofa\u2019s net). Leverer kun til erhvervskunder.",
         "partial": true,
