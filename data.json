@@ -357,7 +357,7 @@
         "name": "Parknet",
         "url": "https:\/\/parknet.dk",
         "ipv6": false,
-        "comment": "M.h.t. dit sp\u00d8rgsm\u00e5l om IPv6 s\u00e5 er det noget vi har i de fremtidige planer. Om der g\u00e5r et \u00e5r eller to kan jeg ikke sige men det er på tegnebr\u00e6ttet."
+        "comment": "M.h.t. dit sp\u00d8rgsm\u00e5l om IPv6 s\u00e5 er det noget vi har i de fremtidige planer. Om der g\u00e5r et \u00e5r eller to kan jeg ikke sige men det er på tegnebr\u00e6ttet.",
         "partial": false,
         "sources": [
             {
