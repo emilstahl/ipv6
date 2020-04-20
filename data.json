@@ -42,7 +42,7 @@
         ]
     },
     {
-        "name": "TDC Erhvev",
+        "name": "TDC Erhverv",
         "url": "https:\/\/tdc.dk",
         "ipv6": true,
         "comment": "Leverer IPv6 til erhverv p\u00e5 professionelle fiberl\u00f8sninger.",
@@ -53,20 +53,6 @@
                 "date": "2016-04-06",
                 "name": "Tweet",
                 "url": "https:\/\/twitter.com\/ikjensen\/status\/575569892990193664"
-            }
-        ]
-    },
-    {
-        "name": "Fullrate",
-        "url": "https:\/\/www.fullrate.dk",
-        "ipv6": true,
-        "comment": "Har implementeret IPv6 underst\u00f8ttelse. Ikke alle routere er underst\u00f8ttet.",
-        "partial": true,
-        "sources": [
-            {
-                "date": "2015-10-11",
-                "name": "v2.dk",
-                "url": "https:\/\/www.version2.dk\/comment\/316818#comment-316818"
             }
         ]
     },
@@ -201,20 +187,6 @@
         "sources": [
             {
                 "date": "2015-12-11",
-                "name": "ISP",
-                "url": null
-            }
-        ]
-    },
-    {
-        "name": "Verdo",
-        "url": "https:\/\/verdo.dk\/",
-        "ipv6": false,
-        "comment": "Vi har planer om at udbyde det, men har p\u00e5 nuv\u00e6rende tidspunkt ingen tidshorisont for det.",
-        "partial": false,
-        "sources": [
-            {
-                "date": "2015-11-26",
                 "name": "ISP",
                 "url": null
             }
