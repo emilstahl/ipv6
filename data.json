@@ -207,20 +207,6 @@
         ]
     },
     {
-        "name": "Verdo",
-        "url": "https:\/\/verdo.dk\/",
-        "ipv6": false,
-        "comment": "Vi har planer om at udbyde det, men har p\u00e5 nuv\u00e6rende tidspunkt ingen tidshorisont for det.",
-        "partial": false,
-        "sources": [
-            {
-                "date": "2015-11-26",
-                "name": "ISP",
-                "url": null
-            }
-        ]
-    },
-    {
         "name": "Sentia",
         "url": "https:\/\/sentia.com\/dk\/",
         "ipv6": true,
