@@ -57,20 +57,6 @@
         ]
     },
     {
-        "name": "Fullrate",
-        "url": "https:\/\/www.fullrate.dk",
-        "ipv6": true,
-        "comment": "Har implementeret IPv6 underst\u00f8ttelse. Ikke alle routere er underst\u00f8ttet.",
-        "partial": true,
-        "sources": [
-            {
-                "date": "2015-10-11",
-                "name": "v2.dk",
-                "url": "https:\/\/www.version2.dk\/comment\/316818#comment-316818"
-            }
-        ]
-    },
-    {
         "name": "Telia",
         "url": "https:\/\/www.telia.dk\/privat\/",
         "ipv6": true,
