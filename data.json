@@ -178,7 +178,7 @@
     },
     {
         "name": "Zen Systems (ejet af GlobalConnect)",
-        "url": "http:\/\/zensystems.dk",
+        "url": "https:\/\/www.globalconnect.dk",
         "ipv6": true,
         "comment": "Vi er fuldt IPv6 klar og har allerede nogle kunder som k\u00f8rer dual stack. Leverer kun til erhvervskunder.",
         "partial": false,
@@ -326,7 +326,7 @@
     },
     {
         "name": "GlobalConnect",
-        "url": "http:\/\/www.globalconnect.dk",
+        "url": "https:\/\/www.globalconnect.dk",
         "ipv6": true,
         "comment": "Vi er fuldt ipv6 dualstack klar. \/48 prefix delegation. Leverer kun til erhvervskunder.",
         "partial": false,
@@ -466,7 +466,7 @@
     },
     {
         "name": "Lollands.net",
-        "url": "http:\/\/lollands.net",
+        "url": "https:\/\/lollands.net",
         "ipv6": true,
         "comment": "Lollands.Net har f\u00e5et tildelt \/29 IPv6 adresser som bliver tildelt vores kunder. ",
         "partial": false,
@@ -582,7 +582,7 @@
     },
     {
         "name": "Fiberby",
-        "url": "http:\/\/fiberby.dk",
+        "url": "https:\/\/fiberby.dk",
         "ipv6": false,
         "comment": "Vi har IPv6 i backbone og tilbyder IPv6 til udvalgte erhvervskunder \u2013 ikke til privatkunder, udover et par enkelte testkunder.\nVi planl\u00e6gger at udrulle IPv6 til samtlige privatkunder inden n\u00e6ste sommer (17). Formodenligvis starter vi med st\u00f8rre\npilotcases.",
         "partial": true,
