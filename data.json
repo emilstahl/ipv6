@@ -555,13 +555,13 @@
     {
         "name": "Fiberby",
         "url": "https:\/\/fiberby.dk",
-        "ipv6": false,
-        "comment": "Vi har IPv6 i backbone og tilbyder IPv6 til udvalgte erhvervskunder \u2013 ikke til privatkunder, udover et par enkelte testkunder.\nVi planl\u00e6gger at udrulle IPv6 til samtlige privatkunder inden n\u00e6ste sommer (17). Formodenligvis starter vi med st\u00f8rre\npilotcases.",
-        "partial": true,
+        "ipv6": true,
+        "comment": "Vi tilbyder statiske IPv6 til erhvervskunder og privatkunder ved foresp\u00f8rgsel; For privat kunder foruds\u00e6ttes samtidig statisk offentlig IPv4-adresse.",
+        "partial": false,
         "sources": [
             {
-                "date": "2016-07-28",
-                "name": "ISP",
+                "date": "2020-04-24",
+                "name": "Email",
                 "url": null
             }
         ]
