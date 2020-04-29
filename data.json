@@ -561,7 +561,7 @@
         "sources": [
             {
                 "date": "2020-04-24",
-                "name": "Email",
+                "name": "ISP",
                 "url": null
             }
         ]
@@ -674,14 +674,14 @@
         "name": "Fastspeed",
         "url": "https:\/\/fastspeed.dk",
         "ipv6": false,
-        "comment": "Vi har ikke IPv6 og kommer heller ikke til [at f\u00E5] det. Vi k\u00F8rer med IPv4",
+        "comment": "Vi k\u00F8rer med IPv6 p\u00E5 vores fiberforbindelser. Der arbejdes p\u00E5 at f\u00E5 IPv6 p\u00E5 vores coaxforbindelser.",
         "partial": false,
         "private": true,
         "sources": [
             {
-                "date": "2019-05-14",
-                "name": "Tweet",
-                "url": "https:\/\/twitter.com\/graffen\/status\/1127828192511889408"
+                "date": "2020-04-28",
+                "name": "ISP",
+                "url": null
             }
         ]
     }
