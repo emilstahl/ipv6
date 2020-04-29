@@ -673,9 +673,9 @@
         {
         "name": "Fastspeed",
         "url": "https:\/\/fastspeed.dk",
-        "ipv6": false,
+        "ipv6": true,
         "comment": "Vi k\u00F8rer med IPv6 p\u00E5 vores fiberforbindelser. Der arbejdes p\u00E5 at f\u00E5 IPv6 p\u00E5 vores coaxforbindelser.",
-        "partial": false,
+        "partial": true,
         "private": true,
         "sources": [
             {
