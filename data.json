@@ -74,13 +74,13 @@
         "name": "Telenor",
         "url": "https:\/\/www.telenor.dk",
         "ipv6": false,
-        "comment": "Der er ikke specifikke planer for IPv6 i øjeblikket",
+        "comment": "Der er ikke specifikke planer for implementering af IPv6 i \u00f8jeblikket.",
         "partial": true,
         "sources": [
             {
-                "date": "2018-06-20",
+                "date": "2020-05-27",
                 "name": "Tweet",
-                "url": "https:\/\/twitter.com\/TelenorDanmark\/status\/1009410916331540482"
+                "url": "https:\/\/twitter.com\/Dpj_DBB\/status\/1265623450166734849"
             }
         ]
     },
