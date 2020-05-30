@@ -584,12 +584,12 @@
         "name": "Andels.net",
         "url": "https:\/\/andels.net",
         "ipv6": false,
-        "comment": "Vi har endnu ikke idriftsat IPv6 og der er umiddelbart ikke planer om dette.",
+        "comment": "Vi har ikke nogen planer om at levere det, da der er for få hjemmesider der understøtter det idag.",
         "partial": false,
         "private": true,
         "sources": [
             {
-                "date": "2016-08-17",
+                "date": "2019-03-28",
                 "name": "ISP",
                 "url": null
             }
