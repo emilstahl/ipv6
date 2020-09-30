@@ -159,16 +159,16 @@ foreach ($data as $item) {
         }
 
         window.updateIPData = function updateIPData(data) {
-            var isV6 = isIPv6(data.ip);
+            var isV6 = isIPv6(data.address);
             document.getElementById('ipVersionText').innerHTML = isV6 ? "Ja, tillykke, du har IPv6!" : "Nej, du har desværre ikke IPv6. Kontakt evt. din internetudbyder.";
             document.getElementById('ipVersionText').classList.add(isV6 ? 'text-awesome' : 'text-danger');
-            document.getElementById('ispName').innerHTML = data.org;
-            document.getElementById('ipaddress').innerHTML = data.ip;
+            document.getElementById('ispName').innerHTML = data.isp_name;
+            document.getElementById('ipaddress').innerHTML = data.address;
             document.querySelector('.topbar').classList.add(isV6 ? 'yes' : 'no');
         }
 
         var script = document.createElement('script');
-        script.src = 'https://ipv6-adresse.dk/jsonp?callback=updateIPData'
+        script.src = 'https://v4v6.ipv6-test.com/json/addrinfo.php?callback=updateIPData'
 
         document.getElementsByTagName('head')[0].appendChild(script);
     })()
