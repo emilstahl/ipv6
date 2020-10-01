@@ -395,7 +395,7 @@
         "name": "Kviknet",
         "url": "https:\/\/www.kviknet.dk",
         "ipv6": true,
-        "comment": "Vi underst\u00f8tter IPv6 p\u00e5 fiber til erhverv og boligforeninger samt til xDSL-kunder p\u00e5 eBSA platformen.",
+        "comment": "Vi underst\u00f8tter IPv6 p\u00e5 fiber til erhverv og boligforeninger samt til xDSL-kunder p\u00e5 eBSA platformen. Leverer IPv6 via Norlys Fiber.",
         "partial": true,
         "private": true,
         "sources": [
@@ -403,6 +403,11 @@
                 "date": "2016-10-28",
                 "name": "ISP",
                 "url": "https:\/\/v2.dk\/1011318"
+            },
+            {
+                "date": "2020-10-01",
+                "name": "ISP",
+                "url": "https://www.kviknet.dk/produktinfo/fiber_norlys"
             }
         ]
     },
