@@ -524,21 +524,6 @@
         ]
     },
     {
-        "name": "Netgroup",
-        "url": "https:\/\/www.netgroup.dk",
-        "ipv6": true,
-        "comment": "Vi er fuldt ud IPv6 klar, men leverer kun til erhvervskunder.",
-        "partial": false,
-        "business": true,
-        "sources": [
-            {
-                "date": "2016-04-05",
-                "name": "ISP",
-                "url": null
-            }
-        ]
-    },
-    {
         "name": "Mira Internet",
         "url": "https:\/\/www.mira.dk\/",
         "ipv6": false,
