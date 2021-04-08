@@ -362,11 +362,11 @@
         "name": "Fibia",
         "url": "https:\/\/www.fibia.dk",
         "ipv6": false,
-        "comment": "Vi har IPv6 med i vores planer, dog er der ikke givet nogen tidshorisont endnu.",
+        "comment": "Vi arbejder på at understøtte IPv6, dog er der ikke givet nogen tidshorisont endnu.",
         "partial": false,
         "sources": [
             {
-                "date": "2020-03-25",
+                "date": "2021-04-08",
                 "name": "ISP",
                 "url": null
             }
