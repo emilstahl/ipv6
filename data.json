@@ -257,14 +257,14 @@
     {
         "name": "bolig:net",
         "url": "https:\/\/www.bolignet.dk",
-        "ipv6": true,
-        "comment": "Vi leverer allerede i dag fuld IPv6 til b\u00e5de vores private kunder og erhvervskunder.",
+        "ipv6": false,
+        "comment": "Har omlagt netværk April 2021, fjernet IPv6 for en stor andel af kunderne. Forventer der vil gå måneder.",
         "partial": false,
         "sources": [
             {
-                "date": "2014-01-18",
-                "name": "ISP",
-                "url": null
+                "date": "2021-04-14",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/kramse\/status\/1382277899684827138
             }
         ]
     },
