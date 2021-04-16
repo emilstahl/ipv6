@@ -1,183 +1,245 @@
-import * as React from "react"
+import * as React      from "react";
+import HeaderComponent from '../components/Header/component';
+import DoIHaveIPv6     from '../components/DoIHaveIPv6/component';
+import { graphql }     from 'gatsby';
+import 'gridjs/dist/theme/mermaid.min.css';
+import { _, Grid }     from 'gridjs-react';
+import Helmet          from "react-helmet";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
+import '../services/checkipv6status'
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
+const styles = {
+  hero: {
+    backgroundColor: '#5CB85C',
+    width: '100%',
+    height: '590px',
+    display: 'block',
+    paddingTop: '4rem',
+    color: 'white',
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
+    heading: {
+      margin: 0,
+      fontSize: '32pt',
+    }
 
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
   },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
 
-// markup
-const IndexPage = () => {
+  blockquote: {
+    color: 'white',
+    padding: '0px',
+    marginLeft: '0',
+    marginRight: '0',
+    link: {
+      color: 'white'
+    }
+  },
+
+  ispList: {
+    marginTop: '120px',
+    marginBottom: '60px',
+    a: {
+      textDecoration: 'none',
+      color: '#333',
+    },
+    sourceLink: {
+      color: '#333'
+    },
+    span: {
+      verticalAlign: 'middle',
+      marginLeft: '10px',
+    },
+    img: {
+      verticalAlign: 'middle',
+    }
+  }
+
+}
+
+export const query = graphql`
+  query GetISPData {
+    allDataJson(
+      sort: { order: [DESC, ASC, ASC], fields: [ipv6, partial, name] }
+    ) {
+      edges {
+        node {
+          id,
+          name,
+          url,
+          
+          ipv6,
+          partial,
+          comment,
+          sources {
+            date
+            name
+            url
+          }
+        }
+      }
+    }
+  }
+
+`
+
+const IndexPage = ({ data }) => {
+  let ispData = data.allDataJson.edges.map(x => x.node);
+  ispData.map(x => x.color = !x.ipv6 ? '#ef9a9a' : (x.partial) ? '#ffe082' : '#a5d6a7');
+  ispData.map(x => x.state = !x.ipv6 ? 'Nej' : (x.partial) ? 'Delvist' : 'Ja');
+
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+    <div>
+      <Helmet>
+        <title>IPv6-adresse.dk — Internetudbydere og IPv6 understøttelse</title>
+        <meta name="description" content="IPv6-adresse.dk er samlingspunktet for den danske indførsel af den nye internet-protokol, IPv6. Siden er et open source projekt, og alle kan bidrage til siden!" />
+      </Helmet>
+      <HeaderComponent/>
+      <div className="hero" style={styles.hero}>
+        <div className="container">
+          <h1 style={styles.hero.heading}>Vi er løbet tør for IPv4-adresser...</h1>
+          <p>
+            Derfor er det på tide, at internetudbyderne giver deres kunder den nye version, IPv6 adresser.<br/>
+            Heldigvis har nogle udbydere allerede gjort det, andre er i gang, og så er der den klassiske <em>ingen
+            tidshorisont</em>.
+          </p>
+
+          <blockquote style={styles.blockquote}>
+            <p>Der er indført mange forbedringer i IPv6, men den største forskel er størrelsen af adressefeltet, som er
+              på 128 bit mod kun 32 bit i den gamle IPv4 standard. Udvidelsen af adressefeltet giver teoretisk mulighed
+              for op til 3,4 × 10<sup>38</sup> (340 sekstillioner) adresser, som kan sammenlignes med, at der i IPv4 kun
+              var mulighed for omkring 4 milliarder adresser.</p>
+            <footer className="blockquote-footer">
+              &ndash; <a style={styles.blockquote.link} href="https://da.wikipedia.org/wiki/IPv6" target="_blank"
+                         rel="noreferrer">
+              <cite title="Wikipedia">Wikipedia</cite>
+            </a>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <DoIHaveIPv6/>
+
+      <section id={"ispList"} style={styles.ispList}>
+        <div className="container">
+          <h2>Liste over danske udbydere</h2>
+          <div className="stats">
+            <p>Internetudbydere på listen: {ispData.length}</p>
+            <p>Internetudbydere med <abbr
+              title="Fuld IPv6-understøttelse betyder at alle kunder har mulighed for at få IPv6. Der kan dog være udbydere, som kun leverer deres tjenester til erhverv.">fuld
+              IPv6-understøttelse</abbr>: {ispData.filter(x => x.ipv6 === true && x.partial === false).length} ({Number(ispData.filter(x => x.ipv6 === true && x.partial === false).length / ispData.length * 100).toFixed(0).toString()}%)
+            </p>
+            <p>Internetudbydere med <abbr
+              title="Delvis IPv6-understøttelse betyder at nogle kunder kan få IPv6. Det kan f.eks. være erhvervskunder, fiberkunder eller lignende.">delvis
+              IPv6-understøttelse</abbr>: {ispData.filter(x => x.ipv6 === true && x.partial === true).length} ({Number(ispData.filter(x => x.ipv6 === true && x.partial === true).length / ispData.length * 100).toFixed(0).toString()}%)
+            </p>
+          </div>
+
+          <Grid
+            data={ispData}
+            columns={[
+              { name: 'color', hidden: true },
+              { name: 'url', hidden: true },
+              {
+                id: 'name',
+                name: 'Navn',
+                width: '160px',
+
+                sort: {
+                  enabled: true
+                },
+
+                formatter: (cell, row) => {
+                  const url = row.cell(1).data;
+                  const { hostname } = new URL(url);
+
+                  return _(<>
+                    <a style={styles.ispList.a} href={url} title={cell + " (nyt vindue)"} target={"_blank"} rel={"noreferrer"}>
+                      <img style={styles.ispList.img} height={"22px"} src={`https://favicons.api.mgx.dk/${hostname}/40`}
+                           alt={cell + " logo"}/>
+                      <span style={styles.ispList.span}>
+                             {cell}
+                         </span>
+                    </a>
+                  </>)
+                }
+              },
+              {
+                id: 'state',
+                name: 'IPv6',
+                width: '35px',
+                attributes: (cell, row) => {
+                  if (cell == null) return;
+                  return {
+                    style: {
+                      textAlign: 'center',
+                      backgroundColor: `${row.cell(0).data}`
+                    },
+                  }
+                },
+                sort: {
+                  enabled: true,
+                  compare: (a, b) => {
+                    const priority = {
+                      "Ja": 0,
+                      "Delvist": 1,
+                      "Nej": 2
+                    }
+
+                    if (priority[a] > priority[b]) {
+                      return 1;
+                    } else if (priority[b] > priority[a]) {
+                      return -1;
+                    } else {
+                      return 0;
+                    }
+
+                  }
+                }
+              },
+              {
+                id: 'comment',
+                name: 'Kommentar fra udbyder',
+                formatter: cell => _(<span style={{ lineHeight: 1.5 }}>{cell}</span>),
+                width: '400px'
+              },
+              {
+                id: 'sources',
+                name: 'Kilde',
+                formatter: cell => {
+                  if (cell[0].url) return _(<a style={styles.ispList.sourceLink} href={cell[0].url}
+                                               title="Gå til kilde (nyt vindue)" target="_blank" rel={"noreferrer"}>{cell[0].name}</a>)
+                  else return `${cell[0].name}`
+                },
+                width: '40px',
+              },
+              {
+                id: 'sources',
+                name: 'Opdateret',
+                formatter: cell => {
+                  return `${cell[0].date}`
+                },
+                width: '60px',
+              }
+            ]}
+
+            language={{
+              'search': {
+                'placeholder': '🔎 Søg i tabellen'
+              }
+            }}
+
+            search={true}
+
+            style={{
+              table: {
+                'font-size': '80%'
+              }
+            }}
+          />
+        </div>
+      </section>
+
+    </div>
   )
 }
 
