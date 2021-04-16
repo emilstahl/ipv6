@@ -1,0 +1,707 @@
+[
+    {
+        "name": "Stofa",
+        "url": "https:\/\/stofa.dk",
+        "ipv6": true,
+        "comment": "Har leveret IPv6 til de f\u00f8rste erhvervskunder. H\u00e5ndterer foresp\u00f8rgsler case by case. Er i gang med at definere en plan for implementering af IPv6 som et standard produkt.",
+        "partial": true,
+        "sources": [
+            {
+                "date": "2017-03-06",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "EWII",
+        "url": "https:\/\/ewii.com\/privat\/fiberbredbaand",
+        "ipv6": false,
+        "comment": "Der er desv\u00e6rre ingen nyheder omkring IPv6 p\u00e5 nuv\u00e6rende tidspunkt.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2017-09-24",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Eniig",
+        "url": "https:\/\/eniig.dk",
+        "ipv6": true,
+        "comment": "Tilbyder Erhvervs Prof kunder IPv6. Vi har ikke endnu fastlagt nogle planer om at overgå til IPv6.Det vil komme på et tidspunkt, men det forventes ikke at ske inden 2022.",
+        "partial": true,
+        "sources": [
+            {
+                "date": "2020-07-06",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "TDC Erhverv",
+        "url": "https:\/\/tdc.dk",
+        "ipv6": true,
+        "comment": "Leverer IPv6 til erhverv p\u00e5 professionelle fiberl\u00f8sninger.",
+        "partial": true,
+        "business": true,
+        "sources": [
+            {
+                "date": "2016-04-06",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/ikjensen\/status\/575569892990193664"
+            }
+        ]
+    },
+    {
+        "name": "Telia",
+        "url": "https:\/\/www.telia.dk\/privat\/",
+        "ipv6": true,
+        "comment": "Leverer IPv6. Ikke alle routere er underst\u00f8ttet.",
+        "partial": true,
+        "sources": [
+            {
+                "date": "2015-03-11",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/TeliaDanmark\/status\/626304483937624064"
+            }
+        ]
+    },
+    {
+        "name": "Telenor",
+        "url": "https:\/\/www.telenor.dk",
+        "ipv6": false,
+        "comment": "Der er ikke specifikke planer for implementering af IPv6 i \u00f8jeblikket.",
+        "partial": true,
+        "sources": [
+            {
+                "date": "2020-05-27",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/Dpj_DBB\/status\/1265623450166734849"
+            }
+        ]
+    },
+    {
+        "name": "Telmore",
+        "url": "https:\/\/www.telmore.dk",
+        "ipv6": false,
+        "comment": "Vores netv\u00e6rk er teknisk set i stand til at tr\u00e6kke IPv6, men desv\u00e6rre er det ikke noget, som der bliver benyttet lige nu, da det vil kr\u00e6ve en stor indsats i samtlige systemer, at f\u00e5 implementeret. Dog er det naturligvis p\u00e5 vores radar, men vi kan desv\u00e6rre ikke give en tidshorisont.",
+        "partial": false,
+        "sources": [       
+            {
+                "date": "2018-10-26",
+                "name": "ISP",
+                "url": null
+            },
+            {
+                "date": "2015-03-10",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/TELMORE\/status\/575312863100866560"
+            }
+        ]
+    },
+    {
+        "name": "YouSee",
+        "url": "https:\/\/yousee.dk",
+        "ipv6": false,
+        "comment": "Det er ikke noget vi har planer om p\u00e5 nuv\u00e6rende tidspunkt",
+        "partial": false,
+        "private": true,
+        "sources": [
+            {
+                "date": "2018-06-17",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/YouSeeDK\/status\/1008294976982343685"
+            },
+            {
+                "date": "2018-03-15",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/YouSeeDK\/status\/974304133095284736"
+            },
+            {
+                "date": "2017-06-06",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/YouSeeDK\/status\/684093196025098245"
+            }
+        ]
+    },
+    {
+        "name": "DanskNet",
+        "url": "https:\/\/www.dansknet.dk",
+        "ipv6": true,
+        "comment": "Privatkunder m\u00e5 vente, vi har ingen planer om IPv6, da vi har fint med kapacitet til at tildele IPv4-adresser l\u00e6nge endnu. Klar til erhverv.",
+        "partial": true,
+        "sources": [
+            {
+                "date": "2018-10-02",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/stderrdk\/status\/1059215611916517376\n"
+            },
+            {
+                "date": "2018-06-21",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/stderrdk\/status\/1009563575311101952\n"
+            }
+
+        ]
+    },
+    {
+        "name": "Altibox",
+        "url": "https:\/\/www.altibox.dk",
+        "ipv6": true,
+        "comment": "Vi underst\u00f8tter IPv6rd.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2016-01-25",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Zen Systems (ejet af GlobalConnect)",
+        "url": "https:\/\/www.globalconnect.dk",
+        "ipv6": true,
+        "comment": "Vi er fuldt IPv6 klar og har allerede nogle kunder som k\u00f8rer dual stack. Leverer kun til erhvervskunder.",
+        "partial": false,
+        "business": true,
+        "sources": [
+            {
+                "date": "2013-09-30",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "GlobalConnect NN (tidl. Nianet)",
+        "url": "https:\/\/www.globalconnect.dk",
+        "ipv6": true,
+        "comment": "Vi underst\u00f8tter IPv6 (ikke p\u00e5 SE\/Stofa\u2019s net). Leverer kun til erhvervskunder.",
+        "partial": true,
+        "business": true,
+        "sources": [
+            {
+                "date": "2015-12-11",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Sentia",
+        "url": "https:\/\/sentia.com\/dk\/",
+        "ipv6": true,
+        "comment": "Vi tilbyder IPv6 til kunder der har specifikke trafikpakker. ",
+        "partial": true,
+        "business": true,
+        "sources": [
+            {
+                "date": "2016-02-14",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Energi Fyn",
+        "url": "https:\/\/www.energifyn.dk\/privat",
+        "ipv6": true,
+        "comment": "Underst\u00f8tter IPv6 i vores Erhverv Pro-produkt. Der g\u00e5r nok nogle \u00e5r endnu f\u00f8r vi tilbyder til privatkunder.",
+        "partial": true,
+        "sources": [
+            {
+                "date": "2016-05-27",
+                "name": "PDF",
+                "url": "https:\/\/www.energifyn.dk\/-\/media\/energifyndk\/ny-struktur\/dokumenter\/erhverv\/fibernet\/erhverv-fibernet_produktspecifikation-erhverv-pro_18-10-2017.ashx"
+            }
+        ]
+    },
+    {
+        "name": "Sydfyns Elforsyning",
+        "url": "https:\/\/www.sef.dk\/",
+        "ipv6": false,
+        "comment": "Overg\u00e5et til Stofa d. 1 maj 2016.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2016-05-01",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "AURA",
+        "url": "https:\/\/www.aura.dk",
+        "ipv6": false,
+        "comment": "Vi har umiddelbart den forn\u00f8dne infrastruktur til at underst\u00f8tte IPv6 - s\u00e5fremt dette bliver aktuelt. Vi har ikke for n\u00e6rverende planer om at indf\u00f8re IPv6 i vores net.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2018-10-26",
+                "name": "ISP",
+                "url": null
+            },
+            {
+                "date": "2016-12-21",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "bolig:net",
+        "url": "https:\/\/www.bolignet.dk",
+        "ipv6": false,
+        "comment": "Har omlagt netværk April 2021, fjernet IPv6 for en stor andel af kunderne. Forventer der vil gå måneder.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2021-04-14",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/kramse\/status\/1382277899684827138"
+            }
+        ]
+    },
+    {
+        "name": "Comflex",
+        "url": "http:\/\/comflex.dk",
+        "ipv6": false,
+        "comment": "Vi h\u00e5ber at kunne levere IPv6 p\u00e5 et tidspunkt, men har ingen tidshorisont.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2015-08-20",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Gigabit",
+        "url": "https:\/\/gigabit.dk",
+        "ipv6": true,
+        "comment": "Fuldt ud underst\u00f8ttet. Dual stack til alle, b\u00e5de privat og erhverv. \/48 prefix deligation.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2014-03-22",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "GlobalConnect",
+        "url": "https:\/\/www.globalconnect.dk",
+        "ipv6": true,
+        "comment": "Vi er fuldt ipv6 dualstack klar. \/48 prefix delegation. Leverer kun til erhvervskunder.",
+        "partial": false,
+        "business": true,
+        "sources": [
+            {
+                "date": "2015-05-13",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "3",
+        "url": "https:\/\/www.3.dk",
+        "ipv6": true,
+        "comment": "Den 29. november overgik alle vores og OiSTER's mobilabonnementkunder til IPv6\/dual stack, for det udstyr som underst\u00f8tter det.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2017-11-29",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/3Danmark\/status\/937997673281589248"
+            }
+        ]
+    },
+    {
+        "name": "Parknet",
+        "url": "https:\/\/parknet.dk",
+        "ipv6": false,
+        "comment": "M.h.t. dit sp\u00d8rgsm\u00e5l om IPv6 s\u00e5 er det noget vi har i de fremtidige planer. Om der g\u00e5r et \u00e5r eller to kan jeg ikke sige men det er på tegnebr\u00e6ttet.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2019-07-09",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "BornFiber",
+        "url": "https:\/\/bornfiber.dk",
+        "ipv6": true,
+        "comment": "Vi underst\u00F8tter fuldt dualstack til alle vores kunder, b\u00E5de til privat- og erhvervskunder.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2018-11-06",
+                "name": "ISP",
+                "url": null
+            },
+            {
+                "date": "2015-11-26",
+                "name": "Tweet",
+                "url": "https:\/\/twitter.com\/BornFiber\/status\/669818778356699137"
+            }
+        ]
+    },
+    {
+        "name": "Fibia",
+        "url": "https:\/\/www.fibia.dk",
+        "ipv6": false,
+        "comment": "Vi arbejder på at understøtte IPv6, dog er der ikke givet nogen tidshorisont endnu.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2021-04-08",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Skywire",
+        "url": "http:\/\/www.skywire.dk",
+        "ipv6": false,
+        "comment": "Vi har planer om at udbyde det, men har p\u00e5 nuv\u00e6rende tidspunkt ingen tidshorisont for det.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2018-10-29",
+                "name": "ISP",
+                "url": null
+            },
+            {
+                "date": "2015-11-30",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Kviknet",
+        "url": "https:\/\/www.kviknet.dk",
+        "ipv6": true,
+        "comment": "Vi underst\u00f8tter IPv6 p\u00e5 fiber til erhverv og boligforeninger samt til xDSL-kunder p\u00e5 eBSA platformen. Leverer IPv6 via Norlys Fiber.",
+        "partial": true,
+        "private": true,
+        "sources": [
+            {
+                "date": "2020-10-01",
+                "name": "ISP",
+                "url": "https://www.kviknet.dk/produktinfo/fiber_norlys"
+            },
+            {
+                "date": "2016-10-28",
+                "name": "ISP",
+                "url": "https:\/\/v2.dk\/1011318"
+            }
+        ]
+    },
+    {
+        "name": "Hiper",
+        "url": "https:\/\/www.hiper.dk",
+        "ipv6": true,
+        "comment": "Vil tildeler IPv6 til alle kunder p\u00e5 b\u00e5de xDSL og fiber. Vi h\u00e5ber ogs\u00e5 at kunne komme til at g\u00f8re det p\u00e5 coax inden for overskuelig fremtid, men det er vi desv\u00e6rre ikke selv herre over grundet platformens indretning.",
+        "partial": true,
+        "private": true,
+        "sources": [
+            {
+                "date": "2015-12-16",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Boxer",
+        "url": "https:\/\/www.boxertv.dk",
+        "ipv6": false,
+        "comment": "For nu har TDC rigeligt IP-adresser. S\u00e5fremt TDC Privat beslutter at indf\u00f8re IPv6, s\u00e5 kommer Boxer Bredb\u00e5nd ogs\u00e5 til at f\u00e5 det.",
+        "partial": false,
+        "private": true,
+        "sources": [
+            {
+                "date": "2016-01-25",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Lollands.net",
+        "url": "https:\/\/lollands.net",
+        "ipv6": true,
+        "comment": "Lollands.Net har f\u00e5et tildelt \/29 IPv6 adresser som bliver tildelt vores kunder. ",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2016-02-28",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "TD-K ",
+        "url": "https:\/\/td-k.dk",
+        "ipv6": true,
+        "comment": "Underst\u00f8tter IPv6. Leverer kun til erhverv.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2016-02-27",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Dansk Kabel TV",
+        "url": "https:\/\/www.danskkabeltv.dk",
+        "ipv6": false,
+        "comment": "IPv6 i vores bolignet er noget vi tester og bestr\u00e6ber os p\u00e5 at kunne levere i fremtiden. Ingen tidshorisont.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2015-08-23",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "ipvision",
+        "url": "https:\/\/ipvision.dk",
+        "ipv6": true,
+        "comment": "Alle vores kunder kan f\u00e5 IPv6 adresser. Leverer kun til erhverv.",
+        "partial": false,
+        "business": true,
+        "sources": [
+            {
+                "date": "2016-02-27",
+                "name": "Kunde",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Net1",
+        "url": "https:\/\/www.net1.dk",
+        "ipv6": true,
+        "comment": "Net1 netv\u00e6rket er IPv6 ready. Det er testet og godkendt til at supportere IPv6. IPv6 kan tilbydes til erhvervskunder p\u00e5 foresp\u00f8rgsel.",
+        "partial": true,
+        "business": true,
+        "sources": [
+            {
+                "date": "2017-10-31",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "K-Net",
+        "url": "https:\/\/k-net.dk",
+        "ipv6": true,
+        "comment": "IPv6 er under test pt.",
+        "partial": true,
+        "private": true,
+        "sources": [
+            {
+                "date": "2018-10-24",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Mira Internet",
+        "url": "https:\/\/www.mira.dk\/",
+        "ipv6": false,
+        "comment": "Vi har p.t. ingen aktuelle planer om implementering af IPV6.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2016-03-15",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Fiberby",
+        "url": "https:\/\/fiberby.dk",
+        "ipv6": true,
+        "comment": "Vi tilbyder statiske IPv6 til erhvervskunder og privatkunder ved foresp\u00f8rgsel; For privat kunder foruds\u00e6ttes samtidig statisk offentlig IPv4-adresse.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2020-04-24",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "NEF Fonden",
+        "url": "https:\/\/nef.dk",
+        "ipv6": false,
+        "comment": "Vi kan endnu ikke tilbyde IPv6, og har for indev\u00e6rende heller ikke eftersp\u00f8rgsel fra vores kunder. P.t. forventer vi at kunne levere det i l\u00f8bet af ca. 2 \u00e5r.",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2016-07-07",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Andels.net",
+        "url": "https:\/\/andels.net",
+        "ipv6": false,
+        "comment": "Vi har ikke nogen planer om at levere det, da der er for få hjemmesider der understøtter det i dag.",
+        "partial": false,
+        "private": true,
+        "sources": [
+            {
+                "date": "2020-09-21",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Forskningsnettet (DeiC)",
+        "url": "https:\/\/www.deic.dk",
+        "ipv6": true,
+        "comment": "IPv6 er implementeret p\u00e5 forskningsnettets produktionsnet, IPv4 og IPv6 k\u00f8rer dual-stack i backbone og i forbindelserne til NORDUnet.",
+        "partial": false,
+        "business": true,
+        "sources": [
+            {
+                "date": "2017-02-06",
+                "name": "ISP",
+                "url": "https:\/\/www.deic.dk\/da\/IPv6"
+            }
+        ]
+    },
+    {
+        "name": "ASOM-Net",
+        "url": "https:\/\/asom-net.dk",
+        "ipv6": false,
+        "comment": "Vi har IPv6 k\u00f8rende i backbone og test-setup, men ikke live. Vi forventer dual-stack med \/48 prefix-delegation til alle vores kunder og h\u00e5ber p\u00e5 at g\u00e5 live tidligst  Q2 2018. Leverer kun til private.",
+        "partial": true,
+        "private": true,
+        "sources": [
+            {
+                "date": "2017-10-30",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Bolignet-Aarhus",
+        "url": "http:\/\/bolignet-aarhus.dk",
+        "ipv6": false,
+        "comment": "Vi tester IPv6 i backbone. Det tilbydes ikke til nogle kunder p\u00e5 nuv\u00e6rende tidspunkt. Vi har ingen umiddelbare planer for udrulning til private.\n ",
+        "partial": true,
+        "private": true,
+        "sources": [
+            {
+                "date": "2017-04-21",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Kalundborgegnens Antennelaug",
+        "url": "https:\/\/ka-net.dk\/",
+        "ipv6": true,
+        "comment": "Kalundborgegnens Antennelaug k\u00f8rer IPv6 Dual stack helt ud til slutbrugeren.",
+        "partial": false,
+        "private": true,
+        "sources": [
+            {
+                "date": "2017-06-06",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "Yderholm Antenneforening",
+        "url": "http:\/\/yderholm-antenneforening.dk",
+        "ipv6": true,
+        "comment": "Yderholm Antenneforening har underst\u00F8ttet IPv6 siden november 2016 og tilbyder en \/60 til de af vores kunder der m\u00E5tte \u00F8nske dette.",
+        "partial": false,
+        "private": true,
+        "sources": [
+            {
+                "date": "2019-03-24",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },  
+        {
+        "name": "Fastspeed",
+        "url": "https:\/\/fastspeed.dk",
+        "ipv6": true,
+        "comment": "Vi k\u00F8rer med IPv6 p\u00E5 vores fiberforbindelser. Der arbejdes p\u00E5 at f\u00E5 IPv6 p\u00E5 vores coaxforbindelser.",
+        "partial": true,
+        "private": true,
+        "sources": [
+            {
+                "date": "2020-04-28",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "SEF FIBER",
+        "url": "https:\/\/sef.dk",
+        "ipv6": true,
+        "comment": "Se Stofa (Kommentar: SEF Fiber har Stofa som udbyder og det er dem der varetager al drift af fibernettet. Det er derfor Stofa du bør kontakte for at få svar på dit spørgsmål.)",
+        "partial": true,
+        "private": true,
+        "sources": [
+            {
+                "date": "2021-02-20",
+                "name": "ISP",
+                "url": null
+            }
+        ]
+    },
+    {
+        "name": "KAZOOM",
+        "url": "https:\/\/www.kazoom.dk",
+        "ipv6": false,
+        "comment": "IPv6 adresser er ikke noget, KAZOOM har mulighed for at tildele",
+        "partial": false,
+        "sources": [
+            {
+                "date": "2020-12-30",
+                "name": "ISP",
+                "url": "https:\/\/www.kazoom.dk\/sporgsmal-og-svar-opsaetning-og-installation\/kan-jeg-fa-en-fast-ip-adresse"
+            }
+        ]
+    }
+]
