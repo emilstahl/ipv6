@@ -1,6 +1,7 @@
 import * as React      from "react";
 import HeaderComponent from '../components/Header/component';
 import DoIHaveIPv6     from '../components/DoIHaveIPv6/component';
+import Footer          from '../components/Footer';
 import { graphql }     from 'gatsby';
 import 'gridjs/dist/theme/mermaid.min.css';
 import { _, Grid }     from 'gridjs-react';
@@ -36,7 +37,6 @@ const styles = {
 
   ispList: {
     marginTop: '120px',
-    marginBottom: '60px',
     a: {
       textDecoration: 'none',
       color: '#333',
@@ -238,6 +238,7 @@ const IndexPage = ({ data }) => {
           />
         </div>
       </section>
+      <Footer />
 
     </div>
   )
