@@ -97,16 +97,15 @@ const IndexPage = ({ data }) => {
         <div className="container">
           <h1 style={styles.hero.heading}>Vi er løbet tør for IPv4-adresser...</h1>
           <p>
-            Derfor er det på tide, at internetudbyderne giver deres kunder den nye version, IPv6 adresser.<br/>
+            Derfor er det på tide, at internetudbyderne giver deres kunder den nye version, IPv6-adresser.<br/>
             Heldigvis har nogle udbydere allerede gjort det, andre er i gang, og så er der den klassiske <em>ingen
             tidshorisont</em>.
           </p>
 
           <blockquote style={styles.blockquote}>
             <p>Der er indført mange forbedringer i IPv6, men den største forskel er størrelsen af adressefeltet, som er
-              på 128 bit mod kun 32 bit i den gamle IPv4 standard. Udvidelsen af adressefeltet giver teoretisk mulighed
-              for op til 3,4 × 10<sup>38</sup> (340 sekstillioner) adresser, som kan sammenlignes med, at der i IPv4 kun
-              var mulighed for omkring 4 milliarder adresser.</p>
+              på 128 bit mod kun 32 bit i den gamle IPv4-standard. Udvidelsen af adressefeltet giver teoretisk mulighed
+              for op til 3,4 × 10<sup>38</sup> (340 sekstillioner) adresser - samlignet med IPv4, som kun havde 4 millarder adresser.</p>
             <footer className="blockquote-footer">
               &ndash; <a style={styles.blockquote.link} href="https://da.wikipedia.org/wiki/IPv6" target="_blank"
                          rel="noreferrer">
