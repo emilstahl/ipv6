@@ -108,6 +108,10 @@ const IndexPage = ({ data }) => {
               title="Delvis IPv6-understøttelse betyder at nogle kunder kan få IPv6. Det kan f.eks. være erhvervskunder, fiberkunder eller lignende.">delvis
               IPv6-understøttelse</abbr>: {ispData.filter(x => x.ipv6 === true && x.partial === true).length} ({Number(ispData.filter(x => x.ipv6 === true && x.partial === true).length / ispData.length * 100).toFixed(0).toString()}%)
             </p>
+            <p>Internetudbydere uden <abbr
+              title="Ingen understøttelse betyder at de ikke tilbyder IPv6 til nogle kunder på nuværende tidspunkt.">
+              IPv6-understøttelse</abbr>: {ispData.filter(x => x.ipv6 === false).length} ({Number(ispData.filter(x => x.ipv6 === false).length / ispData.length * 100).toFixed(0).toString()}%)
+            </p>
           </div>
 
           <Grid
