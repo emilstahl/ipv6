@@ -1,10 +1,35 @@
+@import '../../styles/globals.scss';
+
 .DoIHaveIPv6 {
+    max-width: 95vw;
+    @media screen and (max-width: $breakpoint-md) {
+        width: 420px;
+        text-align: center;
+        padding-top: calc(3rem + 40px + 15px);
+
+        .statusIcon {
+            text-align: center;
+            width: 100%;
+            left: 0;
+            right: 0!important;
+            top: 25px!important;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        --height: 365px;
+        width: 340px;
+        margin-top: calc(var(--height)/7*-1);
+    }
+
+    --height: 300px;
+
     width: 640px;
-    height: 420px;
+    height: var(--height);
     background-color: white;
 
     margin: 0 auto;
-    margin-top: -210px;
+    margin-top: calc(var(--height)/2*-1);
     
     padding: 3rem;
     border-radius: 4px;

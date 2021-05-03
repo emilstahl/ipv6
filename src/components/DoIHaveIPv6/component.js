@@ -51,12 +51,6 @@ const DoIHaveIPv6 = () => {
                     {ipv4 && (<>Din IPv4-adresse er <b>{ipv4}</b><br/></>)}
                     {isp && (<>Din udbyder er <b>{isp}</b><br/></>)}
                 </p>
-
-                <p className="wannaShare">
-                    Vil du dele dit resultat anonymt til vores statistik? Vi indsamler kun om du har IPv6, din udbyder, din IP-adresses lokation og netværkskategori.
-                    <br/>
-                    <a href="#" onClick={sendData} className="btn">Send anonymt data til statistik</a>
-                </p>
             </>)}
         </div>
     )
