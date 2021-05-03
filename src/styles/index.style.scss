@@ -1,0 +1,51 @@
+@import '../styles/globals.scss';
+
+.hero {
+    background-color: #5CB85C;
+    width: 100%;
+    height: 590px;
+
+    @media screen and (max-width: $breakpoint-md) {
+        height: 670px;
+    }
+
+    display: block;
+    padding-top: 4rem;
+    color: white;
+
+    h1 {
+      margin: 0;
+      font-size: 32pt;
+    }
+}
+
+blockquote {
+    color: white;
+    padding: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    
+    a {
+        color: white;
+        padding-left: 1em;
+        position: relative;
+        display: block;
+
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:before {
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            width: 2px;
+            height: 100%;
+            background-color: #ffffff;
+            content: " ";
+        }
+    }
+}
+

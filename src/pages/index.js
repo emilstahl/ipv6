@@ -1,40 +1,17 @@
 import * as React      from "react";
 import HeaderComponent from '../components/Header/component';
 import DoIHaveIPv6     from '../components/DoIHaveIPv6/component';
-import Footer          from '../components/Footer';
+import Footer          from '../components/Footer/component';
 import { graphql }     from 'gatsby';
 import 'gridjs/dist/theme/mermaid.min.css';
 import { _, Grid }     from 'gridjs-react';
 import Helmet          from "react-helmet";
 
+import '../styles/index.style.scss';
+
 import '../services/checkipv6status'
 
 const styles = {
-  hero: {
-    backgroundColor: '#5CB85C',
-    width: '100%',
-    height: '590px',
-    display: 'block',
-    paddingTop: '4rem',
-    color: 'white',
-
-    heading: {
-      margin: 0,
-      fontSize: '32pt',
-    }
-
-  },
-
-  blockquote: {
-    color: 'white',
-    padding: '0px',
-    marginLeft: '0',
-    marginRight: '0',
-    link: {
-      color: 'white'
-    }
-  },
-
   ispList: {
     marginTop: '120px',
     a: {
@@ -93,21 +70,21 @@ const IndexPage = ({ data }) => {
         <meta name="description" content="IPv6-adresse.dk er samlingspunktet for den danske indførsel af den nye internet-protokol, IPv6. Siden er et open source projekt, og alle kan bidrage til siden!" />
       </Helmet>
       <HeaderComponent/>
-      <div className="hero" style={styles.hero}>
+      <div className="hero">
         <div className="container">
-          <h1 style={styles.hero.heading}>Vi er løbet tør for IPv4-adresser...</h1>
+          <h1>Vi er løbet tør for IPv4-adresser...</h1>
           <p>
             Derfor er det på tide, at internetudbyderne giver deres kunder den nye version, IPv6-adresser.<br/>
             Heldigvis har nogle udbydere allerede gjort det, andre er i gang, og så er der den klassiske <em>ingen
             tidshorisont</em>.
           </p>
 
-          <blockquote style={styles.blockquote}>
+          <blockquote>
             <p>Der er indført mange forbedringer i IPv6, men den største forskel er størrelsen af adressefeltet, som er
               på 128 bit mod kun 32 bit i den gamle IPv4-standard. Udvidelsen af adressefeltet giver teoretisk mulighed
               for op til 3,4 × 10<sup>38</sup> (340 sekstillioner) adresser - samlignet med IPv4, som kun havde 4 millarder adresser.</p>
             <footer className="blockquote-footer">
-              &ndash; <a style={styles.blockquote.link} href="https://da.wikipedia.org/wiki/IPv6" target="_blank"
+              <a href="https://da.wikipedia.org/wiki/IPv6" target="_blank"
                          rel="noreferrer">
               <cite title="Wikipedia">Wikipedia</cite>
             </a>
@@ -118,7 +95,7 @@ const IndexPage = ({ data }) => {
 
       <DoIHaveIPv6/>
 
-      <section id={"ispList"} style={styles.ispList}>
+      <section id="ispList" className="ispList" style={styles.ispList}>
         <div className="container">
           <h2>Liste over danske udbydere</h2>
           <div className="stats">
@@ -237,7 +214,7 @@ const IndexPage = ({ data }) => {
           />
         </div>
       </section>
-      <Footer />
+      <Footer className="footer" />
 
     </div>
   )
