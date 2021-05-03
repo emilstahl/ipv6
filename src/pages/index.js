@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
           <blockquote>
             <p>Der er indført mange forbedringer i IPv6, men den største forskel er størrelsen af adressefeltet, som er
               på 128 bit mod kun 32 bit i den gamle IPv4-standard. Udvidelsen af adressefeltet giver teoretisk mulighed
-              for op til 3,4 × 10<sup>38</sup> (340 sekstillioner) adresser - samlignet med IPv4, som kun havde 4 millarder adresser.</p>
+              for op til 3,4 × 10<sup>38</sup> (340 sekstillioner) adresser - sammenlignet med IPv4, som kun havde 4 millarder adresser.</p>
             <footer className="blockquote-footer">
               <a href="https://da.wikipedia.org/wiki/IPv6" target="_blank"
                          rel="noreferrer">
