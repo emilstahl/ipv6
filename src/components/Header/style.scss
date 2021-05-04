@@ -1,0 +1,21 @@
+@import '../../styles/globals';
+
+.header {
+    display: block;
+    margin: 0;
+    width: 100%;
+    padding: 2rem;
+    
+    box-shadow: 0 4px 4px rgba(#000, .2);
+
+    font-family: $font-stack;
+    font-size: 16pt;
+    font-weight: bold;
+    
+    z-index: 3;
+    position: relative;
+    
+    .container {
+        padding: 0!important;
+    }
+}

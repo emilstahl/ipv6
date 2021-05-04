@@ -1,0 +1,42 @@
+@import '../../styles/globals.scss';
+
+.footer {
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  .sep {
+    margin-left: .25rem;
+    margin-right: .25rem;
+  }
+  
+  &.container {
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+    font-size: 80%;
+    max-width: 95vw;
+  }
+  
+  .grid {
+    @media screen and (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      text-align: center;
+  
+      .sep {
+        visibility: collapse;
+        height: 4px;
+        display: block;
+      }
+  
+      .right {
+        text-align: center!important;
+      }
+    }
+    .right {
+      text-align: right;
+    }
+    display: flex;
+    justify-content: space-between;
+  }
+}
