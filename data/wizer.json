@@ -1,14 +1,1 @@
-{
-   "name":"Wizer",
-   "url":"https://wizer.dk",
-   "ipv6":true,
-   "comment":"Tidligere Gigabit. Fuldt ud understøttet. Dual stack til alle, både privat og erhverv. /48 prefix deligation.",
-   "partial":false,
-   "sources":[
-      {
-         "date":"2014-03-22",
-         "name":"ISP",
-         "url":null
-      }
-   ]
-}
+{"name":"Wizer", "url":"https://wizer.dk", "ipv6":true, "comment":"Tidligere Gigabit. Fuldt ud understøttet. Dual stack til alle, både privat og erhverv. /48 prefix deligation.", "partial":false,"sources":[{"date":"22/03-2014","name":"ISP","url":null}]}
