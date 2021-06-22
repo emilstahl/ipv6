@@ -6,6 +6,7 @@ import { graphql }     from 'gatsby';
 import 'gridjs/dist/theme/mermaid.min.css';
 import { _, Grid }     from 'gridjs-react';
 import Helmet          from "react-helmet";
+import { format }      from 'date-fns'
 
 import '../styles/index.style.scss';
 
@@ -196,7 +197,7 @@ const IndexPage = ({ data }) => {
                 id: 'sources',
                 name: 'Opdateret',
                 formatter: cell => {
-                  return `${cell[0].date}`
+                  return `${format(new Date(cell[0].date), 'dd/MM/yyyy')}`
                 },
                 width: '60px',
               }
