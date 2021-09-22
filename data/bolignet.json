@@ -1,1 +1,1 @@
-{"name":"bolig:net","url":"https://www.bolignet.dk","ipv6":false,"comment":"Har omlagt netværk April 2021, fjernet IPv6 for en stor andel af kunderne. Forventer der vil gå måneder.","partial":false,"sources":[{"date":"2021-04-14","name":"Tweet","url":"https://twitter.com/kramse/status/1382277899684827138"}]}
+{"name":"bolig:net","url":"https://www.bolignet.dk","ipv6":true,"comment":"Understøtter IPv6 Prefix Delegation.","partial":false,"sources":[{"date":"2021-04-23","name":"Tweet","url":"https://twitter.com/kramse/status/1385642419153215496"}]}
