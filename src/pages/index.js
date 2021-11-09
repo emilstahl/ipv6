@@ -135,7 +135,7 @@ const IndexPage = ({ data }) => {
 
                   return _(<>
                     <a style={styles.ispList.a} href={url} title={cell + " (nyt vindue)"} target={"_blank"} rel={"noreferrer"}>
-                      <img style={styles.ispList.img} height={"22px"} src={`https://favicons.api.mgx.dk/${hostname}/40`}
+                      <img style={styles.ispList.img} height={"22px"} src={`https://www.google.com/s2/favicons?sz=128&domain_url=${hostname}`}
                            alt={cell + " logo"}/>
                       <span style={styles.ispList.span}>
                              {cell}
