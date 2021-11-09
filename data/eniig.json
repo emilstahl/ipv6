@@ -1,1 +1,8 @@
-{"name":"Eniig","url":"https://eniig.dk","ipv6":true,"comment":"Tilbyder Erhvervs Prof kunder IPv6. Vi har ikke endnu fastlagt nogle planer om at overgå til IPv6.Det vil komme på et tidspunkt, men det forventes ikke at ske inden 2022.","partial":true,"sources":[{"date":"2020-07-06","name":"ISP","url":null}]}
+{
+  "name": "Eniig",
+  "url": "https://eniig.dk",
+  "ipv6": true,
+  "comment": "Tilbyder Erhvervs Prof kunder IPv6. Vi har ikke endnu fastlagt nogle planer om at overgå til IPv6.Det vil komme på et tidspunkt, men det forventes ikke at ske inden 2022.",
+  "partial": true,
+  "sources": [{ "date": "2020-07-06", "name": "ISP", "url": null }]
+}

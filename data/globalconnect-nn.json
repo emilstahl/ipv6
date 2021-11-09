@@ -1,1 +1,9 @@
-{"name":"GlobalConnect NN (tidl. Nianet)","url":"https://www.globalconnect.dk","ipv6":true,"comment":"Vi understøtter IPv6 (ikke på SE/Stofa’s net). Leverer kun til erhvervskunder.","partial":true,"business":true,"sources":[{"date":"2015-12-11","name":"ISP","url":null}]}
+{
+  "name": "GlobalConnect NN (tidl. Nianet)",
+  "url": "https://www.globalconnect.dk",
+  "ipv6": true,
+  "comment": "Vi understøtter IPv6 (ikke på SE/Stofa’s net). Leverer kun til erhvervskunder.",
+  "partial": true,
+  "business": true,
+  "sources": [{ "date": "2015-12-11", "name": "ISP", "url": null }]
+}

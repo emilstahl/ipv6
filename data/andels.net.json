@@ -1,1 +1,9 @@
-{"name":"Andels.net","url":"https://andels.net","ipv6":false,"comment":"Vi har ikke nogen planer om at levere det, da der er for få hjemmesider der understøtter det i dag.","partial":false,"private":true,"sources":[{"date":"2020-09-21","name":"ISP","url":null}]}
+{
+  "name": "Andels.net",
+  "url": "https://andels.net",
+  "ipv6": false,
+  "comment": "Vi har ikke nogen planer om at levere det, da der er for få hjemmesider der understøtter det i dag.",
+  "partial": false,
+  "private": true,
+  "sources": [{ "date": "2020-09-21", "name": "ISP", "url": null }]
+}

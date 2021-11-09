@@ -1,1 +1,8 @@
-{"name":"Fiberby","url":"https://fiberby.dk","ipv6":true,"comment":"Vi tilbyder statiske IPv6 til erhvervskunder og privatkunder ved forespørgsel; For privat kunder forudsættes samtidig statisk offentlig IPv4-adresse.","partial":false,"sources":[{"date":"2020-04-24","name":"ISP","url":null}]}
+{
+  "name": "Fiberby",
+  "url": "https://fiberby.dk",
+  "ipv6": true,
+  "comment": "Vi tilbyder statiske IPv6 til erhvervskunder og privatkunder ved forespørgsel; For privat kunder forudsættes samtidig statisk offentlig IPv4-adresse.",
+  "partial": false,
+  "sources": [{ "date": "2020-04-24", "name": "ISP", "url": null }]
+}

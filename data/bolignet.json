@@ -1,1 +1,14 @@
-{"name":"bolig:net","url":"https://www.bolignet.dk","ipv6":true,"comment":"Understøtter IPv6 Prefix Delegation.","partial":false,"sources":[{"date":"2021-04-23","name":"Tweet","url":"https://twitter.com/kramse/status/1385642419153215496"}]}
+{
+  "name": "bolig:net",
+  "url": "https://www.bolignet.dk",
+  "ipv6": true,
+  "comment": "Understøtter IPv6 Prefix Delegation.",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2021-04-23",
+      "name": "Tweet",
+      "url": "https://twitter.com/kramse/status/1385642419153215496"
+    }
+  ]
+}

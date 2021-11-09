@@ -1,1 +1,9 @@
-{"name":"SEF FIBER","url":"https://sef.dk","ipv6":true,"comment":"Se Stofa (Kommentar: SEF Fiber har Stofa som udbyder og det er dem der varetager al drift af fibernettet. Det er derfor Stofa du bør kontakte for at få svar på dit spørgsmål.)","partial":true,"private":true,"sources":[{"date":"2021-02-20","name":"ISP","url":null}]}
+{
+  "name": "SEF FIBER",
+  "url": "https://sef.dk",
+  "ipv6": true,
+  "comment": "Se Stofa (Kommentar: SEF Fiber har Stofa som udbyder og det er dem der varetager al drift af fibernettet. Det er derfor Stofa du bør kontakte for at få svar på dit spørgsmål.)",
+  "partial": true,
+  "private": true,
+  "sources": [{ "date": "2021-02-20", "name": "ISP", "url": null }]
+}
