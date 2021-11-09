@@ -1,1 +1,8 @@
-{"name":"Stofa","url":"https://stofa.dk","ipv6":true,"comment":"Har leveret IPv6 til de første erhvervskunder. Håndterer forespørgsler case by case. Er i gang med at definere en plan for implementering af IPv6 som et standard produkt.","partial":true,"sources":[{"date":"2017-03-06","name":"ISP","url":null}]}
+{
+  "name": "Stofa",
+  "url": "https://stofa.dk",
+  "ipv6": true,
+  "comment": "Har leveret IPv6 til de første erhvervskunder. Håndterer forespørgsler case by case. Er i gang med at definere en plan for implementering af IPv6 som et standard produkt.",
+  "partial": true,
+  "sources": [{ "date": "2017-03-06", "name": "ISP", "url": null }]
+}

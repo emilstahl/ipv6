@@ -1,1 +1,8 @@
-{"name":"Lollands.net","url":"https://lollands.net","ipv6":true,"comment":"Lollands.Net har fået tildelt /29 IPv6 adresser som bliver tildelt vores kunder. ","partial":false,"sources":[{"date":"2016-02-28","name":"ISP","url":null}]}
+{
+  "name": "Lollands.net",
+  "url": "https://lollands.net",
+  "ipv6": true,
+  "comment": "Lollands.Net har fået tildelt /29 IPv6 adresser som bliver tildelt vores kunder. ",
+  "partial": false,
+  "sources": [{ "date": "2016-02-28", "name": "ISP", "url": null }]
+}

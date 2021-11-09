@@ -1,1 +1,9 @@
-{"name":"Sentia","url":"https://sentia.com/dk/","ipv6":true,"comment":"Vi tilbyder IPv6 til kunder der har specifikke trafikpakker. ","partial":true,"business":true,"sources":[{"date":"2016-02-14","name":"ISP","url":null}]}
+{
+  "name": "Sentia",
+  "url": "https://sentia.com/dk/",
+  "ipv6": true,
+  "comment": "Vi tilbyder IPv6 til kunder der har specifikke trafikpakker. ",
+  "partial": true,
+  "business": true,
+  "sources": [{ "date": "2016-02-14", "name": "ISP", "url": null }]
+}

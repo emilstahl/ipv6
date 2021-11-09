@@ -1,1 +1,14 @@
-{"name":"Energi Fyn","url":"https://www.energifyn.dk/privat","ipv6":true,"comment":"Understøtter IPv6 i vores Erhverv Pro-produkt. Der går nok nogle år endnu før vi tilbyder til privatkunder.","partial":true,"sources":[{"date":"2016-05-27","name":"ISP","url":"https://www.energifyn.dk/erhverv/fibernet/fiberprodukter-til-erhverv/tillaegsprodukter/"}]}
+{
+  "name": "Energi Fyn",
+  "url": "https://www.energifyn.dk/privat",
+  "ipv6": true,
+  "comment": "Understøtter IPv6 i vores Erhverv Pro-produkt. Der går nok nogle år endnu før vi tilbyder til privatkunder.",
+  "partial": true,
+  "sources": [
+    {
+      "date": "2016-05-27",
+      "name": "ISP",
+      "url": "https://www.energifyn.dk/erhverv/fibernet/fiberprodukter-til-erhverv/tillaegsprodukter/"
+    }
+  ]
+}

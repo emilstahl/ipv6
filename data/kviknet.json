@@ -1,1 +1,16 @@
-{"name":"Kviknet","url":"https://www.kviknet.dk","ipv6":true,"comment":"Vi understøtter IPv6 på fiber til erhverv og boligforeninger samt til xDSL-kunder på eBSA platformen. Leverer IPv6 via Norlys Fiber.","partial":true,"private":true,"sources":[{"date":"2020-10-01","name":"ISP","url":"https://www.kviknet.dk/produktinfo/fiber_norlys"},{"date":"2016-10-28","name":"ISP","url":"https://v2.dk/1011318"}]}
+{
+  "name": "Kviknet",
+  "url": "https://www.kviknet.dk",
+  "ipv6": true,
+  "comment": "Vi understøtter IPv6 på fiber til erhverv og boligforeninger samt til xDSL-kunder på eBSA platformen. Leverer IPv6 via Norlys Fiber.",
+  "partial": true,
+  "private": true,
+  "sources": [
+    {
+      "date": "2020-10-01",
+      "name": "ISP",
+      "url": "https://www.kviknet.dk/produktinfo/fiber_norlys"
+    },
+    { "date": "2016-10-28", "name": "ISP", "url": "https://v2.dk/1011318" }
+  ]
+}

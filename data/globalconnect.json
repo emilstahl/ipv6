@@ -1,1 +1,9 @@
-{"name":"GlobalConnect","url":"https://www.globalconnect.dk","ipv6":true,"comment":"Vi er fuldt ipv6 dualstack klar. /48 prefix delegation. Leverer kun til erhvervskunder.","partial":false,"business":true,"sources":[{"date":"2015-05-13","name":"ISP","url":null}]}
+{
+  "name": "GlobalConnect",
+  "url": "https://www.globalconnect.dk",
+  "ipv6": true,
+  "comment": "Vi er fuldt ipv6 dualstack klar. /48 prefix delegation. Leverer kun til erhvervskunder.",
+  "partial": false,
+  "business": true,
+  "sources": [{ "date": "2015-05-13", "name": "ISP", "url": null }]
+}

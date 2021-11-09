@@ -1,1 +1,19 @@
-{"name":"Hiper","url":"https://www.hiper.dk","ipv6":true,"comment":"[...] Hiper understøtter IPv6 på både DSL- og fiberforbindelser, men desværre endnu ikke på coax, da det ikke er understøttet af TDC NET.","partial":true,"sources":[{"date":"2021-06-21","name":"Tweet","url":"https://twitter.com/stderrdk/status/1059215611916517376\n"},{"date":"2021-06-21","name":"Tweet","url":"https://twitter.com/Nuudaydk/status/1406976008301973511"}]}
+{
+  "name": "Hiper",
+  "url": "https://www.hiper.dk",
+  "ipv6": true,
+  "comment": "[...] Hiper understøtter IPv6 på både DSL- og fiberforbindelser, men desværre endnu ikke på coax, da det ikke er understøttet af TDC NET.",
+  "partial": true,
+  "sources": [
+    {
+      "date": "2021-06-21",
+      "name": "Tweet",
+      "url": "https://twitter.com/stderrdk/status/1059215611916517376\n"
+    },
+    {
+      "date": "2021-06-21",
+      "name": "Tweet",
+      "url": "https://twitter.com/Nuudaydk/status/1406976008301973511"
+    }
+  ]
+}

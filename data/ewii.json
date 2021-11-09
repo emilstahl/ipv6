@@ -1,1 +1,8 @@
-{"name":"EWII","url":"https://ewii.com/privat/fiberbredbaand","ipv6":false,"comment":"Der er desværre ingen nyheder omkring IPv6 på nuværende tidspunkt.","partial":false,"sources":[{"date":"2017-09-24","name":"ISP","url":null}]}
+{
+  "name": "EWII",
+  "url": "https://ewii.com/privat/fiberbredbaand",
+  "ipv6": false,
+  "comment": "Der er desværre ingen nyheder omkring IPv6 på nuværende tidspunkt.",
+  "partial": false,
+  "sources": [{ "date": "2017-09-24", "name": "ISP", "url": null }]
+}

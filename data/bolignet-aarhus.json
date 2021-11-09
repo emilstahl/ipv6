@@ -1,1 +1,9 @@
-{"name":"Bolignet-Aarhus","url":"http://bolignet-aarhus.dk","ipv6":false,"comment":"Vi tester IPv6 i backbone. Det tilbydes ikke til nogle kunder på nuværende tidspunkt. Vi har ingen umiddelbare planer for udrulning til private.\n ","partial":true,"private":true,"sources":[{"date":"2017-04-21","name":"ISP","url":null}]}
+{
+  "name": "Bolignet-Aarhus",
+  "url": "http://bolignet-aarhus.dk",
+  "ipv6": false,
+  "comment": "Vi tester IPv6 i backbone. Det tilbydes ikke til nogle kunder på nuværende tidspunkt. Vi har ingen umiddelbare planer for udrulning til private.\n ",
+  "partial": true,
+  "private": true,
+  "sources": [{ "date": "2017-04-21", "name": "ISP", "url": null }]
+}

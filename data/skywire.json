@@ -1,1 +1,11 @@
-{"name":"Skywire","url":"http://www.skywire.dk","ipv6":false,"comment":"Vi har planer om at udbyde det, men har på nuværende tidspunkt ingen tidshorisont for det.","partial":false,"sources":[{"date":"2018-10-29","name":"ISP","url":null},{"date":"2015-11-30","name":"ISP","url":null}]}
+{
+  "name": "Skywire",
+  "url": "http://www.skywire.dk",
+  "ipv6": false,
+  "comment": "Vi har planer om at udbyde det, men har på nuværende tidspunkt ingen tidshorisont for det.",
+  "partial": false,
+  "sources": [
+    { "date": "2018-10-29", "name": "ISP", "url": null },
+    { "date": "2015-11-30", "name": "ISP", "url": null }
+  ]
+}

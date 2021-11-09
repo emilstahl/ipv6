@@ -1,1 +1,14 @@
-{"name":"Telia","url":"https://www.telia.dk/privat/","ipv6":true,"comment":"Leverer IPv6. Ikke alle routere er understøttet.","partial":true,"sources":[{"date":"2015-03-11","name":"Tweet","url":"https://twitter.com/TeliaDanmark/status/626304483937624064"}]}
+{
+  "name": "Telia",
+  "url": "https://www.telia.dk/privat/",
+  "ipv6": true,
+  "comment": "Leverer IPv6. Ikke alle routere er understøttet.",
+  "partial": true,
+  "sources": [
+    {
+      "date": "2015-03-11",
+      "name": "Tweet",
+      "url": "https://twitter.com/TeliaDanmark/status/626304483937624064"
+    }
+  ]
+}
