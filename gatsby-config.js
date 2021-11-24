@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "IPv6-adresse.dk",
-    siteUrl: 'https://www.ipv6-adresse.dk'
+    siteUrl: 'https://ipv6-adresse.dk'
   },
   plugins: [
     "gatsby-plugin-sass",
