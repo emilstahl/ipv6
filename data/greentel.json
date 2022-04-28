@@ -1,0 +1,13 @@
+{
+  "name": "Greentel",
+  "url": "https://www.greentel.dk",
+  "ipv6": false,
+  "comment": "Telia (udbyderen) har desværre ikke nogen tidshorisont for det endnu.",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2022-04-26",
+      "name": "ISP",
+    }
+  ]
+}
