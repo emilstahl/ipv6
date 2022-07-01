@@ -2,7 +2,7 @@
   "name": "Fastspeed (og JETNET)",
   "url": "https://fastspeed.dk",
   "ipv6": true,
-  "comment": "Vi kører med IPv6 på vores fiberforbindelser (med undtagelse af forbindelser på Aura's net). Der arbejdes på at få IPv6 på vores coaxforbindelser.",
+  "comment": "Faspeed understøtter IPv6 (undtaget Aura's fibernet). IPv6 på COAX forbindelser understøttes ikke af TDC.",
   "partial": true,
   "private": true,
   "sources": [{ "date": "2020-04-28", "name": "ISP", "url": null }]
