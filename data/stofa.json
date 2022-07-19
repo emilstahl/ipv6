@@ -1,8 +1,8 @@
 {
-  "name": "Stofa",
+  "name": "Stofa - en del af Norlys",
   "url": "https://stofa.dk",
   "ipv6": true,
-  "comment": "Har leveret IPv6 til de første erhvervskunder. Håndterer forespørgsler case by case. IPv6 er på vej til privatkunder, men der er ikke givet en tidshorisont endnu.",
-  "partial": true,
-  "sources": [{ "date": "2021-12-10", "name": "ISP", "url": null }]
+  "comment": "Erhvervskunder og privatkunder har mulighed for IPv6, en del forbrugere aktiveret pr. default",
+  "partial": false,
+  "sources": [{"date": "2022-07-19", "name": "ISP", "url": null}, { "date": "2021-12-10", "name": "ISP", "url": null }]
 }
