@@ -2,7 +2,7 @@
   "name": "Stofa - en del af Norlys",
   "url": "https://stofa.dk",
   "ipv6": true,
-  "comment": "Erhvervskunder og privatkunder har mulighed for IPv6, en del forbrugere aktiveret pr. default",
-  "partial": false,
-  "sources": [{"date": "2022-07-19", "name": "ISP", "url": null}, { "date": "2021-12-10", "name": "ISP", "url": null }]
+  "comment": "Erhvervskunder og privatkunder på fiber har mulighed for IPv6, en del forbrugere aktiveret pr. default. Ingen IPv6-understøttelse på coax. xDSL (kobber) ukendt",
+  "partial": true,
+  "sources": [{"date": "2022-08-18", "name": "ISP", "url": null}, { "date": "2021-12-10", "name": "ISP", "url": null }]
 }
