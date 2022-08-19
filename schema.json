@@ -51,7 +51,7 @@
             "description": "Name of source"
           },
           "url": {
-            "type": "string",
+            "type": ["string", "null"],
             "description": "Website of source"
           },
           "date": {
