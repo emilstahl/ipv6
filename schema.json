@@ -3,12 +3,18 @@
   "description": "IPv6-adresse ISP Schema",
   "type": "object",
   "additionalProperties": false,
+  "required": [
+    "name",
+    "url",
+    "ipv6",
+    "partial",
+    "comment"
+  ],
   "properties": {
     "$schema": {
       "type": "string",
       "title": "Schema",
-      "description": "Pointer to the schema against which this document should be validated.",
-      "required": false
+      "description": "Pointer to the schema against which this document should be validated."
     },
     "name": {
       "type": "string",
