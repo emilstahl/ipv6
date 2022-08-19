@@ -1,6 +1,5 @@
 {
   "$schema": "./../schema.json",
-  "name": "Andels.net",
   "url": "https://andels.net",
   "ipv6": false,
   "comment": "Vi har ikke nogen planer om at levere det, da der er for få hjemmesider der understøtter det i dag.",
