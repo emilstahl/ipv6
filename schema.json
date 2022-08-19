@@ -31,6 +31,11 @@
       "type": "string",
       "description": "Comment on the IPv6 support"
     },
+    "private": {
+      "type": "boolean",
+      "description": "Whether the ISP has private IPv6-support",
+      "deprecated": true
+    },
     "sources": {
       "type": "array",
       "description": "List of sources",
