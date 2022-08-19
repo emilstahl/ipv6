@@ -33,7 +33,10 @@
     },
     "private": {
       "type": "boolean",
-      "description": "Whether the ISP has private IPv6-support",
+      "deprecated": true
+    },
+    "business": {
+      "type": "boolean",
       "deprecated": true
     },
     "sources": {
