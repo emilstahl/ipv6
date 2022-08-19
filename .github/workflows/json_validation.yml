@@ -3,6 +3,8 @@ name: JSON Validation CI
 on:
   pull_request:
     branches: [ master ]
+  push:
+    branches: [ fix-json-validator ]
 
 jobs:
   validate-json:
