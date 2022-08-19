@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Net1",
   "url": "https://www.net1.dk",
   "ipv6": true,

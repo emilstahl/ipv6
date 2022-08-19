@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Sentia",
   "url": "https://sentia.com/dk/",
   "ipv6": true,

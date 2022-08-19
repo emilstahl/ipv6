@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Comflex",
   "url": "http://comflex.dk",
   "ipv6": false,

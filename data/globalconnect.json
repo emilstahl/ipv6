@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "GlobalConnect",
   "url": "https://www.globalconnect.dk",
   "ipv6": true,

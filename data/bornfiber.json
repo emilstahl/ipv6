@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "BornFiber",
   "url": "https://bornfiber.dk",
   "ipv6": true,

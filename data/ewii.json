@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "EWII",
   "url": "https://ewii.com/privat/fiberbredbaand",
   "ipv6": false,

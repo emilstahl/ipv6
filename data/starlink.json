@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
     "name": "Starlink",
     "url": "https://starlink.com",
     "ipv6": true,

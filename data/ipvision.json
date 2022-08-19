@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "ipvision",
   "url": "https://ipvision.dk",
   "ipv6": true,

@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Telmore",
   "url": "https://www.telmore.dk",
   "ipv6": false,
