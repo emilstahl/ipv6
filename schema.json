@@ -1,6 +1,5 @@
 {
   "$id": "https://ipv6-adresse.dk/schema.json",
-	"$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "IPv6-adresse ISP Schema",
   "type": "object",
   "additionalProperties": false,
