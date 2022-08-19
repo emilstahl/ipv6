@@ -1,3 +1,57 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#"
+  "$id": "https://ipv6-adresse.dk/schema.json",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "IPv6-adresse ISP Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "title": "Schema",
+      "description": "Pointer to the schema against which this document should be validated.",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of ISP"
+    },
+    "url": {
+      "type": "string",
+      "description": "Website of ISP"
+    },
+    "ipv6": {
+      "type": "boolean",
+      "description": "Whether the ISP has IPv6-support"
+    },
+    "partial": {
+      "type": "boolean",
+      "description": "Whether the ISP has IPv6-support, that only applies to a segmented customer group"
+    },
+    "comment": {
+      "type": "string",
+      "description": "Comment on the IPv6 support"
+    },
+    "sources": {
+      "type": "array",
+      "description": "List of sources",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of source"
+          },
+          "url": {
+            "type": "string",
+            "description": "Website of source"
+          },
+          "date": {
+            "type": "string",
+            "description": "Date of source - must be in YYYY-MM-DD format"
+          }
+        }
+      }
+    }
+  }
 }
