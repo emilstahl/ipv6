@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Dansk Kabel TV",
   "url": "https://www.danskkabeltv.dk",
   "ipv6": false,

@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "ASOM-Net",
   "url": "https://asom-net.dk",
   "ipv6": false,

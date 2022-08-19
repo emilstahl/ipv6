@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Energi Fyn",
   "url": "https://www.energifyn.dk/privat",
   "ipv6": true,

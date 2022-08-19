@@ -3,14 +3,16 @@ name: JSON Validation CI
 on:
   pull_request:
     branches: [ master ]
+  push:
+    branches: [ fix-json-validator ]
 
 jobs:
   validate-json:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Validate JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: ./schema.json
-          INPUT_JSONS: ./data.json
+      - uses: actions/checkout@v2
+
+      - uses: vanekj/validate-json-action@v1
+        with:
+          schema: schema.json
+          pattern: data/**.json

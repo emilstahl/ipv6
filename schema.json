@@ -1,3 +1,70 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#"
+  "$id": "https://ipv6-adresse.dk/schema.json",
+  "description": "IPv6-adresse ISP Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "url",
+    "ipv6",
+    "partial",
+    "comment"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "title": "Schema",
+      "description": "Pointer to the schema against which this document should be validated."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of ISP"
+    },
+    "url": {
+      "type": "string",
+      "description": "Website of ISP"
+    },
+    "ipv6": {
+      "type": "boolean",
+      "description": "Whether the ISP has IPv6-support"
+    },
+    "partial": {
+      "type": "boolean",
+      "description": "Whether the ISP has IPv6-support, that only applies to a segmented customer group"
+    },
+    "comment": {
+      "type": "string",
+      "description": "Comment on the IPv6 support"
+    },
+    "private": {
+      "type": "boolean",
+      "deprecated": true
+    },
+    "business": {
+      "type": "boolean",
+      "deprecated": true
+    },
+    "sources": {
+      "type": "array",
+      "description": "List of sources",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of source"
+          },
+          "url": {
+            "type": ["string", "null"],
+            "description": "Website of source"
+          },
+          "date": {
+            "type": "string",
+            "description": "Date of source - must be in YYYY-MM-DD format"
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Greentel",
   "url": "https://www.greentel.dk",
   "ipv6": false,

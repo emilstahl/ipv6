@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Fastspeed (og JETNET)",
   "url": "https://fastspeed.dk",
   "ipv6": true,

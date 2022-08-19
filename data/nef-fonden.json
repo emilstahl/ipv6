@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "NEF Fonden",
   "url": "https://nef.dk",
   "ipv6": false,

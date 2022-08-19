@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Kalundborgegnens Antennelaug",
   "url": "https://ka-net.dk/",
   "ipv6": true,

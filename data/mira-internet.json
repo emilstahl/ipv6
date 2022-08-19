@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Mira Internet",
   "url": "https://www.mira.dk/",
   "ipv6": false,

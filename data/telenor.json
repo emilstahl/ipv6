@@ -1,4 +1,5 @@
 {
+  "$schema": "./../schema.json",
   "name": "Telenor",
   "url": "https://www.telenor.dk",
   "ipv6": false,
