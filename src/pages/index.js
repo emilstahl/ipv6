@@ -202,8 +202,8 @@ const IndexPage = ({ data }) => {
                 sort: {
                   enabled: true,
                   compare: (a, b) => {
-                    var da = new Date(a[0].date);
-                    var db = new Date(b[0].date);
+                    let da = new Date(a[0].date);
+                    let db = new Date(b[0].date);
 
                     if (da > db) {
                       return 1;
