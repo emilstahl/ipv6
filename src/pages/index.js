@@ -199,6 +199,24 @@ const IndexPage = ({ data }) => {
                 formatter: cell => {
                   return `${format(new Date(cell[0].date), 'dd/MM/yyyy')}`
                 },
+                sort: {
+                  enabled: true,
+                  compare: (a, b) => {
+                    let da = new Date(a[0].date);
+                    let db = new Date(b[0].date);
+
+                    if (da > db) {
+                      return 1;
+                    } else if (da < db) {
+                      return -1;
+                    } else {
+                      return 0;
+                    }
+
+                  }
+                },
+
+                
                 width: '60px',
               }
             ]}
