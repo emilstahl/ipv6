@@ -8,6 +8,11 @@
   "private": true,
   "sources": [
     {
+      "date": "2022-08-24",
+      "name": "FAQ (support.kviknet.dk)",
+      "url": "https://support.kviknet.dk/hc/da/articles/360014470198"
+    },
+    {
       "date": "2021-11-17",
       "name": "Email",
       "url": "https://github.com/emilstahl/ipv6/issues/48"
