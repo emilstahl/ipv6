@@ -3,10 +3,15 @@
   "name": "YouSee",
   "url": "https://yousee.dk",
   "ipv6": false,
-  "comment": "Det er ikke noget vi har planer om på nuværende tidspunkt",
+  "comment": "Vi har desværre ikke noget konkret/nyt at bringe i forhold til IPv6 desværre.",
   "partial": false,
   "private": true,
   "sources": [
+    {
+      "date": "2021-08-09",
+      "name": "Tweet",
+      "url": "https://twitter.com/YouSeeDK/status/1424659406684360704"
+    }
     {
       "date": "2018-06-17",
       "name": "Tweet",
