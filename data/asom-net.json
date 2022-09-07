@@ -2,9 +2,9 @@
   "$schema": "./../schema.json",
   "name": "ASOM-Net",
   "url": "https://asom-net.dk",
-  "ipv6": false,
-  "comment": "Vi har IPv6 kørende i backbone og test-setup, men ikke live. Vi forventer dual-stack med /48 prefix-delegation til alle vores kunder og håber på at gå live tidligst  Q2 2018. Leverer kun til private.",
-  "partial": true,
+  "ipv6": true,
+  "comment": "ASOM-Net tilbyder dual-stack IPv6 med /48 prefix-delegation hos alle kunder. Leverer kun til private.",
+  "partial": false,
   "private": true,
-  "sources": [{ "date": "2017-10-30", "name": "ISP", "url": null }]
+  "sources": [{ "date": "2022-09-09", "name": "ISP", "url": null }]
 }
