@@ -6,5 +6,5 @@
   "comment": "ASOM-Net tilbyder dual-stack IPv6 med /48 prefix-delegation. Leverer kun til private.",
   "partial": false,
   "private": true,
-  "sources": [{ "date": "2022-09-09", "name": "ISP", "url": null }]
+  "sources": [{ "date": "2022-09-07", "name": "ISP", "url": null }]
 }
