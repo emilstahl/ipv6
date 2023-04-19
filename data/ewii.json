@@ -3,7 +3,7 @@
   "name": "EWII",
   "url": "https://ewii.com/privat/fiberbredbaand",
   "ipv6": false,
-  "comment": "Der er desværre ingen nyheder omkring IPv6 på nuværende tidspunkt.",
+  "comment": "På nuværende tidspunkt har vi ingen planer om dette. Derfor kan vi ikke give en tidshorisont.",
   "partial": false,
-  "sources": [{ "date": "2017-09-24", "name": "ISP", "url": null }]
+  "sources": [{ "date": "2023-04-19", "name": "ISP", "url": null }]
 }
