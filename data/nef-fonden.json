@@ -3,7 +3,7 @@
   "name": "NEF Fonden",
   "url": "https://nef.dk",
   "ipv6": false,
-  "comment": "NEF Fonden udruller større tekniske ændringer i deres fibernet fra april 2023. Læs mere under \"Kilde\".",
+  "comment": "NEF Fonden udruller større tekniske ændringer i deres fibernet fra april 2023. Men har endnu ikke en dato for, hvornår IPv6 kommer. Læs mere under \"Kilde\".",
   "partial": false,
   "sources": [
     { "date": "2023-04-15", "name": "Læs mere (ISP)", "url": "https://nef.dk/kundeservice/fibernet-aendringer-2023/" },
