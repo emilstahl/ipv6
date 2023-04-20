@@ -5,5 +5,5 @@
   "ipv6": false,
   "comment": "De kan på nuværende tidspunkt, ikke oplyse om de kommer til at tilbyde IPv6, på et senere tidspunkt.",
   "partial": false,
-  "sources": [{ "date": "2023-04-23", "name": "ISP", "url": null }]
+  "sources": [{ "date": "2023-04-20", "name": "ISP", "url": null }]
 }
