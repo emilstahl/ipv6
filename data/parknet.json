@@ -3,7 +3,7 @@
   "name": "Parknet",
   "url": "https://parknet.dk",
   "ipv6": false,
-  "comment": "M.h.t. dit spØrgsmål om IPv6 så er det noget vi har i de fremtidige planer. Om der går et år eller to kan jeg ikke sige men det er på tegnebrættet.",
+  "comment": "Det er noget vi arbejder hen imod. Jeg har dog ingen dato for hvornår det vil blive rullet ud.",
   "partial": false,
-  "sources": [{ "date": "2019-07-09", "name": "ISP", "url": null }]
+  "sources": [{ "date": "2023-06-09", "name": "ISP (Email)", "url": null }]
 }
