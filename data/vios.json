@@ -3,12 +3,12 @@
   "name": "Vios (AFAA)",
   "url": "https://vios.dk",
   "ipv6": true,
-  "comment": "Vios tilbyder native IPv6",
+  "comment": "Det gør vi i hvert fald :) (Tilbyder native IPv6)",
   "partial": false,
   "sources": [
     {
       "date": "2023-06-13",
-      "name": "Ukendt",
+      "name": "ISP",
       "url": null
     }
   ]
