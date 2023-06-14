@@ -3,11 +3,11 @@
   "name": "Stofa - en del af Norlys",
   "url": "https://stofa.dk",
   "ipv6": true,
-  "comment": "Erhvervskunder og privatkunder på fiber har mulighed for IPv6, en del forbrugere aktiveret pr. default. IPv6 på COAX forbindelser understøttes ikke af TDC. xDSL (kobber) ukendt",
+  "comment": "Erhvervskunder på fiber har mulighed for IPv6, en del aktiveret pr. default. IPv6 er på vej til privatkunder, men der er ikke givet en tidshorisont endnu. IPv6 på COAX forbindelser understøttes ikke af TDC. xDSL (kobber) ukendt",
   "partial": true,
   "sources": [
     {
-      "date": "2022-08-18",
+      "date": "2023-07-14",
       "name": "ISP",
       "url": null
     },
