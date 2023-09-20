@@ -1,10 +1,10 @@
 {
   "$schema": "./../schema.json",
-  "name": "Norlys (tidl. Boxer)",
+  "name": "Norlys",
   "url": "https://www.norlys.dk",
-  "ipv6": false,
-  "comment": "For nu har TDC rigeligt IP-adresser. Såfremt TDC Privat beslutter at indføre IPv6, så kommer Boxer Bredbånd også til at få det.",
-  "partial": false,
+  "ipv6": true,
+  "comment": "Erhvervskunder og privatkunder på fiber har mulighed for IPv6, en del forbrugere aktiveret pr. default. IPv6 på COAX forbindelser understøttes ikke af TDC. xDSL (kobber) ukendt",
+  "partial": true,
   "private": true,
-  "sources": [{ "date": "2016-01-25", "name": "ISP", "url": null }]
+  "sources": [{ "date": "2023-09-20", "name": "ISP", "url": null }]
 }
