@@ -2,8 +2,8 @@
   "$schema": "./../schema.json",
   "name": "Altibox",
   "url": "https://www.altibox.dk",
-  "ipv6": true,
-  "comment": "Vi understøtter IPv6rd.",
-  "partial": false,
-  "sources": [{ "date": "2016-01-25", "name": "ISP", "url": null }]
+  "ipv6": false,
+  "comment": "Vi tilbyder ikke på nuværende tidspunkt statisk tildeling af IPv6 prefix/adresser.",
+  "partial": true,
+  "sources": [{ "date": "2023-11-06", "name": "ISP (Email)", "url": null }]
 }
