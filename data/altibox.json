@@ -5,5 +5,5 @@
   "ipv6": false,
   "comment": "Vi tilbyder ikke på nuværende tidspunkt statisk tildeling af IPv6 prefix/adresser.",
   "partial": true,
-  "sources": [{ "date": "2023-11-06", "name": "ISP (Email)", "url": null }]
+  "sources": [{ "date": "2023-11-06", "name": "ISP (Email)", "url": "https://user-images.githubusercontent.com/71432330/280961438-cad75111-2f1f-4215-862b-4b26e44c6dca.png" }]
 }
