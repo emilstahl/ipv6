@@ -3,8 +3,8 @@
   "name": "Norlys",
   "url": "https://www.norlys.dk",
   "ipv6": true,
-  "comment": "Erhvervskunder og privatkunder på fiber har mulighed for IPv6, en del forbrugere aktiveret pr. default. IPv6 på COAX forbindelser understøttes ikke af TDC. xDSL (kobber) ukendt",
+  "comment": "IPv6 kun mulig for erhvervskunder. Ikke privat-kunder jf. Support.",
   "partial": true,
-  "private": true,
-  "sources": [{ "date": "2023-09-20", "name": "ISP", "url": null }]
+  "private": false,
+  "sources": [{ "date": "2023-12-18", "name": "ISP", "url": null }]
 }
