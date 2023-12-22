@@ -8,9 +8,19 @@
   "private": true,
   "sources": [
     {
-      "date": "2022-08-24",
-      "name": "FAQ (support.kviknet.dk)",
-      "url": "https://support.kviknet.dk/hc/da/articles/360014470198"
+      "date": "2023-12-22",
+      "name": "Kviknet FAQ - Internet Optsætning",
+      "url": "https://web.archive.org/web/20221003090412/https://support.kviknet.dk/hc/da/articles/6495304559249-Internet-ops%C3%A6tning"
+    },
+    {
+      "date": "2023-12-22",
+      "name": "Kviknet FAQ - DHCPv6 IAID Issues",
+      "url": "https://web.archive.org/web/20220813145436/https://support.kviknet.dk/hc/da/articles/7972272930193-DHCPv6-IAID-Issues"
+    },
+    {
+      "date": "2023-12-22",
+      "name": "Kviknet FAQ - Statisk DUID Værdi",
+      "url": "https://web.archive.org/web/20221003075730/https://support.kviknet.dk/hc/da/articles/6650187045265-Statisk-DUID-v%C3%A6rdi"
     },
     {
       "date": "2021-11-17",
