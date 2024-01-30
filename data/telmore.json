@@ -4,6 +4,6 @@
   "url": "https://www.telmore.dk",
   "ipv6": true,
   "comment": "Du har både en IPv4 og en IPv6-adresse, i tilfælde af, at du kommer i kontakt med netværksudstyr, der bruger en IPv6-adresse",
-  "partial": false,
-  "sources": [{"date": "2019-6-27", "name": "Tweet", "url": "https://twitter.com/telmore/status/1144160756075831297"}]
+  "partial": true,
+  "sources": [{ "date": "2019-06-27", "name": "Tweet", "url": "https://twitter.com/telmore/status/1144160756075831297" }]
 }
