@@ -3,7 +3,7 @@
   "name": "bolig:net",
   "url": "https://www.bolignet.dk",
   "ipv6": true,
-  "comment": "Understøtter IPv6 Prefix Delegation.",
+  "comment": "Understøtter IPv6 Prefix Delegation (mod merbetaling)",
   "partial": false,
   "sources": [
     {
