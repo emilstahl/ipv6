@@ -3,9 +3,10 @@
   "name": "AURA",
   "url": "https://www.aura.dk",
   "ipv6": false,
-  "comment": "Vi har umiddelbart den fornødne infrastruktur til at understøtte IPv6 - såfremt dette bliver aktuelt. Vi har ikke for nærverende planer om at indføre IPv6 i vores net.",
+  "comment": "…i forhold til dit spørgsmål så har vi ikke planer om at få IPV6 til privat kunder da vi ikke har nok kunder i vores område til at det kan betale sig",
   "partial": false,
   "sources": [
+    { "date": "2024-02-01", "name": "ISP", "url": null },
     { "date": "2018-10-26", "name": "ISP", "url": null },
     { "date": "2016-12-21", "name": "ISP", "url": null }
   ]
