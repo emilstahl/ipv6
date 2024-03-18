@@ -3,7 +3,7 @@
   "name": "Altibox",
   "url": "https://www.altibox.dk",
   "ipv6": true,
-  "comment": "Fuld understøttelse for Ipv6.",
+  "comment": "Ingen mulighed for statiske IPv6 prefixes.",
   "partial": false,
-  "sources": [{ "date": "2024-02-19", "name": "Website", "url": "https://minesider.altibox.dk/sadan-kommer-du-i-gang-med-ipv6/" }]
+  "sources": [{ "date": "2024-03-18", "name": "Website", "url": "https://www.altibox.dk/kundeservice/internet" }]
 }
