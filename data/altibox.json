@@ -2,8 +2,8 @@
   "$schema": "./../schema.json",
   "name": "Altibox",
   "url": "https://www.altibox.dk",
-  "ipv6": false,
-  "comment": "Ingen statisk IPv6 prefix. Dog Dual Stack.",
-  "partial": true,
-  "sources": [{ "date": "2023-11-08", "name": "ISP (Email)", "url": null }]
+  "ipv6": true,
+  "comment": "Ingen mulighed for statiske IPv6 prefixes.",
+  "partial": false,
+  "sources": [{ "date": "2024-03-18", "name": "Website", "url": "https://www.altibox.dk/kundeservice/internet" }]
 }
