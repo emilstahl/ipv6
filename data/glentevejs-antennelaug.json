@@ -1,0 +1,15 @@
+{
+  "$schema": "./../schema.json",
+  "name": "Glentevejs Antennelaug",
+  "url": "https://www.glenten.dk",
+  "ipv6": false,
+  "comment": "[...]der fortsættes med IPv4. Der er ved at blive nået en grænse. Derfor deles samme IP-adresse, hvilket kan resultere i, at nettet kører langsommere. Udstyret kan sagtens klare en opgradering til IPv6[...]",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2019-02-07",
+      "name": "Referat af repræsentantskabsmøde",
+      "url": "https://www.glenten.dk/filarkiv/Bestyrelse/Referater/Reprasentantskab/Referat_reprasentantskabsmode_20190207_Glenten_FINAL.pdf"
+    }
+  ]
+}
