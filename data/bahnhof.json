@@ -1,0 +1,9 @@
+{
+  "$schema": "./../schema.json",
+  "name": "Bahnhof",
+  "url": "https://bahnhofinternet.dk/",
+  "ipv6": true,
+  "comment": "...men vi tilbyder IPv6 i vores netværk, så længe man konfigurerer routeren til at fungere med dette, og routeren understøtter IPv6...",
+  "partial": false,
+  "sources": [{ "date": "2024-09-04", "name": "ISP (Email)", "url": null }]
+}
