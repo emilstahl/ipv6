@@ -14,7 +14,7 @@ const HeaderComponent = () => {
             }}>
                 <div className="logo">
                   <a href="/" title="IPv6-adresse.dk" alt="Link to Home" style={{
-                    color: '#333',
+                    color: 'light-dark(#333, #ccc)',
                     textDecoration: 'none',
                   }}>
                     <Logo height={"30px"} style={{
