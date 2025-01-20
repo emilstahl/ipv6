@@ -7,13 +7,13 @@ const styles = {
         width: '100%',
         height: '100vh',
         padding: '4rem',
-        backgroundColor: '#5cb85c',
+        backgroundColor: 'light-dark(#5cb85c, #266326)',
         color: 'white'
     },
     btn: {
         display: 'inline-block',
         padding: '1rem',
-        backgroundColor: 'white',
+        backgroundColor: 'Canvas',
         color: '#5cb85c',
         textDecoration: 'none',
         borderRadius: '4px',

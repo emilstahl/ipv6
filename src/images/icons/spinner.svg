@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="256px" height="64px" viewBox="0 0 128 32"
-     xml:space="preserve"><rect x="0" y="0" width="100%" height="100%" fill="#FFFFFF" />
+     xml:space="preserve"><rect x="0" y="0" width="100%" height="100%" fill="none" />
     <circle fill="#5CB85C" cx="0" cy="0" r="11" transform="translate(16 16)"><animateTransform attributeName="transform" type="scale" additive="sum" values="1;1.42;1;1;1;1;1;1;1;1" dur="900ms" repeatCount="indefinite"></animateTransform></circle>
     <circle fill="#5CB85C" cx="0" cy="0" r="11" transform="translate(64 16)"><animateTransform attributeName="transform" type="scale" additive="sum" values="1;1;1;1;1.42;1;1;1;1;1" dur="900ms" repeatCount="indefinite"></animateTransform></circle>
     <circle fill="#5CB85C" cx="0" cy="0" r="11" transform="translate(112 16)"><animateTransform attributeName="transform" type="scale" additive="sum" values="1;1;1;1;1;1;1;1.42;1;1" dur="900ms" repeatCount="indefinite"></animateTransform></circle>
