@@ -3,9 +3,10 @@
   "name": "AURA",
   "url": "https://www.aura.dk",
   "ipv6": false,
-  "comment": "…i forhold til dit spørgsmål så har vi ikke planer om at få IPV6 til privat kunder da vi ikke har nok kunder i vores område til at det kan betale sig",
+  "comment": "Vores virksomhed har på nuværende tidspunkt ikke planer om at overgå til IPv6. Hovedårsagen til denne beslutning er, at vores forsyningsområde ikke er særlig stort, og vi derfor ikke har behov for en større pulje af IP-adresser end dem, vi allerede råder over.",
   "partial": false,
   "sources": [
+    { "date": "2025-03-07", "name": "ISP", "url": null },
     { "date": "2024-02-01", "name": "ISP", "url": null },
     { "date": "2018-10-26", "name": "ISP", "url": null },
     { "date": "2016-12-21", "name": "ISP", "url": null }
