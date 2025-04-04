@@ -1,0 +1,10 @@
+{
+  "$schema": "./../schema.json",
+  "name": "Netnørden",
+  "url": "https://xn--netnrden-84a.dk/",
+  "ipv6": true,
+  "comment": "Netnørden understøtter IPv6. IPv6 på COAX forbindelser understøttes ikke af TDC.",
+  "partial": true,
+  "private": true,
+  "sources": [{ "date": "2025-04-04", "name": "ISP", "url": "https://xn--netnrden-84a.dk/faq" }]
+}
