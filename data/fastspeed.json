@@ -1,6 +1,6 @@
 {
   "$schema": "./../schema.json",
-  "name": "Fastspeed (og JETNET)",
+  "name": "Fastspeed",
   "url": "https://fastspeed.dk",
   "ipv6": true,
   "comment": "Fastspeed understøtter IPv6. IPv6 på COAX forbindelser understøttes ikke af TDC.",
