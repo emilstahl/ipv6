@@ -46,6 +46,7 @@ export const query = graphql`
           
           ipv6,
           partial,
+          assignedprefix,
           comment,
           sources {
             date
@@ -177,6 +178,42 @@ const IndexPage = ({ data }) => {
                   }
                 }
               },
+              {
+                id: 'assignedprefix',
+                name: 'Præfiks',
+                width: '35px',
+                formatter: cell => _(<span style={{ lineHeight: 1.5 }}>{cell}</span>),
+                attributes: (cell) => {
+                  if (cell == null) return;
+                  return {
+                    style: {
+                      textAlign: 'center'
+                    }
+                  }
+                },
+                sort: {
+                  enabled: true,
+                  compare: (a, b) => {
+                    const parsePrefix = (prefix) => {
+                      if (!prefix) return 128; // Treat undefined as the largest prefix
+                      return parseInt(prefix.replace('/', ''), 10);
+                    };
+
+                    const pa = parsePrefix(a);
+                    const pb = parsePrefix(b);
+
+                    if (pa > pb) {
+                      return 1;
+                    } else if (pa < pb) {
+                      return -1;
+                    } else {
+                      return 0;
+                    }
+
+                  }
+                }
+              },
+
               {
                 id: 'comment',
                 name: 'Kommentar fra udbyder',

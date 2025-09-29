@@ -3,6 +3,7 @@
   "name": "Fastspeed",
   "url": "https://fastspeed.dk",
   "ipv6": true,
+  "assignedprefix": "/48",
   "comment": "Fastspeed understøtter IPv6. IPv6 på COAX forbindelser understøttes ikke af TDC.",
   "partial": true,
   "private": true,

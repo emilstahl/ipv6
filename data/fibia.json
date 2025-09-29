@@ -1,6 +1,6 @@
 {
   "$schema": "./../schema.json",
-  "name": "Fibia",
+  "name": "Fibia Erhverv",
   "url": "https://www.fibia.dk",
   "ipv6": false,
   "comment": "Vi arbejder på at understøtte IPv6 og tidshorisonten er foreløbig 2024H2.",

@@ -9,7 +9,7 @@ const Footer = () => {
         <p className="left">
           &copy; 2013 - { new Date().getUTCFullYear() } IPv6-adresse.dk
           <span className="sep">·</span>
-          <a href="https://twitter.com/ipv6dk" title="@ipv6dk på Twitter" target="_blank" rel="noreferrer">@ipv6dk</a>
+          <a href="https://x.com/ipv6dk" title="@ipv6dk på Twitter" target="_blank" rel="noreferrer">@ipv6dk</a>
           <span className="sep">·</span>
           <a href="mailto:ipv6@ipv6-adresse.dk" title="Send en mail!">ipv6@ipv6-adresse.dk</a>
         </p>
