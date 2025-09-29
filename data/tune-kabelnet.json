@@ -1,0 +1,15 @@
+{
+  "$schema": "./../schema.json",
+  "name": "Tune Kabelnet",
+  "url": "https://tunenet.dk",
+  "ipv6": false,
+  "comment": "Tune Kabelnet benytter pt. ikke IPv6-adresser.",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2025-09-29",
+      "name": "ISP",
+      "url": "https://tunenet.dk/faq#faq9"
+    }
+  ]
+}
