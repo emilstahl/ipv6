@@ -3,13 +3,14 @@
   "name": "bolig:net",
   "url": "https://www.bolignet.dk",
   "ipv6": true,
-  "comment": "Understøtter IPv6 Prefix Delegation (mod merbetaling)",
+  "assignedprefix": "/48",
+  "comment": "Understøtter dynamisk IPv6 Prefix Delegation (mod merbetaling kan man få statisk)",
   "partial": false,
   "sources": [
     {
-      "date": "2021-04-23",
-      "name": "Tweet",
-      "url": "https://twitter.com/kramse/status/1385642419153215496"
+      "date": "2025-09-29",
+      "name": "Livechat",
+      "url": null
     }
   ]
 }

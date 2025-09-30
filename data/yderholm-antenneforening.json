@@ -3,6 +3,7 @@
   "name": "Yderholm Antenneforening",
   "url": "http://yderholm-antenneforening.dk",
   "ipv6": true,
+  "assignedprefix": "/60",
   "comment": "Yderholm Antenneforening har understøttet IPv6 siden november 2016 og tilbyder en /60 til de af vores kunder der måtte ønske dette.",
   "partial": false,
   "private": true,

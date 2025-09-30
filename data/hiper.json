@@ -3,6 +3,7 @@
   "name": "Hiper",
   "url": "https://www.hiper.dk",
   "ipv6": true,
+  "assignedprefix": "/48",
   "comment": "Hiper understøtter IPv6. IPv6 på COAX forbindelser understøttes ikke af TDC.",
   "partial": true,
   "sources": [

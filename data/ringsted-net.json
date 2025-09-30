@@ -3,6 +3,7 @@
   "name": "Ringsted Net",
   "url": "https://www.ringstednet.dk",
   "ipv6": true,
+  "assignedprefix": "/48",
   "comment": "Den 4. marts 2025 overgik alle vores medlemmer til IPv6/dual stack /48 prefix-delegation.",
   "partial": false,
   "private": true,

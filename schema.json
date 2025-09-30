@@ -32,6 +32,10 @@
       "type": "boolean",
       "description": "Whether the ISP has IPv6-support, that only applies to a segmented customer group"
     },
+    "assignedprefix": {
+      "type": "string",
+      "description": "The assigned IPv6 prefix size for customers, e.g. /48 or /56. If unknown, leave out this field."
+    },
     "comment": {
       "type": "string",
       "description": "Comment on the IPv6 support"

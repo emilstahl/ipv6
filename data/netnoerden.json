@@ -3,6 +3,7 @@
   "name": "Netnørden",
   "url": "https://xn--netnrden-84a.dk/",
   "ipv6": true,
+  "assignedprefix": "/48",
   "comment": "Netnørden understøtter IPv6. /48 prefix delegation og mulighed for statisk prefix. IPv6 på COAX forbindelser understøttes ikke af TDC.",
   "partial": true,
   "private": true,

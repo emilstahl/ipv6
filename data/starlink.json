@@ -3,6 +3,7 @@
     "name": "Starlink",
     "url": "https://starlink.com",
     "ipv6": true,
+    "assignedprefix": "/56",
     "comment": "Starlink har IPv6 med så længe man ikke bruger den medfølgende router.",
     "partial": false,
     "sources": [{ "date": "2021-05-31", "name": "Forumtråd", "url": "https://www.reddit.com/r/Starlink/comments/nuhy31/starlink_ipv6_changes_over_the_last_5_months/" }]
