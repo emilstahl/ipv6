@@ -4,9 +4,10 @@ import store from '../store/default';
 const isIPv6 = input => (/^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$/gi).test(input);
 
 let addr = '';
+const addrInfoUrl = process.env.GATSBY_ADDRINFO_URL || 'https://v4v6.ipv6-test.com/json/addrinfo.php?callback=updateIPData';
 
 try {
-  jsonp('https://v4v6.ipv6-test.com/json/addrinfo.php?callback=updateIPData', {}, (err, data) => {
+  jsonp(addrInfoUrl, {}, (err, data) => {
     if (err) {
       console.error(err);
       return;
