@@ -1,11 +1,10 @@
 {
   "$schema": "./../schema.json",
   "name": "Yderholm Antenneforening",
-  "url": "http://yderholm-antenneforening.dk",
+  "url": "https://yderholm-antenneforening.dk",
   "ipv6": true,
   "assignedprefix": "/60",
   "comment": "Yderholm Antenneforening har understøttet IPv6 siden november 2016 og tilbyder en /60 til de af vores kunder der måtte ønske dette.",
   "partial": false,
-  "private": true,
   "sources": [{ "date": "2019-03-24", "name": "ISP", "url": null }]
 }

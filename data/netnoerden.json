@@ -1,11 +1,10 @@
 {
   "$schema": "./../schema.json",
   "name": "Netnørden",
-  "url": "https://xn--netnrden-84a.dk/",
+  "url": "https://netnoerden.dk/",
   "ipv6": true,
   "assignedprefix": "/48",
   "comment": "Netnørden understøtter IPv6. /48 prefix delegation og mulighed for statisk prefix. IPv6 på COAX forbindelser understøttes ikke af TDC.",
   "partial": true,
-  "private": true,
-  "sources": [{ "date": "2025-04-04", "name": "ISP", "url": "https://xn--netnrden-84a.dk/faq" }]
+  "sources": [{ "date": "2025-04-04", "name": "ISP", "url": "https://netnoerden.dk/faq" }]
 }
