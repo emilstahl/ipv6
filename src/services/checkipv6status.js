@@ -1,34 +1,27 @@
-import store from '../store/default';
-
-// The endpoint answers JSONP ("updateIPData({...});") — strip the wrapper.
-const parseJsonp = text =>
-  JSON.parse(text.slice(text.indexOf('(') + 1, text.lastIndexOf(')')));
+import { parseJsonp } from '../utils/safe';
 
 const addrInfoUrl =
   process.env.GATSBY_ADDRINFO_URL || 'https://check.ipv6-adresse.dk';
 
-if (typeof window !== 'undefined') {
+const check = () =>
   fetch(addrInfoUrl, { signal: AbortSignal.timeout(10000) })
     .then(res => res.text())
     .then(text => {
       const data = parseJsonp(text);
       const isIPv6 = data.address.includes(':'); // an IPv4 address never contains a colon
 
-      store.dispatch({
-        type: 'SET_USER_DATA',
-        payload: {
-          testRun: true,
-          ispName: data.isp_name,
-          isIPv6,
-          ipv6Address: isIPv6 ? data.address : null,
-          ipv4Address: !isIPv6 ? data.address : null,
-        },
-      });
+      return {
+        ispName: data.isp_name,
+        ipv6Address: isIPv6 ? data.address : null,
+        ipv4Address: isIPv6 ? null : data.address,
+      };
     })
-    .catch(() => {
-      store.dispatch({
-        type: 'SET_USER_DATA',
-        payload: { testRun: true, failed: true },
-      });
-    });
-}
+    .catch(() => ({ failed: true }));
+
+// Started at import time so the request is already in flight before React
+// mounts. Resolves with what to render and never rejects — a failed check is a
+// result, not an error. Resolves null during SSR, where there is no visitor to
+// look up; the component renders its loading state into the static HTML.
+const ipv6Check = typeof window === 'undefined' ? Promise.resolve(null) : check();
+
+export default ipv6Check;

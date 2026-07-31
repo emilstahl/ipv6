@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import store from '../../store/default'
+import ipv6Check from '../../services/checkipv6status'
 import './style.scss'
 
 import Spinner from '../../images/icons/spinner.svg'
@@ -10,12 +10,11 @@ const DoIHaveIPv6 = () => {
     const [result, setResult] = useState(null)
 
     useEffect(() => {
-        const read = () => {
-            const state = store.getState().userIPv6Data;
-            if (state.testRun) setResult(state);
-        };
-        read(); // the check may have finished before this component mounted
-        return store.subscribe(read);
+        // The check may already have resolved before this mounted; .then still
+        // fires either way. Null means SSR, where there is nothing to show.
+        let alive = true;
+        ipv6Check.then(r => { if (alive && r) setResult(r) });
+        return () => { alive = false };
     }, [])
 
     return (

@@ -8,8 +8,6 @@ import { _, Grid }     from 'gridjs-react';
 
 import '../styles/index.style.scss';
 
-import '../services/checkipv6status'
-
 import AdoptionChart from '../components/AdoptionChart/component';
 import { safeUrl, safeDate, formatDate } from '../utils/safe';
 
