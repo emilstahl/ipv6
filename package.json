@@ -30,7 +30,7 @@
     "gridjs-react": "^6.1.1",
     "jsonp": "^0.2.1",
     "normalize.css": "^8.0.1",
-    "react": "^18.3.1",
+    "react": "^19.2.8",
     "react-dom": "^18.3.1",
     "sass": "^1.83.0"
   },
