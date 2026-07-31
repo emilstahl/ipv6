@@ -2,6 +2,7 @@ node_modules/
 .cache/
 public
 .idea
+.claude/
 .tmp-home/
 addrinfo.php
 security-report.md
