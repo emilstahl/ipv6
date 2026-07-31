@@ -156,7 +156,7 @@ const IndexPage = ({ data }) => {
               {
                 id: 'state',
                 name: 'IPv6',
-                width: '35px',
+                width: '90px',
                 attributes: (cell, row) => {
                   if (cell == null) return;
                   return {
@@ -189,7 +189,7 @@ const IndexPage = ({ data }) => {
               {
                 id: 'assignedprefix',
                 name: 'Præfiks',
-                width: '35px',
+                width: '110px',
                 formatter: cell => _(<span style={{ lineHeight: 1.5 }}>{cell}</span>),
                 attributes: (cell) => {
                   if (cell == null) return;
@@ -247,7 +247,7 @@ const IndexPage = ({ data }) => {
                     );
                   })}
                 </span>),
-                width: '40px',
+                width: '110px',
               },
               {
                 id: 'sources',
@@ -273,8 +273,8 @@ const IndexPage = ({ data }) => {
                   }
                 },
 
-                
-                width: '60px',
+
+                width: '120px',
               }
             ]}
 
