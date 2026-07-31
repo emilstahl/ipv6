@@ -1,31 +1,34 @@
-import jsonp from 'jsonp';
 import store from '../store/default';
 
-const isIPv6 = input => (/^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$/gi).test(input);
+// The endpoint answers JSONP ("updateIPData({...});") — strip the wrapper.
+const parseJsonp = text =>
+  JSON.parse(text.slice(text.indexOf('(') + 1, text.lastIndexOf(')')));
 
-let addr = '';
-const addrInfoUrl = process.env.GATSBY_ADDRINFO_URL || 'https://check.ipv6-adresse.dk?callback=updateIPData';
+const addrInfoUrl =
+  process.env.GATSBY_ADDRINFO_URL || 'https://check.ipv6-adresse.dk';
 
-try {
-  jsonp(addrInfoUrl, {}, (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
+if (typeof window !== 'undefined') {
+  fetch(addrInfoUrl, { signal: AbortSignal.timeout(10000) })
+    .then(res => res.text())
+    .then(text => {
+      const data = parseJsonp(text);
+      const isIPv6 = data.address.includes(':'); // an IPv4 address never contains a colon
 
-    store.dispatch({
-      type: 'SET_USER_DATA', payload: {
-        testRun: true,
-        ispName: data.isp_name,
-        isIPv6: isIPv6(data.address),
-        ipv6Address: isIPv6(data.address) ? data.address : null,
-        ipv4Address: !isIPv6(data.address) ? data.address : null,
-      }
+      store.dispatch({
+        type: 'SET_USER_DATA',
+        payload: {
+          testRun: true,
+          ispName: data.isp_name,
+          isIPv6,
+          ipv6Address: isIPv6 ? data.address : null,
+          ipv4Address: !isIPv6 ? data.address : null,
+        },
+      });
     })
-
-    addr = data.address;
-  })
-
-} catch (e) {
-  // Ignore
+    .catch(() => {
+      store.dispatch({
+        type: 'SET_USER_DATA',
+        payload: { testRun: true, failed: true },
+      });
+    });
 }

@@ -12,12 +12,13 @@ import '../styles/index.style.scss';
 import '../services/checkipv6status'
 
 import AdoptionChart from '../components/AdoptionChart/component';
+import { safeUrl, safeDate } from '../utils/safe';
 
-// Newest date across an ISP's sources, regardless of array order
-const newestDate = sources => sources.reduce(
-  (max, s) => (s.date && new Date(s.date) > max ? new Date(s.date) : max),
-  new Date(sources[0].date)
-);
+// Newest valid date across an ISP's sources, regardless of array order
+const newestDate = sources => sources.reduce((max, s) => {
+  const d = safeDate(s.date);
+  return d && (!max || d > max) ? d : max;
+}, null);
 
 const styles = {
   ispList: {
@@ -68,9 +69,11 @@ export const query = graphql`
 `
 
 const IndexPage = ({ data }) => {
-  let ispData = data.allDataJson.edges.map(x => x.node);
-  ispData.map(x => x.color = !x.ipv6 ? '#ef9a9a' : (x.partial) ? '#ffe082' : '#a5d6a7');
-  ispData.map(x => x.state = !x.ipv6 ? 'Nej' : (x.partial) ? 'Delvist' : 'Ja');
+  const ispData = data.allDataJson.edges.map(x => ({
+    ...x.node,
+    color: !x.node.ipv6 ? '#ef9a9a' : (x.node.partial) ? '#ffe082' : '#a5d6a7',
+    state: !x.node.ipv6 ? 'Nej' : (x.node.partial) ? 'Delvist' : 'Ja',
+  }));
 
   return (
     <div>
@@ -136,12 +139,12 @@ const IndexPage = ({ data }) => {
                 },
 
                 formatter: (cell, row) => {
-                  const url = row.cell(1).data;
-                  const { hostname } = new URL(url);
+                  const url = safeUrl(row.cell(1).data);
+                  if (!url) return cell;
 
                   return _(<>
-                    <a style={styles.ispList.a} href={url} title={cell + " (nyt vindue)"} target={"_blank"} rel={"noreferrer"}>
-                      <img style={styles.ispList.img} height={"22px"} src={`https://www.google.com/s2/favicons?sz=128&domain_url=${hostname}`}
+                    <a style={styles.ispList.a} href={url.href} title={cell + " (nyt vindue)"} target={"_blank"} rel={"noreferrer"}>
+                      <img style={styles.ispList.img} height={"22px"} src={`https://www.google.com/s2/favicons?sz=128&domain_url=${url.hostname}`}
                            alt={cell + " logo"}/>
                       <span style={styles.ispList.span}>
                              {cell}
@@ -229,16 +232,20 @@ const IndexPage = ({ data }) => {
                 id: 'sources',
                 name: 'Kilde',
                 formatter: cell => _(<span style={{ lineHeight: 1.5 }}>
-                  {cell.map((source, i) => (
-                    <React.Fragment key={i}>
-                      {i > 0 && <br/>}
-                      {source.url
-                        ? <a style={styles.ispList.sourceLink} href={source.url}
-                             title={`Gå til kilde fra ${format(new Date(source.date), 'dd/MM/yyyy')} (nyt vindue)`}
-                             target="_blank" rel={"noreferrer"}>{source.name}</a>
-                        : <span title={format(new Date(source.date), 'dd/MM/yyyy')}>{source.name}</span>}
-                    </React.Fragment>
-                  ))}
+                  {cell.map((source, i) => {
+                    const date = safeDate(source.date);
+                    const dateText = date ? format(date, 'dd/MM/yyyy') : '—';
+                    return (
+                      <React.Fragment key={i}>
+                        {i > 0 && <br/>}
+                        {safeUrl(source.url)
+                          ? <a style={styles.ispList.sourceLink} href={source.url}
+                               title={`Gå til kilde fra ${dateText} (nyt vindue)`}
+                               target="_blank" rel={"noreferrer"}>{source.name}</a>
+                          : <span title={dateText}>{source.name}</span>}
+                      </React.Fragment>
+                    );
+                  })}
                 </span>),
                 width: '40px',
               },
@@ -246,13 +253,14 @@ const IndexPage = ({ data }) => {
                 id: 'sources',
                 name: 'Opdateret',
                 formatter: cell => {
-                  return `${format(newestDate(cell), 'dd/MM/yyyy')}`
+                  const d = newestDate(cell);
+                  return d ? format(d, 'dd/MM/yyyy') : '—';
                 },
                 sort: {
                   enabled: true,
                   compare: (a, b) => {
-                    let da = newestDate(a);
-                    let db = newestDate(b);
+                    let da = newestDate(a) || 0;
+                    let db = newestDate(b) || 0;
 
                     if (da > db) {
                       return 1;

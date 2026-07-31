@@ -1,10 +1,17 @@
 name: CI
 
+# No job writes to the repository — never hand install scripts or npx-fetched
+# tools a write-capable GITHUB_TOKEN.
+permissions:
+  contents: read
+
 on:
   pull_request:
     branches: [ master ]
   push:
     branches: [ master ]
+  schedule:
+    - cron: '0 6 * * 1'
 
 jobs:
   validate-json:
@@ -18,7 +25,7 @@ jobs:
           node-version: 22
 
       - name: Validate data/*.json against schema.json
-        run: npx --yes ajv-cli validate -s schema.json -d "data/*.json"
+        run: npx --yes ajv-cli@5.0.0 validate -s schema.json -d "data/*.json"
 
   build:
     name: Build site
@@ -34,6 +41,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Unit tests
+        run: npm test
+
       - name: Gatsby build
         run: npm run build
 
@@ -43,6 +53,8 @@ jobs:
           grep -q "IPv6-adresse.dk" public/index.html
           test -f public/sitemap-index.xml
           test -f public/manifest.webmanifest
+          grep -q "Content-Security-Policy" public/_headers
+          grep -q "sha256-" public/_headers
 
   audit:
     name: npm audit (fails on critical)
@@ -62,3 +74,18 @@ jobs:
       - name: Report high/critical counts (informational)
         if: always()
         run: npm audit --audit-level=high || true
+
+  # Weekly visibility into the high-severity backlog without blocking PRs.
+  audit-scheduled:
+    name: Weekly high-severity audit report
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Audit dependencies (high)
+        run: npm audit --audit-level=high
