@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { format } from 'date-fns';
+import { safeDate } from '../../utils/safe';
 
 // Chart tokens — line color validated >= 3:1 on white; site accent used only as fill
 const tokens = {
@@ -11,13 +12,14 @@ const tokens = {
   ink: '#333',
 };
 
-// Earliest source date per ISP with (full or partial) IPv6 support
+// Earliest valid source date per ISP with (full or partial) IPv6 support
 const adoptionEvents = ispData => ispData
   .filter(isp => isp.ipv6 === true && isp.sources && isp.sources.length > 0)
-  .map(isp => ({
-    name: isp.name,
-    date: isp.sources.reduce((min, s) => (s.date && new Date(s.date) < min ? new Date(s.date) : min), new Date(isp.sources[0].date)),
-  }))
+  .map(isp => {
+    const dates = isp.sources.map(s => safeDate(s.date)).filter(Boolean);
+    return dates.length ? { name: isp.name, date: new Date(Math.min(...dates)) } : null;
+  })
+  .filter(Boolean)
   .sort((a, b) => a.date - b.date)
   .map((e, i) => ({ ...e, count: i + 1 }));
 

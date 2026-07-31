@@ -5,7 +5,7 @@ const parseJsonp = text =>
   JSON.parse(text.slice(text.indexOf('(') + 1, text.lastIndexOf(')')));
 
 const addrInfoUrl =
-  process.env.GATSBY_ADDRINFO_URL || 'https://check.ipv6-adresse.dk?callback=updateIPData';
+  process.env.GATSBY_ADDRINFO_URL || 'https://check.ipv6-adresse.dk';
 
 if (typeof window !== 'undefined') {
   fetch(addrInfoUrl, { signal: AbortSignal.timeout(10000) })
