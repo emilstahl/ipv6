@@ -41,14 +41,6 @@
       "type": "string",
       "description": "Comment on the IPv6 support"
     },
-    "private": {
-      "type": "boolean",
-      "deprecated": true
-    },
-    "business": {
-      "type": "boolean",
-      "deprecated": true
-    },
     "sources": {
       "type": "array",
       "description": "List of sources",

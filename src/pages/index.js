@@ -5,41 +5,19 @@ import Footer          from '../components/Footer/component';
 import { graphql }     from 'gatsby';
 import 'gridjs/dist/theme/mermaid.min.css';
 import { _, Grid }     from 'gridjs-react';
-import { format }      from 'date-fns'
 
 import '../styles/index.style.scss';
 
 import '../services/checkipv6status'
 
 import AdoptionChart from '../components/AdoptionChart/component';
-import { safeUrl, safeDate } from '../utils/safe';
+import { safeUrl, safeDate, formatDate } from '../utils/safe';
 
 // Newest valid date across an ISP's sources, regardless of array order
 const newestDate = sources => sources.reduce((max, s) => {
   const d = safeDate(s.date);
   return d && (!max || d > max) ? d : max;
 }, null);
-
-const styles = {
-  ispList: {
-    marginTop: '120px',
-    a: {
-      textDecoration: 'none',
-      color: '#333',
-    },
-    sourceLink: {
-      color: '#333'
-    },
-    span: {
-      verticalAlign: 'middle',
-      marginLeft: '10px',
-    },
-    img: {
-      verticalAlign: 'middle',
-    }
-  }
-
-}
 
 export const query = graphql`
   query GetISPData {
@@ -48,14 +26,12 @@ export const query = graphql`
     ) {
       edges {
         node {
-          id,
-          name,
-          url,
-          
-          ipv6,
-          partial,
-          assignedprefix,
-          comment,
+          name
+          url
+          ipv6
+          partial
+          assignedprefix
+          comment
           sources {
             date
             name
@@ -65,7 +41,6 @@ export const query = graphql`
       }
     }
   }
-
 `
 
 const IndexPage = ({ data }) => {
@@ -74,6 +49,12 @@ const IndexPage = ({ data }) => {
     color: !x.node.ipv6 ? '#ef9a9a' : (x.node.partial) ? '#ffe082' : '#a5d6a7',
     state: !x.node.ipv6 ? 'Nej' : (x.node.partial) ? 'Delvist' : 'Ja',
   }));
+
+  const total = ispData.length;
+  const full = ispData.filter(x => x.ipv6 && !x.partial).length;
+  const partial = ispData.filter(x => x.ipv6 && x.partial).length;
+  const none = total - full - partial;
+  const pct = n => (n / total * 100).toFixed(0);
 
   return (
     <div>
@@ -103,22 +84,22 @@ const IndexPage = ({ data }) => {
 
       <DoIHaveIPv6/>
 
-      <section id="ispList" className="ispList" style={styles.ispList}>
+      <section id="ispList" className="ispList">
         <div className="container">
           <h2>Liste over danske udbydere</h2>
           <div className="stats">
-            <p>Internetudbydere på listen: {ispData.length}</p>
+            <p>Internetudbydere på listen: {total}</p>
             <p>Internetudbydere med <abbr
               title="Fuld IPv6-understøttelse betyder at alle kunder har mulighed for at få IPv6. Der kan dog være udbydere, som kun leverer deres tjenester til erhverv.">fuld
-              IPv6-understøttelse</abbr>: {ispData.filter(x => x.ipv6 === true && x.partial === false).length} ({Number(ispData.filter(x => x.ipv6 === true && x.partial === false).length / ispData.length * 100).toFixed(0).toString()}%)
+              IPv6-understøttelse</abbr>: {full} ({pct(full)}%)
             </p>
             <p>Internetudbydere med <abbr
               title="Delvis IPv6-understøttelse betyder at nogle kunder kan få IPv6. Det kan f.eks. være erhvervskunder, fiberkunder eller lignende.">delvis
-              IPv6-understøttelse</abbr>: {ispData.filter(x => x.ipv6 === true && x.partial === true).length} ({Number(ispData.filter(x => x.ipv6 === true && x.partial === true).length / ispData.length * 100).toFixed(0).toString()}%)
+              IPv6-understøttelse</abbr>: {partial} ({pct(partial)}%)
             </p>
             <p>Internetudbydere uden <abbr
               title="Ingen understøttelse betyder at de ikke tilbyder IPv6 til nogle kunder på nuværende tidspunkt.">
-              IPv6-understøttelse</abbr>: {ispData.filter(x => x.ipv6 === false).length} ({Number(ispData.filter(x => x.ipv6 === false).length / ispData.length * 100).toFixed(0).toString()}%)
+              IPv6-understøttelse</abbr>: {none} ({pct(none)}%)
             </p>
           </div>
 
@@ -142,18 +123,16 @@ const IndexPage = ({ data }) => {
                   const url = safeUrl(row.cell(1).data);
                   if (!url) return cell;
 
-                  return _(<>
-                    <a style={styles.ispList.a} href={url.href} title={cell + " (nyt vindue)"} target={"_blank"} rel={"noreferrer"}>
+                  return _(
+                    <a className="ispLink" href={url.href} title={cell + " (nyt vindue)"} target="_blank" rel="noreferrer">
                       {/* Fetched at build time by onPreBootstrap in gatsby-node.js — same origin,
                           so no visitor data leaks to a third party. Hide it if it is missing. */}
-                      <img style={styles.ispList.img} height={"22px"} src={`/favicons/${url.hostname}.png`}
+                      <img className="ispLogo" height={"22px"} src={`/favicons/${url.hostname}.png`}
                            onError={e => { e.target.style.visibility = 'hidden' }}
                            alt={cell + " logo"}/>
-                      <span style={styles.ispList.span}>
-                             {cell}
-                         </span>
+                      <span className="ispName">{cell}</span>
                     </a>
-                  </>)
+                  )
                 }
               },
               {
@@ -172,20 +151,8 @@ const IndexPage = ({ data }) => {
                 sort: {
                   enabled: true,
                   compare: (a, b) => {
-                    const priority = {
-                      "Ja": 0,
-                      "Delvist": 1,
-                      "Nej": 2
-                    }
-
-                    if (priority[a] > priority[b]) {
-                      return 1;
-                    } else if (priority[b] > priority[a]) {
-                      return -1;
-                    } else {
-                      return 0;
-                    }
-
+                    const priority = { "Ja": 0, "Delvist": 1, "Nej": 2 };
+                    return priority[a] - priority[b];
                   }
                 }
               },
@@ -193,7 +160,7 @@ const IndexPage = ({ data }) => {
                 id: 'assignedprefix',
                 name: 'Præfiks',
                 width: '110px',
-                formatter: cell => _(<span style={{ lineHeight: 1.5 }}>{cell}</span>),
+                formatter: cell => _(<span className="cellText">{cell}</span>),
                 attributes: (cell) => {
                   if (cell == null) return;
                   return {
@@ -205,22 +172,9 @@ const IndexPage = ({ data }) => {
                 sort: {
                   enabled: true,
                   compare: (a, b) => {
-                    const parsePrefix = (prefix) => {
-                      if (!prefix) return 128; // Treat undefined as the largest prefix
-                      return parseInt(prefix.replace('/', ''), 10);
-                    };
-
-                    const pa = parsePrefix(a);
-                    const pb = parsePrefix(b);
-
-                    if (pa > pb) {
-                      return 1;
-                    } else if (pa < pb) {
-                      return -1;
-                    } else {
-                      return 0;
-                    }
-
+                    // Treat a missing prefix as the largest, so it sorts last
+                    const parsePrefix = p => (p ? parseInt(p.replace('/', ''), 10) : 128);
+                    return parsePrefix(a) - parsePrefix(b);
                   }
                 }
               },
@@ -228,23 +182,23 @@ const IndexPage = ({ data }) => {
               {
                 id: 'comment',
                 name: 'Kommentar fra udbyder',
-                formatter: cell => _(<span style={{ lineHeight: 1.5 }}>{cell}</span>),
+                formatter: cell => _(<span className="cellText">{cell}</span>),
                 width: '400px'
               },
               {
                 id: 'sources',
                 name: 'Kilde',
-                formatter: cell => _(<span style={{ lineHeight: 1.5 }}>
+                formatter: cell => _(<span className="cellText">
                   {cell.map((source, i) => {
                     const date = safeDate(source.date);
-                    const dateText = date ? format(date, 'dd/MM/yyyy') : '—';
+                    const dateText = date ? formatDate(date) : '—';
                     return (
                       <React.Fragment key={i}>
                         {i > 0 && <br/>}
                         {safeUrl(source.url)
-                          ? <a style={styles.ispList.sourceLink} href={source.url}
+                          ? <a className="sourceLink" href={source.url}
                                title={`Gå til kilde fra ${dateText} (nyt vindue)`}
-                               target="_blank" rel={"noreferrer"}>{source.name}</a>
+                               target="_blank" rel="noreferrer">{source.name}</a>
                           : <span title={dateText}>{source.name}</span>}
                       </React.Fragment>
                     );
@@ -257,26 +211,12 @@ const IndexPage = ({ data }) => {
                 name: 'Opdateret',
                 formatter: cell => {
                   const d = newestDate(cell);
-                  return d ? format(d, 'dd/MM/yyyy') : '—';
+                  return d ? formatDate(d) : '—';
                 },
                 sort: {
                   enabled: true,
-                  compare: (a, b) => {
-                    let da = newestDate(a) || 0;
-                    let db = newestDate(b) || 0;
-
-                    if (da > db) {
-                      return 1;
-                    } else if (da < db) {
-                      return -1;
-                    } else {
-                      return 0;
-                    }
-
-                  }
+                  compare: (a, b) => (newestDate(a) || 0) - (newestDate(b) || 0),
                 },
-
-
                 width: '120px',
               }
             ]}
@@ -297,7 +237,7 @@ const IndexPage = ({ data }) => {
           />
         </div>
       </section>
-      <Footer className="footer" />
+      <Footer />
 
     </div>
   )

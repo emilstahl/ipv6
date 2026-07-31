@@ -17,9 +17,6 @@ const styles = {
         textDecoration: 'none',
         borderRadius: '4px',
         marginTop: '1rem',
-        "&:hover": {
-            backgroundColor: 'red'
-        }
     },
     footer: {
         fontSize: '10pt',
@@ -27,7 +24,6 @@ const styles = {
     }
 }
 
-// markup
 const NotFoundPage = () => {
     return (
         <div style={styles.hero}>

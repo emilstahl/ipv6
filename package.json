@@ -19,7 +19,6 @@
     "test": "node --test test/*.test.js"
   },
   "dependencies": {
-    "date-fns": "^4.1.0",
     "gatsby": "^5.16.1",
     "gatsby-plugin-manifest": "^5.16.0",
     "gatsby-plugin-react-svg": "^3.3.0",
@@ -41,7 +40,6 @@
     "immutable": "^4.3.9",
     "sharp": "^0.35.3",
     "brace-expansion@1": "^1.1.18",
-    "brace-expansion@2": "^2.1.4",
     "resolve-url-loader": "^5.0.0",
     "postcss": "^8.5.25",
     "serialize-javascript": "^7.0.7",

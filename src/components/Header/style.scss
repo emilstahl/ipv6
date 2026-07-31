@@ -21,4 +21,13 @@
     a {
         color: inherit;
     }
+
+    .contribute svg {
+        vertical-align: middle;
+        opacity: 0.75;
+    }
+
+    .contribute a:hover svg {
+        opacity: 1;
+    }
 }
