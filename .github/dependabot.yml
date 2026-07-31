@@ -10,6 +10,12 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    ignore:
+      # Gatsby 5 peer-depends on React 18; React 19 breaks `npm ci` (ERESOLVE).
+      - dependency-name: "react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-dom"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "github-actions"
     directory: "/"

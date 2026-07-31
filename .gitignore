@@ -4,3 +4,5 @@ public
 .idea
 .tmp-home/
 addrinfo.php
+security-report.md
+security-remediation.md

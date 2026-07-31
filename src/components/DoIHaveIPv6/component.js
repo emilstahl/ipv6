@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import store from '../../store/default'
 import './style.scss'
 
@@ -6,40 +6,34 @@ import Spinner from '../../images/icons/spinner.svg'
 import Checkmark from '../../images/icons/checkmark.svg'
 import Error from '../../images/icons/error.svg'
 
-const sendData = () => {
-    alert('Tak!')
-}
-
 const DoIHaveIPv6 = () => {
-    const [loading, setLoading] = useState(true)
+    const [result, setResult] = useState(null)
 
-    const [ipv6, setIPv6] = useState(null)
-    const [ipv4, setIPv4] = useState(null)
-    const [isp, setISP] = useState(null)
-
-    store.subscribe(() => {
-      const state = store.getState();
-
-      setIPv6(state.userIPv6Data.ipv6Address);
-      setIPv4(state.userIPv6Data.ipv4Address);
-      setISP(state.userIPv6Data.ispName);
-
-      setLoading(false);
-    })
+    useEffect(() => {
+        const read = () => {
+            const state = store.getState().userIPv6Data;
+            if (state.testRun) setResult(state);
+        };
+        read(); // the check may have finished before this component mounted
+        return store.subscribe(read);
+    }, [])
 
     return (
         <div className="DoIHaveIPv6">
             <p className="heading">Har jeg IPv6?</p>
-            {loading && (<>
+            {!result && (<>
                 <p className="result">Vi tjekker om du har IPv6...</p>
                 <Spinner className="loader" />
             </>)}
-            {!loading && (<>
-                {ipv6 && (<>
+            {result && result.failed && (<>
+                <Error height="66px" width="66px" className="statusIcon" />
+                <p className="result">Vi kunne desværre ikke teste om du har IPv6</p>
+            </>)}
+            {result && !result.failed && (<>
+                {result.ipv6Address ? (<>
                   <Checkmark height="64px" className="statusIcon" />
                   <p className="result">Ja! Du har IPv6 &ndash; sikke en first mover!</p>
-                </>)}
-                {!ipv6 && (<>
+                </>) : (<>
                   <Error height="66px" width="66px" className="statusIcon" />
                   <p className="result">Øv! Du har desværre ikke IPv6</p>
                 </>)}
@@ -47,9 +41,9 @@ const DoIHaveIPv6 = () => {
                 <br/>
 
                 <p className="details">
-                    {ipv6 && (<>Din IPv6-adresse er <b>{ipv6}</b><br/></>)}
-                    {ipv4 && (<>Din IPv4-adresse er <b>{ipv4}</b><br/></>)}
-                    {isp && (<>Din udbyder er <b>{isp}</b><br/></>)}
+                    {result.ipv6Address && (<>Din IPv6-adresse er <b>{result.ipv6Address}</b><br/></>)}
+                    {result.ipv4Address && (<>Din IPv4-adresse er <b>{result.ipv4Address}</b><br/></>)}
+                    {result.ispName && (<>Din udbyder er <b>{result.ispName}</b><br/></>)}
                 </p>
             </>)}
         </div>

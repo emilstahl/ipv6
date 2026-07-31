@@ -43,6 +43,8 @@ jobs:
           grep -q "IPv6-adresse.dk" public/index.html
           test -f public/sitemap-index.xml
           test -f public/manifest.webmanifest
+          grep -q "Content-Security-Policy" public/_headers
+          grep -q "sha256-" public/_headers
 
   audit:
     name: npm audit (fails on critical)
