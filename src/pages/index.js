@@ -144,7 +144,10 @@ const IndexPage = ({ data }) => {
 
                   return _(<>
                     <a style={styles.ispList.a} href={url.href} title={cell + " (nyt vindue)"} target={"_blank"} rel={"noreferrer"}>
-                      <img style={styles.ispList.img} height={"22px"} src={`https://www.google.com/s2/favicons?sz=128&domain_url=${url.hostname}`}
+                      {/* Fetched at build time by onPreBootstrap in gatsby-node.js — same origin,
+                          so no visitor data leaks to a third party. Hide it if it is missing. */}
+                      <img style={styles.ispList.img} height={"22px"} src={`/favicons/${url.hostname}.png`}
+                           onError={e => { e.target.style.visibility = 'hidden' }}
                            alt={cell + " logo"}/>
                       <span style={styles.ispList.span}>
                              {cell}
