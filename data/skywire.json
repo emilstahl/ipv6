@@ -1,7 +1,7 @@
 {
   "$schema": "./../schema.json",
   "name": "Skywire",
-  "url": "http://www.skywire.dk",
+  "url": "https://skywire.dk",
   "ipv6": false,
   "comment": "Vi har planer om at udbyde det, men har på nuværende tidspunkt ingen tidshorisont for det.",
   "partial": false,

@@ -1,10 +1,9 @@
 {
   "$schema": "./../schema.json",
-  "name": "ipvision",
-  "url": "https://ipvision.dk",
+  "name": "Dstny (tidl. ipvision)",
+  "url": "https://dstny.dk",
   "ipv6": true,
   "comment": "Alle vores kunder kan få IPv6 adresser. Leverer kun til erhverv.",
   "partial": false,
-  "business": true,
   "sources": [{ "date": "2016-02-27", "name": "Kunde", "url": null }]
 }
