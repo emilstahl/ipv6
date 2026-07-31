@@ -12,6 +12,14 @@ import '../styles/index.style.scss';
 
 import '../services/checkipv6status'
 
+import AdoptionChart from '../components/AdoptionChart/component';
+
+// Newest date across an ISP's sources, regardless of array order
+const newestDate = sources => sources.reduce(
+  (max, s) => (s.date && new Date(s.date) > max ? new Date(s.date) : max),
+  new Date(sources[0].date)
+);
+
 const styles = {
   ispList: {
     marginTop: '120px',
@@ -115,6 +123,8 @@ const IndexPage = ({ data }) => {
               IPv6-understøttelse</abbr>: {ispData.filter(x => x.ipv6 === false).length} ({Number(ispData.filter(x => x.ipv6 === false).length / ispData.length * 100).toFixed(0).toString()}%)
             </p>
           </div>
+
+          <AdoptionChart ispData={ispData}/>
 
           <Grid
             data={ispData}
@@ -223,24 +233,31 @@ const IndexPage = ({ data }) => {
               {
                 id: 'sources',
                 name: 'Kilde',
-                formatter: cell => {
-                  if (cell[0].url) return _(<a style={styles.ispList.sourceLink} href={cell[0].url}
-                                               title="Gå til kilde (nyt vindue)" target="_blank" rel={"noreferrer"}>{cell[0].name}</a>)
-                  else return `${cell[0].name}`
-                },
+                formatter: cell => _(<span style={{ lineHeight: 1.5 }}>
+                  {cell.map((source, i) => (
+                    <React.Fragment key={i}>
+                      {i > 0 && <br/>}
+                      {source.url
+                        ? <a style={styles.ispList.sourceLink} href={source.url}
+                             title={`Gå til kilde fra ${format(new Date(source.date), 'dd/MM/yyyy')} (nyt vindue)`}
+                             target="_blank" rel={"noreferrer"}>{source.name}</a>
+                        : <span title={format(new Date(source.date), 'dd/MM/yyyy')}>{source.name}</span>}
+                    </React.Fragment>
+                  ))}
+                </span>),
                 width: '40px',
               },
               {
                 id: 'sources',
                 name: 'Opdateret',
                 formatter: cell => {
-                  return `${format(new Date(cell[0].date), 'dd/MM/yyyy')}`
+                  return `${format(newestDate(cell), 'dd/MM/yyyy')}`
                 },
                 sort: {
                   enabled: true,
                   compare: (a, b) => {
-                    let da = new Date(a[0].date);
-                    let db = new Date(b[0].date);
+                    let da = newestDate(a);
+                    let db = newestDate(b);
 
                     if (da > db) {
                       return 1;
