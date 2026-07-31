@@ -16,4 +16,12 @@ const safeDate = d => {
   return Number.isNaN(date.getTime()) ? null : date;
 };
 
-module.exports = { safeUrl, safeDate };
+// dd/MM/yyyy. en-GB day/month/year order matches what the site has always shown.
+const dateFormat = new Intl.DateTimeFormat('en-GB', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+});
+const formatDate = d => dateFormat.format(d);
+
+module.exports = { safeUrl, safeDate, formatDate };

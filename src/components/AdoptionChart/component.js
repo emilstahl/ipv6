@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { format } from 'date-fns';
-import { safeDate } from '../../utils/safe';
+import { safeDate, formatDate } from '../../utils/safe';
 
 // Chart tokens — line color validated >= 3:1 on white; site accent used only as fill
 const tokens = {
@@ -125,7 +124,7 @@ const AdoptionChart = ({ ispData }) => {
             whiteSpace: 'nowrap',
             boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
           }}>
-            <strong>{format(hover.date, 'dd/MM/yyyy')}</strong><br/>
+            <strong>{formatDate(hover.date)}</strong><br/>
             {hover.count} {hover.count === 1 ? 'udbyder' : 'udbydere'} med IPv6<br/>
             <span style={{ color: tokens.muted }}>+ {hover.name}</span>
           </div>

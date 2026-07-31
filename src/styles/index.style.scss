@@ -27,6 +27,33 @@ th.gridjs-th-sort .gridjs-th-content {
     width: auto;
 }
 
+.ispList {
+    margin-top: 120px;
+
+    // Applied inside gridjs cell formatters, which render into this section.
+    .ispLink,
+    .sourceLink {
+        color: #333;
+    }
+
+    .ispLink {
+        text-decoration: none;
+    }
+
+    .ispLogo,
+    .ispName {
+        vertical-align: middle;
+    }
+
+    .ispName {
+        margin-left: 10px;
+    }
+
+    .cellText {
+        line-height: 1.5;
+    }
+}
+
 blockquote {
     color: white;
     padding: 0px;

@@ -10,8 +10,6 @@ on:
     branches: [ master ]
   push:
     branches: [ master ]
-  schedule:
-    - cron: '0 6 * * 1'
 
 jobs:
   validate-json:
@@ -22,7 +20,7 @@ jobs:
 
       - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version-file: .nvmrc
 
       - name: Validate data/*.json against schema.json
         run: npx --yes ajv-cli@5.0.0 validate -s schema.json -d "data/*.json"
@@ -35,11 +33,22 @@ jobs:
 
       - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Install dependencies
         run: npm ci
+
+      # Audits the tree actually installed above. Gatsby 5's build-time tooling
+      # carries known high-severity findings that need upstream releases, so
+      # gate on critical to keep this a real signal, and report high for
+      # visibility without blocking.
+      - name: Audit dependencies (fails on critical)
+        run: npm audit --audit-level=critical
+
+      - name: Report high-severity backlog (informational)
+        if: always()
+        run: npm audit --audit-level=high || true
 
       - name: Unit tests
         run: npm test
@@ -55,37 +64,3 @@ jobs:
           test -f public/manifest.webmanifest
           grep -q "Content-Security-Policy" public/_headers
           grep -q "sha256-" public/_headers
-
-  audit:
-    name: npm audit (fails on critical)
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 22
-
-      # Gatsby 5's build-time tooling carries known high-severity findings that
-      # need upstream releases; gate on critical so this stays a real signal.
-      - name: Audit dependencies (critical)
-        run: npm audit --audit-level=critical
-
-      - name: Report high/critical counts (informational)
-        if: always()
-        run: npm audit --audit-level=high || true
-
-  # Weekly visibility into the high-severity backlog without blocking PRs.
-  audit-scheduled:
-    name: Weekly high-severity audit report
-    if: github.event_name == 'schedule'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 22
-
-      - name: Audit dependencies (high)
-        run: npm audit --audit-level=high
