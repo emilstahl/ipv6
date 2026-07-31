@@ -19,6 +19,14 @@
     }
 }
 
+// gridjs mermaid theme clips header text with ellipsis; let it render fully
+th.gridjs-th .gridjs-th-content,
+th.gridjs-th-sort .gridjs-th-content {
+    overflow: visible;
+    text-overflow: clip;
+    width: auto;
+}
+
 blockquote {
     color: white;
     padding: 0px;
