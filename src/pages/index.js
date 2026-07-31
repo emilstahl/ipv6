@@ -5,7 +5,6 @@ import Footer          from '../components/Footer/component';
 import { graphql }     from 'gatsby';
 import 'gridjs/dist/theme/mermaid.min.css';
 import { _, Grid }     from 'gridjs-react';
-import Helmet          from "react-helmet";
 import { format }      from 'date-fns'
 
 import '../styles/index.style.scss';
@@ -44,7 +43,7 @@ const styles = {
 export const query = graphql`
   query GetISPData {
     allDataJson(
-      sort: { order: [DESC, ASC, ASC], fields: [ipv6, partial, name] }
+      sort: [{ ipv6: DESC }, { partial: ASC }, { name: ASC }]
     ) {
       edges {
         node {
@@ -75,10 +74,6 @@ const IndexPage = ({ data }) => {
 
   return (
     <div>
-      <Helmet>
-        <title>IPv6-adresse.dk — Internetudbydere og IPv6 understøttelse</title>
-        <meta name="description" content="IPv6-adresse.dk er samlingspunktet for den danske indførsel af den nye internet-protokol, IPv6. Siden er et open source projekt, og alle kan bidrage til siden!" />
-      </Helmet>
       <HeaderComponent/>
       <div className="hero">
         <div className="container">
@@ -296,5 +291,12 @@ const IndexPage = ({ data }) => {
     </div>
   )
 }
+
+export const Head = () => (
+  <>
+    <title>IPv6-adresse.dk — Internetudbydere og IPv6 understøttelse</title>
+    <meta name="description" content="IPv6-adresse.dk er samlingspunktet for den danske indførsel af den nye internet-protokol, IPv6. Siden er et open source projekt, og alle kan bidrage til siden!" />
+  </>
+)
 
 export default IndexPage

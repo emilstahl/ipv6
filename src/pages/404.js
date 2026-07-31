@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link }   from "gatsby"
-import { Helmet } from "react-helmet";
 
 const styles = {
     hero: {
@@ -32,9 +31,6 @@ const styles = {
 const NotFoundPage = () => {
     return (
         <div style={styles.hero}>
-          <Helmet>
-            <title>Siden blev ikke fundet — IPv6-adresse.dk</title>
-          </Helmet>
             <h1>Siden blev ikke fundet :(</h1>
             <p>IPv6-adresse.dk har kun én side, og det er forsiden. Så jeg sender dig lige derhen.</p>
             <Link to="/" style={styles.btn}>Klik her for at komme til forsiden</Link>
@@ -44,5 +40,7 @@ const NotFoundPage = () => {
         </div>
     )
 }
+
+export const Head = () => <title>Siden blev ikke fundet — IPv6-adresse.dk</title>
 
 export default NotFoundPage

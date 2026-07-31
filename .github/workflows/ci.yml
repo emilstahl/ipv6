@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+
+jobs:
+  validate-json:
+    name: Validate ISP data against schema
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate data/*.json against schema.json
+        run: npx --yes ajv-cli validate -s schema.json -d "data/*.json"
+
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Gatsby build
+        run: npm run build
+
+      - name: Sanity-check build output
+        run: |
+          test -f public/index.html
+          grep -q "IPv6-adresse.dk" public/index.html
+          test -f public/sitemap-index.xml
+          test -f public/manifest.webmanifest
+
+  audit:
+    name: npm audit (fails on critical)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Gatsby 5's build-time tooling carries known high-severity findings that
+      # need upstream releases; gate on critical so this stays a real signal.
+      - name: Audit dependencies (critical)
+        run: npm audit --audit-level=critical
+
+      - name: Report high/critical counts (informational)
+        if: always()
+        run: npm audit --audit-level=high || true
