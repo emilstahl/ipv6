@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "engines": {
-    "node": ">=20"
+    "node": ">=20.19.0"
   },
   "scripts": {
     "develop": "gatsby develop",
@@ -35,11 +35,10 @@
   },
   "overrides": {
     "loader-utils@<2": "^1.4.2",
-    "lodash": "^4.18.1",
     "json5@<2": "^1.0.2",
+    "lodash": "^4.18.1",
     "immutable": "^4.3.9",
     "sharp": "^0.35.3",
-    "brace-expansion@1": "^1.1.18",
     "resolve-url-loader": "^5.0.0",
     "postcss": "^8.5.25",
     "serialize-javascript": "^7.0.7",
