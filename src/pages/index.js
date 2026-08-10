@@ -11,6 +11,12 @@ import '../styles/index.style.scss';
 import AdoptionChart from '../components/AdoptionChart/component';
 import { safeUrl, safeDate, formatDate } from '../utils/safe';
 
+// gridjs addresses cells by position, so the hidden columns the visible
+// formatters read from are declared once here and looked up by name. Reordering
+// or adding a column can no longer feed the wrong field into an href.
+const HIDDEN_COLUMNS = ['color', 'url'];
+const hidden = name => HIDDEN_COLUMNS.indexOf(name);
+
 // Newest valid date across an ISP's sources, regardless of array order
 const newestDate = sources => sources.reduce((max, s) => {
   const d = safeDate(s.date);
@@ -106,8 +112,7 @@ const IndexPage = ({ data }) => {
           <Grid
             data={ispData}
             columns={[
-              { name: 'color', hidden: true },
-              { name: 'url', hidden: true },
+              ...HIDDEN_COLUMNS.map(name => ({ name, hidden: true })),
               {
                 id: 'name',
                 name: 'Navn',
@@ -118,7 +123,7 @@ const IndexPage = ({ data }) => {
                 },
 
                 formatter: (cell, row) => {
-                  const url = safeUrl(row.cell(1).data);
+                  const url = safeUrl(row.cell(hidden('url')).data);
                   if (!url) return cell;
 
                   return _(
@@ -142,7 +147,7 @@ const IndexPage = ({ data }) => {
                   return {
                     style: {
                       textAlign: 'center',
-                      backgroundColor: `${row.cell(0).data}`
+                      backgroundColor: `${row.cell(hidden('color')).data}`
                     },
                   }
                 },

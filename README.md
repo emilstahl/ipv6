@@ -30,4 +30,4 @@ npm run develop   # dev-server på localhost:8000
 npm run build     # produktion — genererer også public/_headers (CSP m.m.)
 ```
 
-Kræver Node 20+.
+Kræver Node 20.19+ (`sass` sætter den nedre grænse). CI og deploy bruger den version, der står i [`.nvmrc`](.nvmrc).
