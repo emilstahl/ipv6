@@ -43,6 +43,12 @@ test('identical bodies across pages collapse to one hash', () => {
 test('matches close tags with whitespace and mixed case', () => {
   assert.ok(collectScriptHashes('<script>y()</script >').has(sha256('y()')));
   assert.ok(collectScriptHashes('<SCRIPT>z()</SCRIPT>').has(sha256('z()')));
+  // "</script" + whitespace or "/" closes the element per spec, with anything
+  // up to ">" discarded — browsers end the body here, so the regex must too.
+  assert.ok(collectScriptHashes('<script>w()</script\t\n bar>').has(sha256('w()')));
+  assert.ok(collectScriptHashes('<script>v()</script/foo>').has(sha256('v()')));
+  // "</scripty>" is NOT an end tag; the element runs on to the real one.
+  assert.ok(collectScriptHashes('<script>u()</scripty></script>').has(sha256('u()</scripty>')));
 });
 
 // The header value wraps each hash in single quotes — a regression here
