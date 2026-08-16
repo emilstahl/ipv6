@@ -1,6 +1,8 @@
 node_modules/
 .cache/
 public
+playwright-report/
+test-results/
 .idea
 .claude/
 .tmp-home/

@@ -10,18 +10,13 @@ import '../styles/index.style.scss';
 
 import AdoptionChart from '../components/AdoptionChart/component';
 import { safeUrl, safeDate, formatDate } from '../utils/safe';
+import { ispState, compareState, comparePrefix, newestDate, ispStats } from '../utils/isp';
 
 // gridjs addresses cells by position, so the hidden columns the visible
 // formatters read from are declared once here and looked up by name. Reordering
 // or adding a column can no longer feed the wrong field into an href.
 const HIDDEN_COLUMNS = ['color', 'url'];
 const hidden = name => HIDDEN_COLUMNS.indexOf(name);
-
-// Newest valid date across an ISP's sources, regardless of array order
-const newestDate = sources => sources.reduce((max, s) => {
-  const d = safeDate(s.date);
-  return d && (!max || d > max) ? d : max;
-}, null);
 
 export const query = graphql`
   query GetISPData {
@@ -48,16 +43,9 @@ export const query = graphql`
 `
 
 const IndexPage = ({ data }) => {
-  const ispData = data.allDataJson.edges.map(x => ({
-    ...x.node,
-    color: !x.node.ipv6 ? '#ef9a9a' : (x.node.partial) ? '#ffe082' : '#a5d6a7',
-    state: !x.node.ipv6 ? 'Nej' : (x.node.partial) ? 'Delvist' : 'Ja',
-  }));
+  const ispData = data.allDataJson.edges.map(x => ({ ...x.node, ...ispState(x.node) }));
 
-  const total = ispData.length;
-  const full = ispData.filter(x => x.ipv6 && !x.partial).length;
-  const partial = ispData.filter(x => x.ipv6 && x.partial).length;
-  const none = total - full - partial;
+  const { total, full, partial, none } = ispStats(ispData);
   const pct = n => (n / total * 100).toFixed(0);
 
   return (
@@ -153,10 +141,7 @@ const IndexPage = ({ data }) => {
                 },
                 sort: {
                   enabled: true,
-                  compare: (a, b) => {
-                    const priority = { "Ja": 0, "Delvist": 1, "Nej": 2 };
-                    return priority[a] - priority[b];
-                  }
+                  compare: compareState
                 }
               },
               {
@@ -174,11 +159,7 @@ const IndexPage = ({ data }) => {
                 },
                 sort: {
                   enabled: true,
-                  compare: (a, b) => {
-                    // Treat a missing prefix as the largest, so it sorts last
-                    const parsePrefix = p => (p ? parseInt(p.replace('/', ''), 10) : 128);
-                    return parsePrefix(a) - parsePrefix(b);
-                  }
+                  compare: comparePrefix
                 }
               },
 

@@ -4,7 +4,7 @@
   "url": "https://www.telenor.dk",
   "ipv6": false,
   "comment": "Der er ikke specifikke planer for implementering af IPv6 i øjeblikket.",
-  "partial": true,
+  "partial": false,
   "sources": [
     {
       "date": "2023-04-20",

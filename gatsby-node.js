@@ -1,7 +1,7 @@
-const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const { safeUrl } = require('./src/utils/safe');
+const { collectScriptHashes } = require('./src/utils/csp');
 
 // Favicons used to be loaded straight from Google's favicon endpoint, which
 // handed every visitor's IP and User-Agent to a third party 41 times per page
@@ -51,11 +51,7 @@ exports.onPostBuild = () => {
   for (const file of fs.readdirSync(pub, { recursive: true })) {
     // page-data/ contains a *directory* named 404.html — check it is a file
     if (!file.endsWith('.html') || !fs.statSync(path.join(pub, file)).isFile()) continue;
-    const html = fs.readFileSync(path.join(pub, file), 'utf8');
-    for (const [, attrs, body] of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)) {
-      if (/\bsrc\s*=/.test(attrs) || body === '') continue;
-      scriptHashes.add(`'sha256-${crypto.createHash('sha256').update(body).digest('base64')}'`);
-    }
+    collectScriptHashes(fs.readFileSync(path.join(pub, file), 'utf8'), scriptHashes);
   }
 
   const csp = [

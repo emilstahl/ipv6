@@ -1,4 +1,5 @@
 import { parseJsonp } from '../utils/safe';
+import { classifyAddress } from '../utils/ipcheck';
 
 const addrInfoUrl =
   process.env.GATSBY_ADDRINFO_URL || 'https://check.ipv6-adresse.dk';
@@ -6,16 +7,7 @@ const addrInfoUrl =
 const check = () =>
   fetch(addrInfoUrl, { signal: AbortSignal.timeout(10000) })
     .then(res => res.text())
-    .then(text => {
-      const data = parseJsonp(text);
-      const isIPv6 = data.address.includes(':'); // an IPv4 address never contains a colon
-
-      return {
-        ispName: data.isp_name,
-        ipv6Address: isIPv6 ? data.address : null,
-        ipv4Address: isIPv6 ? null : data.address,
-      };
-    })
+    .then(text => classifyAddress(parseJsonp(text)))
     .catch(() => ({ failed: true }));
 
 // Started at import time so the request is already in flight before React
