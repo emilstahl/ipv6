@@ -1,9 +1,17 @@
 {
   "$schema": "./../schema.json",
-  "name": "Fibia Erhverv",
+  "name": "Fibia (Waoo)",
   "url": "https://www.fibia.dk",
   "ipv6": false,
-  "comment": "Vi arbejder på at understøtte IPv6 og tidshorisonten er foreløbig 2024H2.",
+  "comment": "IPv6 er ikke et produkt som vi tilbyder, da det primært er målrettet erhverv. Så du skal desværre ikke regne med at det er noget vi kommer til at tilbyde inden for nærmere fremtid. (Svar fra Waoo Teknisk Support på vegne af Fibia, der har været eneejer af Waoo siden 2021. Fibia meldte ellers i 2024 ud, at IPv6 var på vej med tidshorisont 2024H2.)",
   "partial": false,
-  "sources": [{ "date": "2024-02-05", "name": "ISP", "url": null }]
+  "sources": [
+    { "date": "2026-08-14", "name": "ISP", "url": null },
+    { "date": "2024-02-05", "name": "ISP", "url": null },
+    {
+      "date": "2021-03-26",
+      "name": "Pressemeddelelse: Fibia bliver eneejer af Waoo",
+      "url": "https://via.ritzau.dk/pressemeddelelse/13618836/fibia-bliver-eneejer-af-waoo?publisherId=13222602"
+    }
+  ]
 }
