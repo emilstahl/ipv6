@@ -2,10 +2,15 @@
   "$schema": "./../schema.json",
   "name": "Telmore",
   "url": "https://www.telmore.dk",
-  "ipv6": false,
-  "comment": "Telmore understøtter ikke IPv6 på mobilnettet (bekræftet af Telmore kundeservice, marts 2025). Tweetet fra 2019 er ikke længere gældende.",
+  "ipv6": true,
+  "comment": "Telmore kører på TDC NET's mobilnet, der leverer dual-stack IPv4/IPv6 på mobildata (åbnet december 2025). Kundeservice afviste tidligere (marts 2025) IPv6 — det er ikke længere gældende.",
   "partial": false,
   "sources": [
+    {
+      "date": "2025-12-09",
+      "name": "Brugerrapport (Email)",
+      "url": null
+    },
     {
       "date": "2025-03-30",
       "name": "ISP (Email)",

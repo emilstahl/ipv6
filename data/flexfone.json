@@ -1,0 +1,20 @@
+{
+  "$schema": "./../schema.json",
+  "name": "Flexfone",
+  "url": "https://www.flexfone.dk",
+  "ipv6": true,
+  "comment": "Flexfone kører på TDC NET's mobilnet, der leverer dual-stack IPv4/IPv6 på mobildata (åbnet december 2025).",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2026-08-16",
+      "name": "ISP (FAQ om netværksleverandør)",
+      "url": "https://faq.flexfone.dk/en/who-do-we-get-as-a-network-provider-for-our-mobile-phones"
+    },
+    {
+      "date": "2025-12-09",
+      "name": "Brugerrapport (Email)",
+      "url": null
+    }
+  ]
+}
