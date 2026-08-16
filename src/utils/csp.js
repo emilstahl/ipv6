@@ -5,7 +5,7 @@ const crypto = require('crypto');
 // src= are already covered by 'self', and an empty body has nothing to hash.
 // Adds to (and returns) `hashes` so callers can accumulate across pages.
 const collectScriptHashes = (html, hashes = new Set()) => {
-  for (const [, attrs, body] of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)) {
+  for (const [, attrs, body] of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)) {
     if (/\bsrc\s*=/.test(attrs) || body === '') continue;
     hashes.add(`'sha256-${crypto.createHash('sha256').update(body).digest('base64')}'`);
   }

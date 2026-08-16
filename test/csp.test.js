@@ -37,6 +37,14 @@ test('identical bodies across pages collapse to one hash', () => {
   assert.equal(hashes.size, 2);
 });
 
+// Whitespace and mixed case in the closing tag are valid HTML. The end-tag
+// regex must tolerate both, or a real inline script goes unhashed and its
+// page breaks under CSP. (Hardening for CodeQL js/bad-tag-filter.)
+test('matches close tags with whitespace and mixed case', () => {
+  assert.ok(collectScriptHashes('<script>y()</script >').has(sha256('y()')));
+  assert.ok(collectScriptHashes('<SCRIPT>z()</SCRIPT>').has(sha256('z()')));
+});
+
 // The header value wraps each hash in single quotes — a regression here
 // produces a syntactically invalid CSP that browsers ignore entirely.
 test('hashes are emitted in CSP source-list form', () => {
