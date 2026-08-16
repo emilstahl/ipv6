@@ -1,0 +1,9 @@
+{
+  "$schema": "./../schema.json",
+  "name": "Nemnet",
+  "url": "https://nemnet.dk/",
+  "ipv6": true,
+  "comment": "Vi tilbyder fast IP-adresse, både IPv4 og IPv6",
+  "partial": false,
+  "sources": [{ "date": "2026-08-16", "name": "ISP", "url": "https://nemnet.dk/#pakker" }]
+}
