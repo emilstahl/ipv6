@@ -2,8 +2,19 @@
   "$schema": "./../schema.json",
   "name": "Telmore",
   "url": "https://www.telmore.dk",
-  "ipv6": true,
-  "comment": "Du har både en IPv4 og en IPv6-adresse, i tilfælde af, at du kommer i kontakt med netværksudstyr, der bruger en IPv6-adresse",
+  "ipv6": false,
+  "comment": "Telmore understøtter ikke IPv6 på mobilnettet (bekræftet af Telmore kundeservice, marts 2025). Tweetet fra 2019 er ikke længere gældende.",
   "partial": false,
-  "sources": [{ "date": "2019-06-27", "name": "Tweet", "url": "https://x.com/telmore/status/1144160756075831297" }]
+  "sources": [
+    {
+      "date": "2025-03-30",
+      "name": "ISP (Email)",
+      "url": null
+    },
+    {
+      "date": "2019-06-27",
+      "name": "Tweet",
+      "url": "https://x.com/telmore/status/1144160756075831297"
+    }
+  ]
 }

@@ -5,5 +5,16 @@
   "ipv6": false,
   "comment": "Vi har ikke nogen planer om at levere det, da der er for få hjemmesider der understøtter det i dag.",
   "partial": false,
-  "sources": [{ "date": "2020-09-21", "name": "ISP", "url": null }]
+  "sources": [
+    {
+      "date": "2022-11-21",
+      "name": "ISP (Email)",
+      "url": null
+    },
+    {
+      "date": "2020-09-21",
+      "name": "ISP",
+      "url": null
+    }
+  ]
 }

@@ -3,8 +3,19 @@
   "name": "Fastspeed",
   "url": "https://fastspeed.dk",
   "ipv6": true,
-  "assignedprefix": "/48",
+  "assignedprefix": "/60",
   "comment": "Fastspeed understøtter IPv6. IPv6 på COAX forbindelser understøttes ikke af TDC.",
   "partial": true,
-  "sources": [{ "date": "2024-05-01", "name": "ISP", "url": "https://fastspeed.dk/kundeservice/router-opsaetning-indstilling/ip-adresser/" }]
+  "sources": [
+    {
+      "date": "2026-05-28",
+      "name": "Brugerrapport (Email)",
+      "url": null
+    },
+    {
+      "date": "2024-05-01",
+      "name": "ISP",
+      "url": "https://fastspeed.dk/kundeservice/router-opsaetning-indstilling/ip-adresser/"
+    }
+  ]
 }
