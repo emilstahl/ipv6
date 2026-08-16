@@ -17,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          # No job pushes to the repo — don't leave GITHUB_TOKEN in git config.
+          persist-credentials: false
 
       - uses: actions/setup-node@v7
         with:
@@ -30,6 +33,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          # No job pushes to the repo — don't leave GITHUB_TOKEN in git config.
+          persist-credentials: false
 
       - uses: actions/setup-node@v7
         with:
