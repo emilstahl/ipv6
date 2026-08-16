@@ -3,14 +3,19 @@
   "name": "Hiper",
   "url": "https://www.hiper.dk",
   "ipv6": true,
-  "assignedprefix": "/48",
-  "comment": "Hiper understøtter IPv6. IPv6 på COAX forbindelser understøttes ikke af TDC.",
+  "assignedprefix": "/48 eller /56",
+  "comment": "Hiper leverer automatisk IPv6 via DHCPv6 på fibernet med fast /48 eller /56 prefix (fast /128 WAN). IPv6 på internet via kabel-tv (COAX) understøttes ikke.",
   "partial": true,
   "sources": [
     {
-      "date": "2021-06-21",
-      "name": "Tweet",
-      "url": "https://x.com/Nuudaydk/status/1406976008301973511"
+      "date": "2026-08-16",
+      "name": "ISP",
+      "url": "https://www.hiper.dk/hjaelp/udstyr/ip-adresse"
+    },
+    {
+      "date": "2018-12-08",
+      "name": "Blog (martinschultz.dev)",
+      "url": "https://www.martinschultz.dev/posts/2018-12-08-egen-router-hos-hiper/"
     }
   ]
 }
