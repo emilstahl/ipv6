@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { safeDate, formatDate } from '../../utils/safe';
+import { formatDate } from '../../utils/safe';
+import { adoptionEvents } from '../../utils/adoption';
 
 // Chart tokens — line color validated >= 3:1 on white; site accent used only as fill
 const tokens = {
@@ -10,17 +11,6 @@ const tokens = {
   muted: '#898781',
   ink: '#333',
 };
-
-// Earliest valid source date per ISP with (full or partial) IPv6 support
-const adoptionEvents = ispData => ispData
-  .filter(isp => isp.ipv6 === true && isp.sources && isp.sources.length > 0)
-  .map(isp => {
-    const dates = isp.sources.map(s => safeDate(s.date)).filter(Boolean);
-    return dates.length ? { name: isp.name, date: new Date(Math.min(...dates)) } : null;
-  })
-  .filter(Boolean)
-  .sort((a, b) => a.date - b.date)
-  .map((e, i) => ({ ...e, count: i + 1 }));
 
 const AdoptionChart = ({ ispData }) => {
   const [hover, setHover] = React.useState(null);

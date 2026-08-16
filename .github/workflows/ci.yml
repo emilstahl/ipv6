@@ -64,3 +64,10 @@ jobs:
           test -f public/manifest.webmanifest
           grep -q "Content-Security-Policy" public/_headers
           grep -q "sha256-" public/_headers
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      # Serves the build from the step above (playwright.config.js webServer)
+      - name: End-to-end smoke tests
+        run: npm run test:e2e
