@@ -15,7 +15,7 @@ import { ispState, compareState, comparePrefix, newestDate, ispStats } from '../
 // gridjs addresses cells by position, so the hidden columns the visible
 // formatters read from are declared once here and looked up by name. Reordering
 // or adding a column can no longer feed the wrong field into an href.
-const HIDDEN_COLUMNS = ['color', 'url'];
+const HIDDEN_COLUMNS = ['color', 'url', 'b2b'];
 const hidden = name => HIDDEN_COLUMNS.indexOf(name);
 
 export const query = graphql`
@@ -29,6 +29,7 @@ export const query = graphql`
           url
           ipv6
           partial
+          b2b
           assignedprefix
           comment
           sources {
@@ -122,6 +123,8 @@ const IndexPage = ({ data }) => {
                            onError={e => { e.target.style.visibility = 'hidden' }}
                            alt={cell + " logo"}/>
                       <span className="ispName">{cell}</span>
+                      {row.cell(hidden('b2b')).data &&
+                        <span className="b2bBadge" title="Leverer kun til erhvervskunder">Erhverv</span>}
                     </a>
                   )
                 }

@@ -20,7 +20,7 @@ Hver udbyder er én JSON-fil i [`data/`](data/), valideret mod [`schema.json`](s
 }
 ```
 
-`assignedprefix` udelades hvis ukendt. `sources[].date` skal være `YYYY-MM-DD`.
+`assignedprefix` udelades hvis ukendt. `b2b` sættes kun til `true`, hvis udbyderen udelukkende leverer til erhverv — udelades ellers. `sources[].date` skal være `YYYY-MM-DD`.
 
 ## Udvikling
 
