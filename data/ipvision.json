@@ -6,5 +6,6 @@
   "comment": "Alle vores kunder kan få IPv6 adresser. Leverer kun til erhverv.",
   "partial": false,
   "b2b": true,
+  "technologies": ["fiber", "xdsl", "mobile", "fwa"],
   "sources": [{ "date": "2016-02-27", "name": "Kunde", "url": null }]
 }

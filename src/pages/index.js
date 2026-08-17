@@ -18,6 +18,29 @@ import { ispState, compareState, comparePrefix, newestDate, ispStats } from '../
 const HIDDEN_COLUMNS = ['color', 'url', 'b2b'];
 const hidden = name => HIDDEN_COLUMNS.indexOf(name);
 
+// Danish display labels for the technology enum in schema.json.
+const TECHNOLOGY_LABELS = {
+  fiber: 'Fiber',
+  coax: 'Coax',
+  xdsl: 'xDSL',
+  mobile: 'Mobil',
+  fwa: 'Fast trådløs',
+  satellite: 'Satellit',
+};
+
+// gridjs' default filter only stringifies string cells, so array cells
+// (technologies, sources) would never match a search. This selector makes
+// them searchable by their visible Danish labels and source names; hidden
+// columns are still skipped by gridjs before the selector runs.
+const searchableText = (cell) => {
+  if (Array.isArray(cell)) {
+    return cell
+      .map(x => typeof x === 'string' ? (TECHNOLOGY_LABELS[x] || x) : ((x && x.name) || ''))
+      .join(' ');
+  }
+  return cell == null ? '' : String(cell);
+};
+
 export const query = graphql`
   query GetISPData {
     allDataJson(
@@ -31,6 +54,7 @@ export const query = graphql`
           partial
           b2b
           assignedprefix
+          technologies
           comment
           sources {
             date
@@ -171,6 +195,17 @@ const IndexPage = ({ data }) => {
               },
 
               {
+                id: 'technologies',
+                name: 'Teknologi',
+                width: '150px',
+                sort: { enabled: false },
+                formatter: cell => _(<span className="cellText">
+                  {(cell || []).map(t => (
+                    <span key={t} className="techTag">{TECHNOLOGY_LABELS[t] || t}</span>
+                  ))}
+                </span>),
+              },
+              {
                 id: 'comment',
                 name: 'Kommentar fra udbyder',
                 formatter: cell => _(<span className="cellText">{cell}</span>),
@@ -218,7 +253,7 @@ const IndexPage = ({ data }) => {
               }
             }}
 
-            search={true}
+            search={{ selector: searchableText }}
 
             style={{
               table: {

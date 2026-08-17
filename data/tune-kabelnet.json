@@ -5,6 +5,7 @@
   "ipv6": false,
   "comment": "Tune Kabelnet benytter pt. ikke IPv6-adresser.",
   "partial": false,
+  "technologies": ["coax"],
   "sources": [
     {
       "date": "2025-09-29",

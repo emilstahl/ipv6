@@ -6,6 +6,7 @@
   "comment": "Leverer IPv6 til erhverv på professionelle fiberløsninger.",
   "partial": true,
   "b2b": true,
+  "technologies": ["fiber", "coax", "xdsl", "mobile"],
   "sources": [
     {
       "date": "2016-04-06",

@@ -5,6 +5,7 @@
   "ipv6": false,
   "comment": "Vores virksomhed har på nuværende tidspunkt ikke planer om at overgå til IPv6. Hovedårsagen til denne beslutning er, at vores forsyningsområde ikke er særlig stort, og vi derfor ikke har behov for en større pulje af IP-adresser end dem, vi allerede råder over.",
   "partial": false,
+  "technologies": ["fiber"],
   "sources": [
     { "date": "2025-03-07", "name": "ISP", "url": null },
     { "date": "2024-02-01", "name": "ISP", "url": null },

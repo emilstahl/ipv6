@@ -5,6 +5,7 @@
   "ipv6": false,
   "comment": "Lebara er MVNO på TN-netværket med Telenors kernenet bagved. Telenors egen tekniske dokumentation angiver, at der tildeles IPv4-adresser via CGNAT på mobilnettet. IPv6 er ikke nævnt hos Lebara.",
   "partial": false,
+  "technologies": ["mobile"],
   "sources": [
     {
       "date": "2026-08-17",

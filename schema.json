@@ -8,6 +8,7 @@
     "url",
     "ipv6",
     "partial",
+    "technologies",
     "comment"
   ],
   "properties": {
@@ -40,6 +41,16 @@
     "assignedprefix": {
       "type": "string",
       "description": "The assigned IPv6 prefix size for customers, e.g. /48 or /56. If unknown, leave out this field."
+    },
+    "technologies": {
+      "type": "array",
+      "description": "Access technologies the ISP sells to customers",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": ["fiber", "coax", "xdsl", "mobile", "fwa", "satellite"]
+      }
     },
     "comment": {
       "type": "string",

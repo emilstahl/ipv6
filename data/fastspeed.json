@@ -6,6 +6,7 @@
   "assignedprefix": "/60",
   "comment": "Fastspeed understøtter IPv6. IPv6 på COAX forbindelser understøttes ikke af TDC.",
   "partial": true,
+  "technologies": ["fiber", "coax", "mobile"],
   "sources": [
     {
       "date": "2026-05-28",

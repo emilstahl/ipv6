@@ -5,6 +5,7 @@
   "ipv6": true,
   "comment": "Vi understøtter fuldt dualstack til alle vores kunder, både til privat- og erhvervskunder.",
   "partial": false,
+  "technologies": ["fiber"],
   "sources": [
     { "date": "2018-11-06", "name": "ISP", "url": null },
     {
