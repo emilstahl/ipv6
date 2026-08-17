@@ -28,6 +28,19 @@ const TECHNOLOGY_LABELS = {
   satellite: 'Satellit',
 };
 
+// gridjs' default filter only stringifies string cells, so array cells
+// (technologies, sources) would never match a search. This selector makes
+// them searchable by their visible Danish labels and source names; hidden
+// columns are still skipped by gridjs before the selector runs.
+const searchableText = (cell) => {
+  if (Array.isArray(cell)) {
+    return cell
+      .map(x => typeof x === 'string' ? (TECHNOLOGY_LABELS[x] || x) : ((x && x.name) || ''))
+      .join(' ');
+  }
+  return cell == null ? '' : String(cell);
+};
+
 export const query = graphql`
   query GetISPData {
     allDataJson(
@@ -240,7 +253,7 @@ const IndexPage = ({ data }) => {
               }
             }}
 
-            search={true}
+            search={{ selector: searchableText }}
 
             style={{
               table: {

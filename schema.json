@@ -8,6 +8,7 @@
     "url",
     "ipv6",
     "partial",
+    "technologies",
     "comment"
   ],
   "properties": {
