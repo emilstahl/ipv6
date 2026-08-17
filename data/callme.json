@@ -1,0 +1,25 @@
+{
+  "$schema": "./../schema.json",
+  "name": "Call me",
+  "url": "https://www.callme.dk",
+  "ipv6": false,
+  "comment": "Call me fortsatte som selvstændigt brand under Norlys, da Telia Danmark blev til Norlys Mobil i maj 2025, og kører på Norlys' (tidligere Telias) kernenet. Telia oplyste i 2022, at der ikke var nogen tidshorisont for IPv6 på mobilnettet (jf. Greentel, samme net), og hverken Call me eller Norlys Mobil har siden annonceret IPv6.",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2022-04-26",
+      "name": "Telia (nu Norlys Mobil): ingen tidshorisont for IPv6 — ISP-svar, jf. Greentel på samme net",
+      "url": null
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Call me: Call me bliver en del af Norlys",
+      "url": "https://www.callme.dk/om-call-me/call-me-bliver-en-del-af-norlys/"
+    },
+    {
+      "date": "2025-04-09",
+      "name": "MereMobil: Telia skifter endegyldigt navn til Norlys",
+      "url": "https://meremobil.dk/2025/04/telia-skifter-endegyldigt-navn-til-norlys/"
+    }
+  ]
+}

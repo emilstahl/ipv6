@@ -1,0 +1,25 @@
+{
+  "$schema": "./../schema.json",
+  "name": "CBB Mobil",
+  "url": "https://www.cbb.dk",
+  "ipv6": false,
+  "comment": "CBB er Telenors discountbrand og bruger Telenors og Telias samlede radionet (TN-netværket) med Telenors kernenet bagved. Telenors egen tekniske dokumentation angiver, at der tildeles IPv4-adresser via CGNAT på mobilnettet. IPv6 er hverken nævnt eller annonceret hos CBB.",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2026-08-17",
+      "name": "Telenor: IoT Application Note — \"The assigned IP addresses are IPv4. Telenor is utilizing CGNAT\" (PDF)",
+      "url": "https://www.telenor.dk/imagevault/publishedmedia/qbcvtxnfcce7opx0euig/Telenor_IoT_-_Application_note_v2.3.pdf"
+    },
+    {
+      "date": "2026-08-17",
+      "name": "CBB: Mobil og netværk",
+      "url": "https://www.cbb.dk/info/netvark/om/"
+    },
+    {
+      "date": "2020-05-27",
+      "name": "Tweet (Telenor)",
+      "url": "https://x.com/Dpj_DBB/status/1265623450166734849"
+    }
+  ]
+}

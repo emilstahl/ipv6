@@ -1,0 +1,20 @@
+{
+  "$schema": "./../schema.json",
+  "name": "Lebara",
+  "url": "https://www.lebara.dk",
+  "ipv6": false,
+  "comment": "Lebara er MVNO på TN-netværket med Telenors kernenet bagved. Telenors egen tekniske dokumentation angiver, at der tildeles IPv4-adresser via CGNAT på mobilnettet. IPv6 er ikke nævnt hos Lebara.",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2026-08-17",
+      "name": "Telenor: IoT Application Note — \"The assigned IP addresses are IPv4. Telenor is utilizing CGNAT\" (PDF)",
+      "url": "https://www.telenor.dk/imagevault/publishedmedia/qbcvtxnfcce7opx0euig/Telenor_IoT_-_Application_note_v2.3.pdf"
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Find-mobilabonnement: Lebara (netværk: TN)",
+      "url": "https://find-mobilabonnement.dk/lebara/"
+    }
+  ]
+}

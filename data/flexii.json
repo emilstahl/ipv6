@@ -1,0 +1,20 @@
+{
+  "$schema": "./../schema.json",
+  "name": "Flexii",
+  "url": "https://www.flexii.dk",
+  "ipv6": true,
+  "comment": "Flexii ejes af Hi3G Denmark (samme selskab som 3 og OiSTER) og kører på 3's mobilnet, der leverer IPv6/dual stack for udstyr, der understøtter det.",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2026-08-17",
+      "name": "3: Vi fremtidssikrer netværket med Dual Stack IPv6",
+      "url": "https://www.3.dk/hjalp/daekning-og-netvaerk/netvaerk/3-implementerer-dual-stack-ipv6/"
+    },
+    {
+      "date": "2026-08-17",
+      "name": "3's netværk – mobilselskaber på nettet (OiSTER og Flexii)",
+      "url": "https://find-mobilabonnement.dk/3-netvaerk/"
+    }
+  ]
+}
