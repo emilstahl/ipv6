@@ -3,7 +3,7 @@
   "name": "CBB Mobil",
   "url": "https://www.cbb.dk",
   "ipv6": false,
-  "comment": "CBB er Telenors discountbrand og kører på Telenors mobilnet, der ikke understøtter IPv6. IPv6 er hverken nævnt eller annonceret hos CBB.",
+  "comment": "CBB er Telenors discountbrand og bruger Telenors og Telias samlede radionet (TN-netværket) med Telenors kernenet bagved, som ikke understøtter IPv6. IPv6 er hverken nævnt eller annonceret hos CBB.",
   "partial": false,
   "sources": [
     {
