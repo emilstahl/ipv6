@@ -13,6 +13,7 @@ Hver udbyder er én JSON-fil i [`data/`](data/), valideret mod [`schema.json`](s
   "ipv6": true,
   "partial": false,
   "assignedprefix": "/56",
+  "technologies": ["fiber", "coax"],
   "comment": "Kommentar fra udbyderen",
   "sources": [
     { "name": "Kilde", "url": "https://kilde.dk/artikel", "date": "2026-07-31" }
@@ -20,7 +21,7 @@ Hver udbyder er én JSON-fil i [`data/`](data/), valideret mod [`schema.json`](s
 }
 ```
 
-`assignedprefix` udelades hvis ukendt. `b2b` sættes kun til `true`, hvis udbyderen udelukkende leverer til erhverv — udelades ellers. `sources[].date` skal være `YYYY-MM-DD`.
+`assignedprefix` udelades hvis ukendt. `b2b` sættes kun til `true`, hvis udbyderen udelukkende leverer til erhverv — udelades ellers. `technologies` er påkrævet og angiver de adgangsteknologier, udbyderen sælger: `fiber`, `coax`, `xdsl`, `mobile`, `fwa` eller `satellite`. `sources[].date` skal være `YYYY-MM-DD`.
 
 ## Udvikling
 

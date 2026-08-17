@@ -5,6 +5,7 @@
   "ipv6": false,
   "comment": "Call me fortsatte som selvstændigt brand under Norlys, da Telia Danmark blev til Norlys Mobil i maj 2025, og kører på Norlys' (tidligere Telias) kernenet. Telia oplyste i 2022, at der ikke var nogen tidshorisont for IPv6 på mobilnettet (jf. Greentel, samme net), og hverken Call me eller Norlys Mobil har siden annonceret IPv6.",
   "partial": false,
+  "technologies": ["mobile"],
   "sources": [
     {
       "date": "2022-04-26",

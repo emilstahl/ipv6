@@ -6,6 +6,7 @@
   "assignedprefix": "/48 eller /56",
   "comment": "Hiper leverer automatisk IPv6 via DHCPv6 på fibernet med fast /48 eller /56 prefix (fast /128 WAN). IPv6 på internet via kabel-tv (COAX) understøttes ikke.",
   "partial": true,
+  "technologies": ["fiber", "coax", "mobile"],
   "sources": [
     {
       "date": "2026-08-16",

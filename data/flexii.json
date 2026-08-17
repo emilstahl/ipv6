@@ -5,6 +5,7 @@
   "ipv6": true,
   "comment": "Flexii ejes af Hi3G Denmark (samme selskab som 3 og OiSTER) og kører på 3's mobilnet, der leverer IPv6/dual stack for udstyr, der understøtter det.",
   "partial": false,
+  "technologies": ["mobile"],
   "sources": [
     {
       "date": "2026-08-17",

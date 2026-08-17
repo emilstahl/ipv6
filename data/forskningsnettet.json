@@ -5,6 +5,7 @@
   "ipv6": true,
   "comment": "IPv6 er implementeret på forskningsnettets produktionsnet, IPv4 og IPv6 kører dual-stack i backbone og i forbindelserne til NORDUnet.",
   "partial": false,
+  "technologies": ["fiber"],
   "sources": [
     {
       "date": "2017-02-06",

@@ -5,5 +5,6 @@
   "ipv6": true,
   "comment": "Kalundborgegnens Antennelaug kører IPv6 Dual stack helt ud til slutbrugeren.",
   "partial": false,
+  "technologies": ["coax"],
   "sources": [{ "date": "2017-06-06", "name": "ISP", "url": null }]
 }

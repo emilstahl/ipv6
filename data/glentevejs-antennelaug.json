@@ -5,6 +5,7 @@
   "ipv6": false,
   "comment": "[...]der fortsættes med IPv4. Der er ved at blive nået en grænse. Derfor deles samme IP-adresse, hvilket kan resultere i, at nettet kører langsommere. Udstyret kan sagtens klare en opgradering til IPv6[...]",
   "partial": false,
+  "technologies": ["coax", "mobile"],
   "sources": [
     {
       "date": "2019-02-07",

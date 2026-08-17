@@ -6,5 +6,6 @@
   "assignedprefix": "/48",
   "comment": "ASOM-Net tilbyder dual-stack IPv6 med /48 prefix-delegation. Leverer kun til private.",
   "partial": false,
+  "technologies": ["coax", "fiber"],
   "sources": [{ "date": "2022-09-07", "name": "ISP", "url": null }]
 }

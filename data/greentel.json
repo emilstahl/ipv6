@@ -5,6 +5,7 @@
   "ipv6": false,
   "comment": "Telia (udbyderen) har desværre ikke nogen tidshorisont for det endnu.",
   "partial": false,
+  "technologies": ["mobile"],
   "sources": [
     {
       "date": "2022-04-26",

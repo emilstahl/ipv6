@@ -5,6 +5,7 @@
   "ipv6": true,
   "comment": "Det gør vi i hvert fald :) (Tilbyder native IPv6)",
   "partial": false,
+  "technologies": ["coax", "mobile"],
   "sources": [
     {
       "date": "2023-06-13",

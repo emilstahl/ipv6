@@ -5,6 +5,7 @@
   "ipv6": false,
   "comment": "IPv6 adresser er ikke noget, KAZOOM har mulighed for at tildele",
   "partial": false,
+  "technologies": ["fiber"],
   "sources": [
     {
       "date": "2025-09-29",

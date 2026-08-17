@@ -7,5 +7,6 @@
   "comment": "Vi er fuldt ipv6 dualstack klar. /48 prefix delegation. Leverer kun til erhvervskunder.",
   "partial": false,
   "b2b": true,
+  "technologies": ["fiber"],
   "sources": [{ "date": "2015-05-13", "name": "ISP", "url": null }]
 }

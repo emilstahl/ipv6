@@ -5,6 +5,7 @@
   "ipv6": false,
   "comment": "IPv6 er ikke et produkt som vi tilbyder, da det primært er målrettet erhverv. Så du skal desværre ikke regne med at det er noget vi kommer til at tilbyde inden for nærmere fremtid. (Svar fra Waoo Teknisk Support på vegne af Fibia, der har været eneejer af Waoo siden 2021. Fibia meldte ellers i 2024 ud, at IPv6 var på vej med tidshorisont 2024H2.)",
   "partial": false,
+  "technologies": ["fiber"],
   "sources": [
     { "date": "2026-08-14", "name": "ISP", "url": null },
     { "date": "2024-02-05", "name": "ISP", "url": null },

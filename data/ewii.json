@@ -6,5 +6,6 @@
   "assignedprefix": "/48",
   "comment": "Nye kunder på EWII Bredbånd altid får en IPv6-adresse. Eksisterende kunder bliver migreret løbende",
   "partial": true,
+  "technologies": ["fiber", "coax"],
   "sources": [{ "date": "2023-04-27", "name": "ISP", "url": "https://www.version2.dk/holdning/ipv6-saa-faa-dog-fingeren-ud#comment-2534983" }]
 }
