@@ -5,6 +5,7 @@
   "ipv6": true,
   "comment": "Flexfone kører på TDC NET's mobilnet, der leverer dual-stack IPv4/IPv6 på mobildata (åbnet december 2025).",
   "partial": false,
+  "b2b": true,
   "sources": [
     {
       "date": "2026-08-16",

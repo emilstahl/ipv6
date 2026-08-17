@@ -30,6 +30,27 @@ test('front page renders the stats, chart and ISP table', async ({ page }) => {
   }
 });
 
+test('business-only ISPs carry the Erhverv badge, consumer ISPs do not', async ({ page }) => {
+  await mockCheck(page, { address: '192.0.2.1', isp_name: 'Example A/S' });
+  await page.goto('/');
+
+  const rows = page.locator('.gridjs tbody tr');
+  await expect(rows.first()).toBeVisible();
+
+  // ipnordic has b2b: true — the badge renders next to (not inside) the link
+  const search = page.getByPlaceholder('🔎 Søg i tabellen');
+  await search.fill('ipnordic');
+  await expect(rows.first()).toContainText('ipnordic');
+  const badge = rows.first().locator('.b2bBadge');
+  await expect(badge).toHaveText('Erhverv');
+  expect(await rows.first().locator('a.ispLink .b2bBadge').count()).toBe(0);
+
+  // Fiberby has no b2b field — no badge
+  await search.fill('Fiberby');
+  await expect(rows.first()).toContainText('Fiberby');
+  await expect(rows.first().locator('.b2bBadge')).toHaveCount(0);
+});
+
 test('table search narrows the list', async ({ page }) => {
   await mockCheck(page, { address: '192.0.2.1', isp_name: 'Example A/S' });
   await page.goto('/');

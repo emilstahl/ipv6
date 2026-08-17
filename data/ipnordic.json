@@ -1,0 +1,21 @@
+{
+  "$schema": "./../schema.json",
+  "name": "ipnordic",
+  "url": "https://ipnordic.dk",
+  "ipv6": false,
+  "partial": false,
+  "b2b": true,
+  "comment": "ipnordic leverer kun til erhverv (internet via fiberpartnere samt 4G/5G). Deres netværksspecifikation er ren IPv4 med eget 185.72.208.0/22-scope, og om IPv6 står der blot, at man skal kontakte dem, hvis man arbejder med det.",
+  "sources": [
+    {
+      "date": "2026-08-17",
+      "name": "ipnordic: Network specification (PDF)",
+      "url": "https://ipnordic.dk/wp-content/uploads/Network-specification_ENG.pdf"
+    },
+    {
+      "date": "2026-08-17",
+      "name": "ipnordic: Internetløsninger",
+      "url": "https://ipnordic.dk/telefoni/losninger/internet/"
+    }
+  ]
+}

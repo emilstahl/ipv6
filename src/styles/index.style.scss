@@ -49,6 +49,17 @@ th.gridjs-th-sort .gridjs-th-content {
         margin-left: 10px;
     }
 
+    .b2bBadge {
+        vertical-align: middle;
+        margin-left: 8px;
+        padding: 1px 6px;
+        border-radius: 8px;
+        font-size: 9pt;
+        white-space: nowrap;
+        background-color: light-dark(#e0e0e0, #424242);
+        color: light-dark(#424242, #e0e0e0);
+    }
+
     .cellText {
         line-height: 1.5;
     }

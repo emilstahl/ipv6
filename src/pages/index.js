@@ -15,7 +15,7 @@ import { ispState, compareState, comparePrefix, newestDate, ispStats } from '../
 // gridjs addresses cells by position, so the hidden columns the visible
 // formatters read from are declared once here and looked up by name. Reordering
 // or adding a column can no longer feed the wrong field into an href.
-const HIDDEN_COLUMNS = ['color', 'url'];
+const HIDDEN_COLUMNS = ['color', 'url', 'b2b'];
 const hidden = name => HIDDEN_COLUMNS.indexOf(name);
 
 export const query = graphql`
@@ -29,6 +29,7 @@ export const query = graphql`
           url
           ipv6
           partial
+          b2b
           assignedprefix
           comment
           sources {
@@ -114,15 +115,21 @@ const IndexPage = ({ data }) => {
                   const url = safeUrl(row.cell(hidden('url')).data);
                   if (!url) return cell;
 
+                  // The badge stays outside the <a>, so it neither joins the
+                  // link's accessible name nor navigates on click.
                   return _(
-                    <a className="ispLink" href={url.href} title={cell + " (nyt vindue)"} target="_blank" rel="noreferrer">
-                      {/* Fetched at build time by onPreBootstrap in gatsby-node.js — same origin,
-                          so no visitor data leaks to a third party. Hide it if it is missing. */}
-                      <img className="ispLogo" height={"22px"} src={`/favicons/${url.hostname}.png`}
-                           onError={e => { e.target.style.visibility = 'hidden' }}
-                           alt={cell + " logo"}/>
-                      <span className="ispName">{cell}</span>
-                    </a>
+                    <span>
+                      <a className="ispLink" href={url.href} title={cell + " (nyt vindue)"} target="_blank" rel="noreferrer">
+                        {/* Fetched at build time by onPreBootstrap in gatsby-node.js — same origin,
+                            so no visitor data leaks to a third party. Hide it if it is missing. */}
+                        <img className="ispLogo" height={"22px"} src={`/favicons/${url.hostname}.png`}
+                             onError={e => { e.target.style.visibility = 'hidden' }}
+                             alt={cell + " logo"}/>
+                        <span className="ispName">{cell}</span>
+                      </a>
+                      {row.cell(hidden('b2b')).data &&
+                        <span className="b2bBadge" title="Leverer kun til erhvervskunder">Erhverv</span>}
+                    </span>
                   )
                 }
               },
