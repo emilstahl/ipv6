@@ -1,0 +1,20 @@
+{
+  "$schema": "./../schema.json",
+  "name": "OiSTER",
+  "url": "https://www.oister.dk",
+  "ipv6": true,
+  "comment": "OiSTER er Hi3G's discountbrand og kører på 3's mobilnet, hvor alle 3- og OiSTER-kunder fik IPv6/dual stack den 29. november 2017 (for udstyr der understøtter det).",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2026-08-17",
+      "name": "3: Vi fremtidssikrer netværket med Dual Stack IPv6",
+      "url": "https://www.3.dk/hjalp/daekning-og-netvaerk/netvaerk/3-implementerer-dual-stack-ipv6/"
+    },
+    {
+      "date": "2017-11-29",
+      "name": "Tweet",
+      "url": "https://x.com/3Danmark/status/937997673281589248"
+    }
+  ]
+}

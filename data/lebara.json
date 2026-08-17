@@ -1,0 +1,15 @@
+{
+  "$schema": "./../schema.json",
+  "name": "Lebara",
+  "url": "https://www.lebara.dk",
+  "ipv6": false,
+  "comment": "Lebara er MVNO på TN-netværket (Telenor/Norlys), hvor IPv6 ikke er annonceret. IPv6 er ikke nævnt hos Lebara.",
+  "partial": false,
+  "sources": [
+    {
+      "date": "2026-08-17",
+      "name": "Find-mobilabonnement: Lebara (netværk: TN)",
+      "url": "https://find-mobilabonnement.dk/lebara/"
+    }
+  ]
+}
