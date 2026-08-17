@@ -42,7 +42,9 @@ test('business-only ISPs carry the Erhverv badge, consumer ISPs do not', async (
   await search.fill('ipnordic');
   await expect(rows.first()).toContainText('ipnordic');
   const badge = rows.first().locator('.b2bBadge');
+  await expect(badge).toBeVisible();
   await expect(badge).toHaveText('Erhverv');
+  await expect(badge).toHaveAttribute('title', 'Leverer kun til erhvervskunder');
   expect(await rows.first().locator('a.ispLink .b2bBadge').count()).toBe(0);
 
   // Fiberby has no b2b field — no badge
