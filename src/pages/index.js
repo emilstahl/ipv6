@@ -115,17 +115,21 @@ const IndexPage = ({ data }) => {
                   const url = safeUrl(row.cell(hidden('url')).data);
                   if (!url) return cell;
 
+                  // The badge stays outside the <a>, so it neither joins the
+                  // link's accessible name nor navigates on click.
                   return _(
-                    <a className="ispLink" href={url.href} title={cell + " (nyt vindue)"} target="_blank" rel="noreferrer">
-                      {/* Fetched at build time by onPreBootstrap in gatsby-node.js — same origin,
-                          so no visitor data leaks to a third party. Hide it if it is missing. */}
-                      <img className="ispLogo" height={"22px"} src={`/favicons/${url.hostname}.png`}
-                           onError={e => { e.target.style.visibility = 'hidden' }}
-                           alt={cell + " logo"}/>
-                      <span className="ispName">{cell}</span>
+                    <span>
+                      <a className="ispLink" href={url.href} title={cell + " (nyt vindue)"} target="_blank" rel="noreferrer">
+                        {/* Fetched at build time by onPreBootstrap in gatsby-node.js — same origin,
+                            so no visitor data leaks to a third party. Hide it if it is missing. */}
+                        <img className="ispLogo" height={"22px"} src={`/favicons/${url.hostname}.png`}
+                             onError={e => { e.target.style.visibility = 'hidden' }}
+                             alt={cell + " logo"}/>
+                        <span className="ispName">{cell}</span>
+                      </a>
                       {row.cell(hidden('b2b')).data &&
                         <span className="b2bBadge" title="Leverer kun til erhvervskunder">Erhverv</span>}
-                    </a>
+                    </span>
                   )
                 }
               },
