@@ -35,7 +35,7 @@
       "description": "Whether the ISP has IPv6-support, that only applies to a segmented customer group"
     },
     "b2b": {
-      "type": "boolean",
+      "const": true,
       "description": "Whether the ISP only serves business customers (erhverv). If the ISP also serves consumers, leave out this field."
     },
     "assignedprefix": {
