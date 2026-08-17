@@ -5,5 +5,6 @@
   "ipv6": false,
   "comment": "Det er noget vi arbejder hen imod. Jeg har dog ingen dato for hvornår det vil blive rullet ud.",
   "partial": false,
+  "technologies": ["fiber"],
   "sources": [{ "date": "2023-06-09", "name": "ISP (Email)", "url": null }]
 }

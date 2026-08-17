@@ -63,6 +63,17 @@ th.gridjs-th-sort .gridjs-th-content {
     .cellText {
         line-height: 1.5;
     }
+
+    .techTag {
+        display: inline-block;
+        margin: 1px 4px 1px 0;
+        padding: 1px 6px;
+        border-radius: 8px;
+        font-size: 9pt;
+        white-space: nowrap;
+        background-color: light-dark(#e3f2fd, #1a3a52);
+        color: light-dark(#1a3a52, #e3f2fd);
+    }
 }
 
 blockquote {

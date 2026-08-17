@@ -5,6 +5,7 @@
   "ipv6": true,
   "comment": "Telmore kører på TDC NET's mobilnet, der leverer dual-stack IPv4/IPv6 på mobildata (åbnet december 2025). Kundeservice afviste tidligere (marts 2025) IPv6 — det er ikke længere gældende.",
   "partial": false,
+  "technologies": ["mobile"],
   "sources": [
     {
       "date": "2025-12-09",

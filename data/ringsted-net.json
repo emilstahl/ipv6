@@ -6,5 +6,6 @@
   "assignedprefix": "/48",
   "comment": "Den 4. marts 2025 overgik alle vores medlemmer til IPv6/dual stack /48 prefix-delegation.",
   "partial": false,
+  "technologies": ["coax"],
   "sources": [{ "date": "2025-03-20", "name": "ISP", "url": null }]
 }

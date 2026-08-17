@@ -5,6 +5,7 @@
   "ipv6": true,
   "comment": "eesy kører på TDC NET's mobilnet, hvor der leveres dual-stack IPv4/IPv6 på mobildata.",
   "partial": false,
+  "technologies": ["mobile"],
   "sources": [
     { "date": "2025-12-09", "name": "Brugerrapport (Email)", "url": null },
     { "date": "2025-09-09", "name": "Brugerrapport (Email)", "url": null }

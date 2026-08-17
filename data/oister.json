@@ -5,6 +5,7 @@
   "ipv6": true,
   "comment": "OiSTER er Hi3G's discountbrand og kører på 3's mobilnet, hvor alle 3- og OiSTER-kunder fik IPv6/dual stack den 29. november 2017 (for udstyr der understøtter det).",
   "partial": false,
+  "technologies": ["mobile"],
   "sources": [
     {
       "date": "2026-08-17",

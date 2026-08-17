@@ -6,6 +6,7 @@
   "assignedprefix": "/56",
   "comment": "Norlys er resultatet af en større konsolidering (bl.a. tidligere Boxer samt opkøb af Telia i Danmark), så IPv6-understøttelse afhænger af den konkrete forbindelse og det oprindelige net. Fiberkunder har mulighed for IPv6 med dynamisk /56 prefix delegation via DHCPv6, og en del er aktiveret pr. default, men det annonceres ikke tydeligt og opleves som inkonsistent. COAX (kabel) og xDSL (kobber) understøttes typisk ikke. Supporten giver ikke altid et entydigt svar.",
   "partial": true,
+  "technologies": ["fiber", "coax", "xdsl", "mobile"],
   "sources": [
     { "date": "2025-07-23", "name": "Blog (sigmablue.dk)", "url": "https://blog.sigmablue.dk/posts/norlys-ipv6/" },
     { "date": "2023-09-20", "name": "ISP", "url": null }

@@ -5,6 +5,7 @@
   "ipv6": true,
   "comment": "Vi tilbyder statiske IPv6 til erhvervskunder og privatkunder ved forespørgsel; For privat kunder forudsættes samtidig statisk offentlig IPv4-adresse (100 kr i oprettelse + 25 kr/md). IPv6 leveres altså ikke som standard til private.",
   "partial": true,
+  "technologies": ["fiber"],
   "sources": [
     {
       "date": "2026-08-16",

@@ -18,6 +18,16 @@ import { ispState, compareState, comparePrefix, newestDate, ispStats } from '../
 const HIDDEN_COLUMNS = ['color', 'url', 'b2b'];
 const hidden = name => HIDDEN_COLUMNS.indexOf(name);
 
+// Danish display labels for the technology enum in schema.json.
+const TECHNOLOGY_LABELS = {
+  fiber: 'Fiber',
+  coax: 'Coax',
+  xdsl: 'xDSL',
+  mobile: 'Mobil',
+  fwa: 'Fast trådløs',
+  satellite: 'Satellit',
+};
+
 export const query = graphql`
   query GetISPData {
     allDataJson(
@@ -31,6 +41,7 @@ export const query = graphql`
           partial
           b2b
           assignedprefix
+          technologies
           comment
           sources {
             date
@@ -170,6 +181,17 @@ const IndexPage = ({ data }) => {
                 }
               },
 
+              {
+                id: 'technologies',
+                name: 'Teknologi',
+                width: '150px',
+                sort: { enabled: false },
+                formatter: cell => _(<span className="cellText">
+                  {(cell || []).map(t => (
+                    <span key={t} className="techTag">{TECHNOLOGY_LABELS[t] || t}</span>
+                  ))}
+                </span>),
+              },
               {
                 id: 'comment',
                 name: 'Kommentar fra udbyder',

@@ -5,6 +5,7 @@
   "ipv6": false,
   "comment": "Der er ikke specifikke planer for implementering af IPv6 i øjeblikket.",
   "partial": false,
+  "technologies": ["fiber", "coax", "mobile"],
   "sources": [
     {
       "date": "2023-04-20",

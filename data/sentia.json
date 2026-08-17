@@ -6,5 +6,6 @@
   "comment": "Vi tilbyder IPv6 til kunder der har specifikke trafikpakker. ",
   "partial": true,
   "b2b": true,
+  "technologies": ["fiber"],
   "sources": [{ "date": "2016-02-14", "name": "ISP", "url": null }]
 }

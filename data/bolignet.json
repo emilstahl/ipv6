@@ -6,6 +6,7 @@
   "assignedprefix": "/48",
   "comment": "Understøtter dynamisk IPv6 Prefix Delegation (mod merbetaling kan man få statisk)",
   "partial": false,
+  "technologies": ["fiber"],
   "sources": [
     {
       "date": "2025-09-29",
