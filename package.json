@@ -32,7 +32,7 @@
     "normalize.css": "^8.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.83.0"
+    "sass": "^1.104.0"
   },
   "overrides": {
     "loader-utils@<2": "^1.4.2",
@@ -55,6 +55,6 @@
     "@parcel/reporter-dev-server": "^2.16.4"
   },
   "devDependencies": {
-    "@playwright/test": "^1.62.1"
+    "@playwright/test": "^1.63.0"
   }
 }
